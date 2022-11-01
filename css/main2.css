@@ -1,0 +1,243 @@
+@import url("./common.css");
+
+section {
+  padding: 200px 0;
+}
+
+.project_intro .title {
+  margin-bottom: 60px;
+}
+
+.project_intro .project_flexbox {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.project_intro .project_flexbox .swiper {
+  width: 60%;
+  margin-left: unset;
+  margin-right: unset;
+}
+
+.project_intro .project_flexbox .swiper .swiper_btn {
+  background-color: #fff;
+  background-position: -50%;
+  opacity: 80%;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+.project_intro .project_flexbox .swiper .swiper_btn img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: '';
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: '';
+}
+
+.project_intro .project_flexbox .pro_txt {
+  width: calc(40% - 24px);
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.project_intro .project_flexbox .pro_txt a {
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project_intro .rotate {
+  position: absolute;
+  top: 100%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.project_intro .rotate img {
+  animation: rotate_circle 15s linear infinite;
+}
+
+@keyframes rotate_circle {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.news .title {
+  margin-bottom: 60px;
+}
+
+.news .plug_box {
+  height: 400px;
+  background-color: #ccc;
+}
+
+.main_inquire .inq_flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_inquire .inq_flexbox .title {
+  margin-bottom: 22px;
+}
+
+.main_inquire .inq_flexbox .inq_plug_box {
+  height: 500px;
+  width: 800px;
+  background-color: #ccc;
+}
+
+footer {
+  padding: 40px;
+  background-color: #222;
+}
+
+footer p {
+  color: #d9d9d9;
+  font-weight: 300;
+}
+
+footer p span {
+  margin-left: 33px;
+}
+
+@media screen and (max-width: 1600px) {
+  section {
+    padding: 120px 0;
+  }
+
+  .project_intro {
+    overflow-x: hidden;
+  }
+  .project_intro .project_flexbox {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .project_intro .project_flexbox .swiper {
+    width: 100%;
+  }
+
+  .project_intro .project_flexbox .swiper .swiper-slide a {
+    width: 100%;
+  }
+
+  .project_intro .project_flexbox .pro_txt {
+    width: 100%;
+    margin-top: 28px;
+    margin-bottom: 0;
+  }
+
+  .project_intro .rotate {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
+  .project_intro .rotate img {
+    animation: rotate_circle 15s linear infinite;
+  }
+
+  .news .title {
+    margin-bottom: 40px;
+  }
+
+  .main_inquire .inq_flexbox {
+    flex-direction: column;
+  }
+
+  .main_inquire .inq_flexbox .title {
+    margin-bottom: 22px;
+  }
+
+  .main_inquire .inq_flexbox p {
+    margin-bottom: 22px;
+  }
+
+  .main_inquire .inq_flexbox .inq_plug_box {
+    width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
+  
+  .footer_ad {
+    margin-top: 20px;
+    display: block;
+    margin-left: unset;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    padding: 80px 0;
+  }
+
+  .project_intro .project_flexbox {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .project_intro .title {
+    margin-bottom: 40px;
+  }
+
+  .project_intro .rotate {
+    display: none;
+  }
+
+  .main_inquire .inq_flexbox .title {
+    margin-bottom: 22px;
+  }
+
+  .main_inquire .inq_flexbox p {
+    margin-bottom: 22px;
+  }
+
+  .main_inquire .inq_flexbox .inq_plug_box {
+    width: 100%;
+  }
+}
