@@ -5,27 +5,77 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/main2.css">
 </head>
 <body>
   <section class="project_intro">
     <div class="inner_container">
-      <p>더불어 함께 발전하는 기업시민 경영이념을 바탕으로 건전하고 책임있는 ESG경영을 위해 노력하고  있습니다.</p>
-      <button type="button">more</button>
+      <h2 class="title">부활피앤피의 더 프로젝트를<br />소개해 드립니다.</h2>
+      <div class="project_flexbox">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="javascript:(0)"><img src="./image/slide.jpg" alt="slide1"></a></div>
+            <div class="swiper-slide"><a href="javascript:(0)"><img src="./image/slide.jpg" alt="slide2"></a></div>
+            <div class="swiper-slide"><a href="javascript:(0)"><img src="./image/slide.jpg" alt="slide3"></a></div>
+            <div class="swiper-slide"><a href="javascript:(0)"><img src="./image/slide.jpg" alt="slide3"></a></div>
+          </div>
+          <div class="swiper-button-next swiper_btn">
+            <img src="./image/after.png" alt="next_btn" />
+          </div>
+          <div class="swiper-button-prev swiper_btn">
+            <img src="./image/before.png" alt="prev_btn" />
+          </div>
+        </div>
+        <div class="pro_txt">
+          <p>더불어 함께 발전하는 기업시민 경영이념을 바탕으로 건전하고 책임있는 ESG경영을 위해 노력하고  있습니다.</p>
+          <a href="javascript:(0)">more</a>
+        </div>
+        <div class="rotate">
+          <img src="./image/circleText.png" alt="회전하는 이미지">
+        </div>
+      </div>
+      
     </div>
   </section>
+
   <section class="news">
     <div class="inner_container">
+      <h2 class="title">
+        부활피앤피의 더 많은 소식들을 들어보세요.<br />
+        다양한 즐거움을 여러분들에게 드립니다.
+      </h2>
+      <div class="plug_box">
+        
+      </div>
     </div>
   </section>
+
   <section class="main_inquire">
     <div class="inner_container">
-
-    </div>
+      <div class="inq_flexbox">
+        <div class="inq_txt">
+          <h2 class="title">
+            부활피앤피에 궁금한 사항을<br />
+            간편하게 문의해보세요.
+          </h2>
+          <p>부활피앤지에 궁금한 사항을 문의해주세요</p>
+        </div>
+        <div class="inq_plug_box">
+          
+        </div>
+      </div>
+    </div>  
   </section>
+
   <footer>
     <div class="inner_container">
-      <p>(주)부활피앤지  123-365-44451 <span>인천광역시 부평구 갈산동 2222-222 파크타워 101호</span></p>
+      <p>(주)부활피앤지&nbsp;&nbsp;123-365-44451 <span class="footer_ad">인천광역시 부평구 갈산동 2222-222 파크타워 101호</span></p>
     </div>
   </footer>
+
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/section2.js"></script>
 </body>
 </html>
