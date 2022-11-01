@@ -3,10 +3,10 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
   color: #000;
 }
@@ -40,9 +40,11 @@ li {
   color: #fff;
 }
 
-.inner_container {
-  max-width: 1520px;
-  margin: 0 auto;
+@media screen and (min-width: 1601px) {
+  .inner_container {
+    max-width: 1520px;
+    margin: 0 auto;
+  }
 }
 /* 768-1600 패딩설정 */
 @media screen and (min-width: 768px) and (max-width: 1600px) {
