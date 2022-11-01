@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 
 body {
   box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   color: #000;
 }
 a {
@@ -15,21 +15,42 @@ a {
   color: inherit;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
+}
+
+/* 폰트색상 */
+.Black {
+  color: #021d25;
+}
+.Dark {
+  color: #222222;
+}
+.Gray {
+  color: #7b7b7b;
+}
+.lightGray {
+  color: #c9c9c9;
+}
+.Green {
+  color: #3aaa35;
+}
+.White {
+  color: #fff;
 }
 
 .inner_container {
   max-width: 1520px;
   margin: 0 auto;
 }
- /* 768-1600 패딩설정 */
+/* 768-1600 패딩설정 */
 @media screen and (min-width: 768px) and (max-width: 1600px) {
   .inner_container {
     padding: 0 32px;
   }
 }
- /* -767 패딩설정 */
+/* -767 패딩설정 */
 @media screen and (max-width: 767px) {
   .inner_container {
     padding: 0 20px;
@@ -40,23 +61,24 @@ ul, li {
 .intro_title {
   font-size: 72px;
   font-weight: 700;
- }
+  color: #021d25;
+}
 
 .title {
   font-size: 42px;
-  font-weight: 500;
- }
+  font-weight: 300;
+}
 
 .desc {
   font-size: 32px;
   font-weight: 400;
- }
+}
 
 .text {
   font-size: 24px;
- }
+}
 
- /* tab 폰트사이즈 */
+/* tab 폰트사이즈 */
 @media screen and (max-width: 1024px) {
   .intro_title {
     font-size: 60px;
@@ -73,7 +95,6 @@ ul, li {
   .text {
     font-size: 16px;
   }
-
 }
 /* mo 폰트사이즈 */
 @media screen and (max-width: 767px) {
@@ -89,4 +110,3 @@ ul, li {
     font-size: 18px;
   }
 }
-
