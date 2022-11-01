@@ -90,6 +90,15 @@ header .inner_container {
   animation: stroke 3s alternate;
   fill: #021d25;
 }
-.intro_title .intro_title {
+.intro_title {
   position: relative;
+}
+.intro_title .underline {
+  position: absolute;
+  bottom: 0;
+  left: 123px;
+  width: 910px;
+  height: 13px;
+  background: #3cb371;
+  z-index: -1;
 }
