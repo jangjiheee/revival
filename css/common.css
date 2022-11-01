@@ -24,6 +24,7 @@ ul, li {
   margin: 0 auto;
 }
 
+/* 폰트 사이즈 */
 .intro_title {
   font-size: 72px;
   font-weight: 700;
@@ -43,6 +44,7 @@ ul, li {
   font-size: 24px;
  }
 
+ /* tab 폰트사이즈 */
 @media screen and (max-width: 1024px) {
   .intro_title {
     font-size: 60px;
@@ -61,6 +63,7 @@ ul, li {
   }
 
 }
+/* mo 폰트사이즈 */
 @media screen and (max-width: 767px) {
   .intro_title {
     font-size: 36px;
