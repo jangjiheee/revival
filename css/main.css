@@ -13,20 +13,20 @@ header .inner_container {
   display: flex;
   align-items: center;
 }
-.gnb {
+.depth1 {
   display: flex;
   justify-content: space-around;
 }
-.gnb > li {
+.depth1 > li {
   position: relative;
   width: 108px;
   text-align: center;
 }
-.gnb > li > a {
+.depth1 > li > a {
   font-size: 16px;
   line-height: 60px;
 }
-.gnb .depth2 {
+.depth1 .depth2 {
   position: absolute;
   top: 60px;
   left: 0;
@@ -36,7 +36,10 @@ header .inner_container {
   border-radius: 10px;
   display: none;
 }
-.depth2 > li > a {
+.depth1 .menu_list:hover .depth2 {
+  display: block;
+}
+.depth1 .depth2 > li > a {
   font-size: 15px;
   margin: 8px 0;
 }
@@ -78,11 +81,15 @@ header .inner_container {
   width: 100%;
 }
 .main_visual .intro_title {
-  margin-bottom: 30px;
+  height: 105px;
+  margin-bottom: 10px;
 }
 .intro_title > svg {
   width: 100%;
-  height: 100%;
+  height: 105px;
   animation: stroke 3s alternate;
   fill: #021d25;
+}
+.intro_title .intro_title {
+  position: relative;
 }
