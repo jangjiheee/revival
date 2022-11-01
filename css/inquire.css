@@ -1,0 +1,44 @@
+@import url("./common.css");
+
+section {
+  padding: 180px 0 220px;
+  text-align: center;
+}
+
+section .intro_title {
+  position: relative;
+}
+
+section .intro_title::after {
+  content: "";
+  height: 1px;
+  width: 180px;
+  background-color: #000000;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section .flex_ratate_box {
+  position: relative;
+}
+
+section .inquire_flex {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+section .inquire_flex .img_box {
+  width: 40%;
+}
+
+section .inquire_flex .img_box img {
+  width: 100%;
+}
+
+section .inquire_flex .inquire_plug {
+  width: 50%;
+  background-color: #ccc;
+}
