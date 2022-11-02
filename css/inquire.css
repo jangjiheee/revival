@@ -1,6 +1,6 @@
 @import url("./common.css");
 
-section {
+section.inquire {
   padding: 180px 0 220px;
   text-align: center;
 }
@@ -41,4 +41,88 @@ section .inquire_flex .img_box img {
 section .inquire_flex .inquire_plug {
   width: 50%;
   background-color: #ccc;
+}
+
+.inquire .flex_rotate_box {
+  position: relative;
+}
+
+.inquire .flex_rotate_box .rotate {
+  position: absolute;
+  top: -20%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 15%;
+  height: 15%;
+}
+
+.inquire .flex_rotate_box .rotate img {
+  animation: rotate_circle 15s linear infinite;
+  width: 100%;
+}
+
+@keyframes rotate_circle {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  section.inquire {
+    overflow-x: hidden;
+    padding: 120px 0;
+  }
+
+  section .intro_title::after {
+    width: 100px;
+  }
+
+  section .inquire_flex {
+    flex-direction: column;
+    margin-top: 156px;
+  }
+
+  section .inquire_flex .img_box {
+    width: 100%;
+  }
+
+  section .inquire_flex .img_box img {
+    width: 100%;
+  }
+
+  section .inquire_flex .inquire_plug {
+    width: 100%;
+    height: 500px;
+  }
+
+  .inquire .flex_rotate_box .rotate {
+    left: 100%;
+    top: 10%;
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section.inquire {
+    padding: 80px 0;
+  }
+
+  section .intro_title::after {
+    width: 80px;
+    bottom: -50px;
+  }
+
+  section .inquire_flex {
+    margin-top: 100px;
+  }
+
+  section .inquire_flex .inquire_plug {
+    height: 300px;
+  }
+
+  .inquire .flex_rotate_box .rotate {
+    display: none;
+  }
 }
