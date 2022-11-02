@@ -185,14 +185,16 @@
   }
 
   .green_box{
-  height: 324px;
-  margin-top: -242px;
+  height: 0px;
+  padding: 40px 0;
+  margin-top: -5px;
   }
 
   .green_box .green_txt{
     font-size: 18px;
     line-height: 24px;
-    padding-top: 228px;
+    padding-top: 0px;
+    margin-top: -50px;
   }
 
   .introduction_box{
@@ -219,71 +221,135 @@
 
 /* /브랜드시작 */
 
-.wrap2{
-  width: 100%;
-}
-.text_box{
-  padding-top: 180px;
-  text-align: center;
-}
 
 .text_box .line{
-  width: 180px;
-  margin: 0 auto;
-  border-top: 1px solid #000;
   margin-top: 58px;
 }
 
 .tab_menu{
   margin-top: 200px;
-  position:relative;
 }
 
-.tab_menu .list{
-  /* overflow:hidden; */
-  transition: 0.3s;
-  cursor: pointer;
-  display: flex;
-}
-
-.tab_menu .list li{
+.tabs li{
+	background:#D9D9D9;
+	color: #222;
+	display: inline-block;
+	cursor: pointer;
   text-align: center;
-  width: 248px;
+  width: 237px;
   height: 80px;
   line-height: 80px;
-  background-color: #D9D9D9;
-  }  
+  margin-left: -4px;
+  border: 1px solid transparent;
+}
 
-.tab_menu .list .cont{
-  display:none; 
-  position:absolute; 
-  left: 50%;
-  top: 80px;
-  transform: translateX(-50%);
-  text-align: left; 
-  width: 69%;
-  height:1687px;
+.tabs li.current{
+	background: #fff;
+	color: #222;
   border: 1px solid #000;
 }
 
-.tab_menu .list .btn{
-  font-size:1em; 
-  margin-right:14px;
-  text-align: center;
-}
-
-.tab_menu .list li.is_on .btn{
-  font-weight:bold; 
-  color:green;
-  width: 248px;
-  height: 80px;
-  background-color: #fff;
+.tab-content{
+	display: none;
+	padding: 15px;
+  height: 1697px;
+  margin-bottom: 646px;
+  margin-left: -4px;
   border: 1px solid #000;
-  display: block;
 }
 
-.tab_menu .list li.is_on .cont{
-  display:block;
+.tab-content.current{
+	display: inherit;
+}
+
+@media screen and (max-width: 1023px){
+  .tab_menu{
+  margin-top: 96px;
+  }
+
+  .tabs li{
+  width: 137px;
+  height: 60px;
+  line-height: 60px;
+  }
+
+  .tab-content{
+    height: 1297px;
+    margin-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .tab_menu{
+  margin-top: 50px;
+  }
+
+  .tabs li{
+  width: 75px;
+  height: 40px;
+  line-height: 40px;
+  }
+
+  .tab-content{
+    height: 997px;
+    margin-bottom: 80px;
+  }
 }
 
 /* //브랜드끝 */
+
+/* /스토리시작 */
+
+.story_list{
+  margin-top: 52px;
+}
+
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.board li{
+  width: calc(33.3% - 20px);
+}
+
+.board li img{
+  width: 100%;
+  margin-top: 48px;
+}
+
+.board li .story_tit{
+  margin-top: 27px;
+  color: #222222;
+  font-size: 21px;
+}
+
+.board li .date{
+  font-size: 16px;
+  color: #7B7B7B;
+  margin-top: 10px;
+}
+
+.page-wrap{
+  margin-top: 120px;
+  margin-bottom: 180px;
+}
+
+.contents{
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+}
+
+.contents li{
+  font-size: 16px;
+}
+
+.contents img{
+  cursor: pointer;
+}
+
+.button.active{
+  color: #3AAA35;
+}
