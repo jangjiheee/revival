@@ -48,6 +48,10 @@ header .inner_container {
   display: none;
 }
 
+.ghost-list {
+  display: none;
+}
+
 .mobile-list {
   display: none;
 }
@@ -196,8 +200,9 @@ header .inner_container {
   }
 
   .ghost-list ul.mobile-list li .project-list {
-    margin-top: 20px;
     padding-left: 10px;
+    overflow: hidden;
+    display: none;
   }
 
   .ghost-list ul.mobile-list li .project-list li {
@@ -232,10 +237,9 @@ header .inner_container {
     transform: rotate(180deg);
   }
 
-  .ghost-list .mobile-list .project_flex .flex_img.click img {
+  .ghost-list .mobile-list .proBtn.click .flex_img img {
     transform: rotate(360deg);
   }
-
 
   /* section */
   .main_visual {
