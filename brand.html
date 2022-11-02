@@ -9,53 +9,50 @@
   <link rel="stylesheet" href="/css/sub.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
-  <div class="wrap2">
+  <div class="wrap">
     <div class="inner_container">
-      <div class="text_box">
+      <div class="main">
+        <div class="text_box">
           <h1 data-aos="zoom-in" class="intro_title">새로운 프로젝트에<br class="tab_only" /> 도전하는<br /> 부활피앤피</h1>
           <div class="line"></div>
         </div>
-    </div>
-    <div class="tab_menu">
-      <div class="inner_container">
-        <ul class="list">
-          <li class="is_on">
-            <a href="#tab1" class="btn">탭메뉴1</a>
-            <div id="tab1" class="cont">탭메뉴1</div>
-          </li>
-          <li>
-            <a href="#tab2" class="btn">탭메뉴2</a>
-            <div id="tab1" class="cont">탭메뉴2</div>
-          </li>
-          <li>
-            <a href="#tab3" class="btn">탭메뉴3</a>
-            <div id="tab1" class="cont">탭메뉴3</div>
-          </li>
-          <li>
-            <a href="#tab4" class="btn">탭메뉴4</a>
-            <div id="tab1" class="cont">탭메뉴4</div>
-          </li>
-        </ul>
       </div>
     </div>
-  </div>
+    <!-- 탭메뉴 -->
+    <div class="tab_menu">
+      <div class="inner_container">
+      <ul class="tabs">
+        <li class="tab-link current" data-tab="tab-1">탭메뉴1</li>
+        <li class="tab-link" data-tab="tab-2">탭메뉴2</li>
+        <li class="tab-link" data-tab="tab-3">탭메뉴3</li>
+        <li class="tab-link" data-tab="tab-4">탭메뉴4</li>
+      </ul>
+      <div id="tab-1" class="tab-content current">내용1</div>
+      <div id="tab-2" class="tab-content">내용2</div>
+      <div id="tab-3" class="tab-content">내용3</div>
+      <div id="tab-4" class="tab-content">내용4</div>
+      </div>
+    </div>
   <!-- 스크립트영역 -->
   <script>
-      const tabList = document.querySelectorAll('.tab_menu .list li');
-      for(var i = 0; i < tabList.length; i++){
-      tabList[i].querySelector('.btn').addEventListener('click', function(e){
-      e.preventDefault();
-      for(var j = 0; j < tabList.length; j++){
-        tabList[j].classList.remove('is_on');
-      }
-      this.parentNode.classList.add('is_on');
-    });
-}
+      AOS.init();
+  </script>
 
-AOS.init();
+  <script>
+  $(document).ready(function(){
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
 
-    </script>
+  $('ul.tabs li').removeClass('current');
+  $('.tab-content').removeClass('current');
+
+  $(this).addClass('current');
+  $("#"+tab_id).addClass('current');
+	})
+})
+  </script>
 </body>
 </html>   
