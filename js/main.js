@@ -5,13 +5,6 @@ window.onload = function() {
   
   changeI.addEventListener("click", function () {
     paBtn.classList.toggle("click");
-    // if (changeI.classList.contains('click')) {
-    //   hiddenL.style.height = "100%";
-    //   hiddenL.style.marginTop = "20px";
-    // } else {
-    //   hiddenL.style.height = "0px";
-    //   hiddenL.style.marginTop = "0";
-    // }
   })
 
   const ghostBtn = document.getElementById("ghostMenu");
