@@ -1,17 +1,17 @@
 window.onload = function() {
-  var changeI = document.querySelector(".proBtn");
+  var changeI = document.querySelector(".project_flex");
   var hiddenL = document.querySelector(".project-list");
+  var paBtn = document.querySelector(".proBtn");
   
   changeI.addEventListener("click", function () {
-    this.classList.toggle("click");
-    if (changeI.classList.contains('click')) {
-      hiddenL.style.display = "block";
-      hiddenL.style.height = "100%";
-      hiddenL.style.marginTop = "20px";
-    } else {
-      hiddenL.style.height = "0px";
-      hiddenL.style.marginTop = "0";
-    }
+    paBtn.classList.toggle("click");
+    // if (changeI.classList.contains('click')) {
+    //   hiddenL.style.height = "100%";
+    //   hiddenL.style.marginTop = "20px";
+    // } else {
+    //   hiddenL.style.height = "0px";
+    //   hiddenL.style.marginTop = "0";
+    // }
   })
 
   const ghostBtn = document.getElementById("ghostMenu");

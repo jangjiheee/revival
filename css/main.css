@@ -216,11 +216,15 @@ header .inner_container {
     border-bottom: 1px solid #CCCCCC;
   }
 
+  .ghost-list ul.mobile-list .proBtn.click .project-list {
+    height: 100%;
+  }
+
   .ghost-list ul.mobile-list li .project-list {
     padding-left: 10px;
     overflow: hidden;
-    display: none;
     height: 0;
+    transition: all 0.4s;
   }
   
   .ghost-list ul.mobile-list li .project-list li {
@@ -253,11 +257,11 @@ header .inner_container {
     align-items: center;
   }
 
-  .ghost-list .mobile-list .project_flex .flex_img img {
+  .ghost-list .mobile-list .proBtn .project_flex .flex_img img {
     transform: rotate(180deg);
   }
 
-  .ghost-list .mobile-list .proBtn.click .flex_img img {
+  .ghost-list .mobile-list .proBtn.click .project_flex .flex_img img {
     transform: rotate(360deg);
   }
 
