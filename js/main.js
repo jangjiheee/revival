@@ -14,7 +14,7 @@ window.onload = function() {
   let subToggle = true;
   ghostBtn.addEventListener("click", function () {
     if (subToggle) {
-      menuList.style.setProperty('height', 'calc(100% - 60px)');
+      menuList.style.setProperty('height', 'calc(100vh - 60px)');
     } else {
       menuList.style.setProperty('height', '0px');
     }
