@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="./js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <title>Document</title>
   </head>
   <body>
@@ -237,7 +236,7 @@
           </nav>
           <div class="ghost">
             <div class="ghost-menu">
-              <input type="checkbox" id="ghostMenu">
+              <input type="checkbox" id="ghostMenu" />
               <label for="ghostMenu" class="menuLine">
                 <span></span>
                 <span></span>
@@ -249,26 +248,56 @@
         <div class="ghost-list">
           <div class="inner_container">
             <ul class="mobile-list">
-              <li class="line-border mob"><a href="javascript:(0)">회사소개</a></li>
+              <li
+                class="line-border mob"
+                data-aos="fade-up"
+                data-aos-delay="1000"
+              >
+                <a href="javascript:(0)">회사소개</a>
+              </li>
               <li class="line-border proBtn">
                 <a href="javascript:(0)">
                   <div class="project_flex">
                     <p>프로젝트</p>
                     <div class="flex_img">
-                      <img class="changeBtn" src="./image/arrow_up.png">
+                      <img class="changeBtn" src="./image/arrow_up.png" />
                     </div>
                   </div>
                 </a>
                 <ul class="project-list">
-                  <li class="mob"><a href="javascript:(0)"><img src="./image/project_icon.png">프로젝트1</a></li>
-                  <li class="mob"><a href="javascript:(0)"><img src="./image/project_icon.png">프로젝트1</a></li>
-                  <li class="mob"><a href="javascript:(0)"><img src="./image/project_icon.png">프로젝트1</a></li>
-                  <li class="mob"><a href="javascript:(0)"><img src="./image/project_icon.png">프로젝트1</a></li>
-                  <li class="mob"><a href="javascript:(0)"><img src="./image/project_icon.png">프로젝트1</a></li>
+                  <li class="mob">
+                    <a href="javascript:(0)"
+                      ><img src="./image/project_icon.png" />프로젝트1</a
+                    >
+                  </li>
+                  <li class="mob">
+                    <a href="javascript:(0)"
+                      ><img src="./image/project_icon.png" />프로젝트1</a
+                    >
+                  </li>
+                  <li class="mob">
+                    <a href="javascript:(0)"
+                      ><img src="./image/project_icon.png" />프로젝트1</a
+                    >
+                  </li>
+                  <li class="mob">
+                    <a href="javascript:(0)"
+                      ><img src="./image/project_icon.png" />프로젝트1</a
+                    >
+                  </li>
+                  <li class="mob">
+                    <a href="javascript:(0)"
+                      ><img src="./image/project_icon.png" />프로젝트1</a
+                    >
+                  </li>
                 </ul>
               </li>
-              <li class="line-border mob"><a href="javascript:(0)">이야기</a></li>
-              <li class="line-border mob"><a href="javascript:(0)">문의하기</a></li>
+              <li class="line-border mob">
+                <a href="javascript:(0)">이야기</a>
+              </li>
+              <li class="line-border mob">
+                <a href="javascript:(0)">문의하기</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -328,6 +357,8 @@
         </div>
       </section>
     </div>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>

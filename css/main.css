@@ -95,7 +95,7 @@
 
 .main_visual .intro_title {
   height: 105px;
-  margin-bottom: 29px;
+  margin-bottom: 20px;
 }
 
 .intro_title > svg.pc_ver {
@@ -123,6 +123,13 @@
 
 .intro_title .intro_title {
   position: relative;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1025px) {
+  .intro_title {
+    font-size: 5vw;
+    margin-bottom: 1.0417vw;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -211,8 +218,8 @@
     font-size: 20px;
   }
 
-  .line-border{
-    border-bottom: 1px solid #CCCCCC;
+  .line-border {
+    border-bottom: 1px solid #cccccc;
   }
 
   .ghost-list ul.mobile-list li.proBtn {
@@ -229,12 +236,12 @@
     height: 0;
     transition: all 0.5s;
   }
-  
+
   .ghost-list ul.mobile-list .proBtn.click .project-list {
     width: 100%;
     height: 200px;
   }
-  
+
   .ghost-list ul.mobile-list li .project-list li {
     font-weight: 300;
     font-size: 15px;
@@ -299,6 +306,7 @@
     padding: 120px 0;
   }
 
+  .main_visual .intro_title,
   .intro_title > svg.tab_ver {
     height: 110px;
   }
