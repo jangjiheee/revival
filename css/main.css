@@ -119,23 +119,65 @@
   animation-delay: 3s;
   animation-fill-mode: forwards;
 }
-
-.intro_title .stroke_white > text:before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background: #000;
-}
 @keyframes underLining {
   0% {
     width: 0%;
   }
   100% {
-    width: 910px;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1680px) {
+  .intro_title .underline {
+    left: 7.2vw;
+  }
+  @keyframes underLining {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 60%;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .intro_title .underline {
+    left: 3.5vw;
+  }
+  @keyframes underLining {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 66%;
+    }
+  }
+}
+@media screen and (max-width: 1208px) {
+  .intro_title .underline {
+    left: 3vw;
+  }
+  @keyframes underLining {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .intro_title .underline {
+    left: 19vw;
+    top: 76px;
+  }
+  @keyframes underLining {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 60%;
+    }
   }
 }
 
