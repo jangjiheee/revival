@@ -110,11 +110,33 @@
 .intro_title .underline {
   position: absolute;
   bottom: 0;
-  left: 123px;
-  width: 910px;
+  left: 6.5775vw;
   height: 13px;
   background: #3cb371;
   z-index: -1;
+  animation-name: underLining;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.intro_title .stroke_white > text:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: #000;
+}
+@keyframes underLining {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 910px;
+  }
 }
 
 .intro_title > svg.tab_ver {
