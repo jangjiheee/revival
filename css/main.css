@@ -1,11 +1,11 @@
-header {
+.header {
   height: 60px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
 }
-nav {
+.nav {
   padding-right: 257px;
 }
-header .inner_container {
+.header .inner_container {
   display: flex;
   justify-content: space-between;
   height: 60px;
@@ -126,7 +126,7 @@ header .inner_container {
 }
 
 @media screen and (max-width: 1024px) {
-  nav {
+  .nav {
     display: none;
     padding-right: 0;
   }
@@ -140,11 +140,11 @@ header .inner_container {
     display: block;
   }
 
-  input[type="checkbox"] {
+  #ghostMenu {
     display: none;
   }
 
-  input[type="checkbox"] + label {
+  #ghostMenu + label {
     display: block;
     width: 16px;
     height: 11px;
@@ -152,7 +152,7 @@ header .inner_container {
     position: relative;
   }
 
-  input[type="checkbox"] + label > span {
+  #ghostMenu + label > span {
     display: block;
     height: 1px;
     width: 100%;
@@ -161,29 +161,29 @@ header .inner_container {
     transition: 0.3s;
   }
 
-  input[type="checkbox"] + label > span:first-child {
+  #ghostMenu + label > span:first-child {
     top: 0;
   }
 
-  input[type="checkbox"] + label > span:nth-child(2) {
+  #ghostMenu + label > span:nth-child(2) {
     top: 50%;
     transform: translateY(-50%);
   }
 
-  input[type="checkbox"] + label > span:last-child {
+  #ghostMenu + label > span:last-child {
     bottom: 0;
   }
 
-  input[type="checkbox"]:checked + label > span:first-child {
+  #ghostMenu:checked + label > span:first-child {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
   }
 
-  input[type="checkbox"]:checked + label > span:nth-child(2) {
+  #ghostMenu:checked + label > span:nth-child(2) {
     display: none;
   }
 
-  input[type="checkbox"]:checked + label > span:last-child {
+  #ghostMenu:checked + label > span:last-child {
     bottom: 50%;
     transform: translateY(50%) rotate(-45deg);
   }
