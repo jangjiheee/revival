@@ -173,44 +173,37 @@ li {
   z-index: -1;
 }
 
+/* @keyframes subLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+} */
+
 .line{
-  width: 180px;
+  width: 100%;
+  max-width: 180px;
   margin: 0 auto;
   border-top: 1px solid #000;
   margin-top: 60px;
+  animation-name: subLine;
+  animation-duration: 1.2s;
+  animation-delay: 0.9s;
+  /* animation-fill-mode: forwards; */
 }
 
 @media screen and (max-width: 1024px) {
   .line{
-    width: 100px;
+    max-width: 100px;
     margin-top: 50px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .line{
-    width: 80px;
-    margin-top: 30px;
-  }
-}
-
-.line{
-  width: 180px;
-  margin: 0 auto;
-  border-top: 1px solid #000;
-  margin-top: 60px;
-}
-
-@media screen and (max-width: 1024px) {
-  .line{
-    width: 100px;
-    margin-top: 50px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .line{
-    width: 80px;
+    max-width: 80px;
     margin-top: 30px;
   }
 }
