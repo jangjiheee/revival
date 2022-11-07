@@ -119,6 +119,10 @@
   animation-delay: 3s;
   animation-fill-mode: forwards;
 }
+.intro_title .underline_tablet {
+  display: none;
+}
+
 @keyframes underLining {
   0% {
     width: 0%;
@@ -137,6 +141,19 @@
     }
     100% {
       width: 60%;
+    }
+  }
+}
+@media screen and (max-width: 1530px) {
+  .intro_title .underline {
+    left: 6.2vw;
+  }
+  @keyframes underLining {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 62%;
     }
   }
 }
@@ -162,31 +179,9 @@
       width: 0%;
     }
     100% {
-      width: 80%;
+      width: 67%;
     }
   }
-}
-@media screen and (max-width: 1024px) {
-  .intro_title .underline {
-    left: 19vw;
-    top: 76px;
-  }
-  @keyframes underLining {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 60%;
-    }
-  }
-}
-
-.intro_title > svg.tab_ver {
-  display: none;
-}
-
-.intro_title .intro_title {
-  position: relative;
 }
 
 @media screen and (max-width: 1400px) and (min-width: 1025px) {
@@ -351,6 +346,44 @@
   .main_visual .intro_title {
     height: 180px;
   }
+  .intro_title .underline {
+    left: 19vw;
+    top: 76px;
+  }
+  .intro_title .underline {
+    left: 19vw;
+    top: 76px;
+    height: 10px;
+  }
+  .intro_title .underline_tablet {
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    left: 24.5775vw;
+    height: 10px;
+    background: #3cb371;
+    z-index: -1;
+    animation-name: underLiningTab;
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes underLining {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 60%;
+    }
+  }
+  @keyframes underLiningTab {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 16%;
+    }
+  }
 
   .intro_title > svg.pc_ver {
     display: none;
@@ -364,6 +397,33 @@
     fill: #021d25;
   }
 }
+@media screen and (max-width: 860px) {
+  .intro_title .underline {
+    left: 12vw;
+    top: 76px;
+    height: 10px;
+  }
+  .intro_title .underline_tablet {
+    left: 18.5775vw;
+    height: 10px;
+  }
+  @keyframes underLining {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+  @keyframes underLiningTab {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 20%;
+    }
+  }
+}
 
 @media screen and (max-width: 767px) {
   .main_visual {
@@ -373,5 +433,9 @@
   .main_visual .intro_title,
   .intro_title > svg.tab_ver {
     height: 110px;
+  }
+  .intro_title .underline,
+  .intro_title .underline_tablet {
+    display: none;
   }
 }

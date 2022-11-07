@@ -40,6 +40,34 @@ li {
 .White {
   color: #fff;
 }
+@media screen and (min-width: 1025px) {
+  .pc_only {
+    display: block;
+  }
+  .tab_only,
+  .mo_only {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .pc_only,
+  .mo_only {
+    display: none;
+  }
+  .tab_only {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pc_only,
+  .tab_only {
+    display: none;
+  }
+  .mo_only {
+    display: block;
+  }
+}
 
 @media screen and (min-width: 1601px) {
   .inner_container {
@@ -55,6 +83,10 @@ li {
 }
 /* -767 패딩설정 */
 @media screen and (max-width: 767px) {
+  .pc_only,
+  .tab_only {
+    display: none;
+  }
   .inner_container {
     padding: 0 20px;
   }
@@ -106,7 +138,7 @@ li {
   }
 
   .title {
-    font-size: 24px; 
+    font-size: 24px;
   }
 
   .desc {
