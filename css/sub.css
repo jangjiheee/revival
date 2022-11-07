@@ -257,17 +257,19 @@
   margin-top: 200px;
 }
 
+.tabs{
+  display: flex;
+}
+
 .tabs li{
 	background:#D9D9D9;
 	color: #222;
-	display: inline-block;
 	cursor: pointer;
   text-align: center;
   width: 237px;
   height: 80px;
   line-height: 80px;
-  margin-left: -4px;
-  border: 1px solid transparent;
+  border: 1px solid #D9D9D9;
 }
 
 .tabs li.current{
@@ -281,7 +283,6 @@
 	padding: 15px;
   height: 1697px;
   margin-bottom: 646px;
-  margin-left: -4px;
   border: 1px solid #000;
 }
 
