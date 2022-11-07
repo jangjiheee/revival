@@ -1,8 +1,8 @@
-window.onload = function() {
+window.onload = function () {
   var changeI = document.querySelector(".project_flex");
   var hiddenL = document.querySelector(".project-list");
   var paBtn = document.querySelector(".proBtn");
-  
+
   changeI.addEventListener("click", function () {
     paBtn.classList.toggle("click");
   })
@@ -10,7 +10,7 @@ window.onload = function() {
   const ghostBtn = document.getElementById("ghostMenu");
   const menuList = document.querySelector(".ghost-list");
   const mob = document.querySelectorAll(".mob");
-  
+
   let subToggle = true;
   ghostBtn.addEventListener("click", function () {
     if (subToggle) {
