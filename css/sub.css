@@ -32,13 +32,6 @@
   line-height: 88px;
 }
 
-.main .text_box .line{
-  width: 180px;
-  margin: 0 auto;
-  border-top: 1px solid #000;
-  margin-top: 54px;
-}
-
 .banner{
   max-width: 750px;
   margin: 0 auto;
@@ -129,11 +122,6 @@
     line-height: 68px;
   }
 
-  .main .text_box .line{
-    width: 100px;
-    margin-top: 60px;
-  }
-
   .banner{
     max-width: 704px;
     margin-top: 96px; 
@@ -203,11 +191,6 @@
   .banner{
     max-width: 100%;
     margin-top: 50px; 
-  }
-
-  .main .text_box .line{
-    width: 80px;
-    margin-top: 50px;
   }
 
   .green_box{
