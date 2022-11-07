@@ -122,6 +122,9 @@
 .intro_title .underline_tablet {
   display: none;
 }
+.intro_title > svg.tab_ver {
+  display: none;
+}
 
 @keyframes underLining {
   0% {
@@ -424,7 +427,30 @@
     }
   }
 }
-
+@media screen and (max-width: 800px) {
+  .intro_title .underline {
+    left: 9vw;
+  }
+  .intro_title .underline_tablet {
+    left: 16.5775vw;
+  }
+  @keyframes underLining {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 82%;
+    }
+  }
+  @keyframes underLiningTab {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 21%;
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   .main_visual {
     padding: 120px 0;
