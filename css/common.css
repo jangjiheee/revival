@@ -147,29 +147,50 @@ li {
 }
 
 /* underline */
-.tit_underline {
-  position: relative;
-}
-.tit_underline:before {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: 7px;
-  left: 0;
-  height: 12px;
-  background: #3cb371;
-  animation-name: titUnderline;
-  animation-duration: 1s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  z-index: -1;
-}
 @keyframes titUnderline {
   0% {
     width: 0%;
   }
   100% {
     width: 100%;
+  }
+}
+
+.tit_underline {
+  position: relative;
+}
+.tit_underline.active:before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  height: 12px;
+  background: #3cb371;
+  animation-name: titUnderline;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+
+.line{
+  width: 180px;
+  margin: 0 auto;
+  border-top: 1px solid #000;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .line{
+    width: 100px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .line{
+    width: 80px;
+    margin-top: 30px;
   }
 }
 

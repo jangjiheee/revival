@@ -367,8 +367,8 @@
     background: #3cb371;
     z-index: -1;
     animation-name: underLiningTab;
-    animation-duration: 1s;
-    animation-delay: 5s;
+    animation-duration: 2s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
   }
   @keyframes underLining {
