@@ -493,15 +493,48 @@
   font-weight: 300;
   color: #fff;
 }
+@keyframes gradientCycle {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
 .img_area {
   max-width: 910px;
   width: 100%;
   margin: 0 auto;
+  background: linear-gradient(
+    -90deg,
+    #007f5c,
+    #00ac77,
+    #00d190,
+    #00bdfb,
+    #004ffb,
+    #002095,
+    #002095,
+    #004ffb,
+    #00bdfb,
+    #00d190,
+    #00ac77,
+    #007f5c
+  );
+  background-size: 200% 200%;
+  animation-name: gradientCycle;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  clip-path: url(#clippath);
 }
 .img_area img {
   width: 100%;
 }
 
-@media screen and (max-width: 1024px) {
-}
 /* recycle END */
