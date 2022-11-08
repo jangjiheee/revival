@@ -465,3 +465,43 @@
     display: none;
   }
 }
+
+/* recycle */
+
+.recycle {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  background: #021d25;
+}
+.recycle .recycle_wrap {
+  margin: 120px 0;
+}
+.recycle .text_area {
+  text-align: center;
+}
+.recycle .title {
+  margin-bottom: 25px;
+  font-weight: 500;
+  color: #fff;
+}
+.recycle .title .tit_underline {
+  z-index: 0;
+}
+.recycle .desc {
+  margin-bottom: 90px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #fff;
+}
+.img_area {
+  max-width: 910px;
+  width: 100%;
+  margin: 0 auto;
+}
+.img_area img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+}
+/* recycle END */

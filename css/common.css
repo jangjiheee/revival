@@ -162,7 +162,7 @@ li {
 .tit_underline.active:before {
   content: "";
   position: absolute;
-  bottom: 7px;
+  bottom: 5px;
   left: 0;
   height: 12px;
   background: #3cb371;
@@ -173,18 +173,28 @@ li {
   z-index: -1;
 }
 
-/* @keyframes subLine {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-} */
+.line {
+  width: 180px;
+  margin: 0 auto;
+  border-top: 1px solid #000;
+  margin-top: 60px;
+}
 
-.line{
-  width: 100%;
-  max-width: 180px;
+@media screen and (max-width: 1024px) {
+  .line {
+    width: 100px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .line {
+    width: 80px;
+    margin-top: 30px;
+  }
+}
+*/ .line {
+  width: 180px;
   margin: 0 auto;
   border-top: 1px solid #000;
   margin-top: 60px;
@@ -195,15 +205,15 @@ li {
 }
 
 @media screen and (max-width: 1024px) {
-  .line{
-    max-width: 100px;
+  .line {
+    width: 100px;
     margin-top: 50px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .line{
-    max-width: 80px;
+  .line {
+    width: 80px;
     margin-top: 30px;
   }
 }
