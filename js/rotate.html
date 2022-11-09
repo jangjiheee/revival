@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    #text{
+      height: 160px;
+      font-size: 20px;
+      animation: animate 10s linear infinite;
+    }
+    
+    span{
+      position: absolute;
+      transform-origin: 0 140px;
+    }
+
+    @keyframes animate{
+      from{
+        transform: rotate(0deg);
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="text">please join the revival plastic project</h1>
+</body>
+
+<script>
+  const text = document.getElementById('text');
+  text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>");
+  const ele = document.querySelectorAll('span');
+  for(var i = 1;i<ele.length;i++){
+    ele[i].style.transform="rotate("+i*10.5+"deg)";
+  }
+</script>
+
+</html>
