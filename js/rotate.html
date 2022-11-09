@@ -12,15 +12,18 @@
       place-items: center;
     }
 
-    #text{
+    .rotate_text{
       height: 250px;
       font-size: 20px;
       animation: animate 10s linear infinite;
+      position: absolute;
+      left: 70%;
+      bottom: -25%;
     }
     
-    span{
+    .rotate_text > span{
       position: absolute;
-      transform-origin: 0 140px;
+      transform-origin: 0 120px;
     }
 
     @keyframes animate{
@@ -34,13 +37,13 @@
   </style>
 </head>
 <body>
-  <h1 id="text">please join the revival plastic project</h1>
+  <h1 class="rotate_text">please join the revival plastic project</h1>
 </body>
 
 <script>
-  const text = document.getElementById('text');
+  const text = document.querySelector('.rotate_text');
   text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>");
-  const ele = document.querySelectorAll('span');
+  const ele = document.querySelectorAll('.rotate_text > span');
   for(var i = 1;i<ele.length;i++){
     ele[i].style.transform="rotate("+i*10.5+"deg)";
   }
