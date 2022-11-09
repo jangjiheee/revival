@@ -20,7 +20,6 @@
 
     .swiper-fade .swiper-slide.swiper-slide-active {
       opacity: 1 !important;
-
     }
   </style>
 </head>
@@ -42,9 +41,11 @@
                 </a>
               </div>
               <div class="pro_txt">
-                <p>
-                  test1
-                </p>
+                <h3 class="pro_title">
+                  REVIVAL PLASTIC PROJECT I
+                </h3>
+                <p class="pro_subtitle">&lt;친환경 플라스틱 수직정원&gt;</p>
+                <p class="pro_intro">버려진 일회용기 1,000개를 재활용한 친환경 수직정원을 소개합니다.</p>
                 <a href="javascript:(0)">more</a>
               </div>
             </div>
@@ -52,7 +53,7 @@
             <div class="swiper-slide">
               <div class="img-box">
                 <a href="javascript:(0)">
-                  <img src="./image/slide2.jpg" alt="slide1" />
+                  <img src="./image/slide2.jpg" alt="slide2" />
                 </a>
               </div>
               <div class="pro_txt">
@@ -66,7 +67,7 @@
             <div class="swiper-slide">
               <div class="img-box">
                 <a href="javascript:(0)">
-                  <img src="./image/slide3.jpg" alt="slide1" />
+                  <img src="./image/slide3.jpg" alt="slide3" />
                 </a>
               </div>
               <div class="pro_txt">
@@ -137,6 +138,7 @@
     var swiper = new Swiper('.swiper-container', {
       speed: 500,
       effect: 'fade',
+      loop: 'true',
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
