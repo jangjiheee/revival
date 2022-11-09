@@ -10,9 +10,9 @@
   justify-content: space-between;
   height: 60px;
 }
-.logo {
-  display: flex;
-  align-items: center;
+.logo_text {
+  font-size: 24px;
+  line-height: 60px;
 }
 .depth1 {
   display: flex;
@@ -452,17 +452,33 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .logo_text {
+    font-size: 20px;
+  }
   .main_visual {
+    height: calc(100vh - 60px);
     padding: 120px 0;
   }
-
+  .main_visual .inner_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main_visual .intro_title {
+    font-size: 30px;
+  }
   .main_visual .intro_title,
   .intro_title > svg.tab_ver {
-    height: 110px;
+    height: 92px;
   }
   .intro_title .underline,
   .intro_title .underline_tablet {
     display: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  .main_visual .intro_title {
+    font-size: 26px;
   }
 }
 

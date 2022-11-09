@@ -11,16 +11,16 @@
   padding: 0 32px;
 }
 
-.pc_only{
-    display: block;
-  }
+.pc_only {
+  display: block;
+}
 
-.tab_only{
+.tab_only {
   display: none;
-}  
+}
 
-.new_only{
-    display: none;
+.new_only {
+  display: none;
 }
 
 .main .text_box {
@@ -28,30 +28,31 @@
   text-align: center;
 }
 
-.main .text_box .intro_title{
+.main .text_box .intro_title {
   line-height: 88px;
 }
 
-.banner{
+.banner {
   max-width: 750px;
   margin: 0 auto;
   margin-top: 200px;
   position: relative;
   z-index: 10;
+  overflow: hidden;
 }
 
-.banner img{
+.banner img {
   width: 100%;
 }
 
-.green_box{
+.green_box {
   width: 100%;
   height: 530px;
-  background-color: #3AAA35;
+  background-color: #3aaa35;
   margin-top: -244px;
 }
 
-.green_box .green_txt{
+.green_box .green_txt {
   color: #fff;
   padding-top: 286px;
   text-align: center;
@@ -60,59 +61,60 @@
 
 /* 두번째섹션 */
 
-.introduction_box{
+.introduction_box {
   display: flex;
   justify-content: space-between;
   margin-top: 200px;
 }
 
-.introduction_tit_box{
+.introduction_tit_box {
   width: 42%;
 }
 
-.introduction_tit_box .introduction_tit{
+.introduction_tit_box .introduction_tit {
   font-size: 72px;
   font-weight: bold;
-  color: #021D25;
+  color: #021d25;
   line-height: 88px;
 }
 
-.introduction_txt_box{
-  width: 58%;                  
+.introduction_txt_box {
+  width: 58%;
   line-height: 35px;
   color: #222222;
   font-size: 24px;
 }
 
-.introduction_txt_box .introduction_txt2, .introduction_txt_box .introduction_txt3{
+.introduction_txt_box .introduction_txt2,
+.introduction_txt_box .introduction_txt3 {
   margin-top: 30px;
 }
 
-.introduction_txt_box .introduction_txt4{
+.introduction_txt_box .introduction_txt4 {
   margin-top: 108px;
   padding-bottom: 300px;
   font-weight: bold;
   text-align: right;
 }
 
-@media all and (min-width: 1025px) and (max-width: 1400px){
-  .new_only{
+@media all and (min-width: 1025px) and (max-width: 1400px) {
+  .new_only {
     display: block;
   }
 }
 
-@media screen and (max-width: 1024px){
-  .pc_only{
+@media screen and (max-width: 1024px) {
+  .pc_only {
     display: none;
   }
 
-  .tab_only{
+  .tab_only {
     display: block;
-  } 
+  }
 
-  .new_only{
+  .new_only {
     display: none;
-  } 
+  }
 
   .main .text_box {
     margin-top: 120px;
@@ -122,44 +124,44 @@
     line-height: 68px;
   }
 
-  .banner{
+  .banner {
     max-width: 704px;
-    margin-top: 96px; 
+    margin-top: 96px;
   }
 
-  .green_box{
+  .green_box {
     height: 377px;
     margin-top: -188px;
-}
+  }
 
-  .green_box .green_txt{
+  .green_box .green_txt {
     font-size: 32px;
     line-height: 36px;
     padding-top: 228px;
   }
 
-  .introduction_box{
+  .introduction_box {
     display: block;
-    margin-top: 100px;  
+    margin-top: 100px;
   }
 
-  .introduction_tit_box{
+  .introduction_tit_box {
     width: 100%;
   }
 
-  .introduction_tit_box .introduction_tit{
+  .introduction_tit_box .introduction_tit {
     font-size: 60px;
     line-height: 68px;
   }
 
-  .introduction_txt_box{                
+  .introduction_txt_box {
     width: 100%;
     line-height: 24px;
     margin-top: 40px;
     font-size: 20px;
   }
 
-.introduction_txt_box .introduction_txt4{
+  .introduction_txt_box .introduction_txt4 {
     margin-top: 70px;
     padding-bottom: 120px;
     text-align: left;
@@ -167,16 +169,16 @@
   }
 }
 
-@media screen and (max-width: 767px){
-  .pc_only{
+@media screen and (max-width: 767px) {
+  .pc_only {
     display: none;
   }
 
-  .tab_only{
+  .tab_only {
     display: none;
-  } 
+  }
 
-  .new_only{
+  .new_only {
     display: none;
   }
 
@@ -188,39 +190,39 @@
     line-height: 46px;
   }
 
-  .banner{
+  .banner {
     max-width: 100%;
-    margin-top: 50px; 
+    margin-top: 50px;
   }
 
-  .green_box{
-  height: inherit;
-  padding: 40px 0;
-  margin-top: -5px;
+  .green_box {
+    height: inherit;
+    padding: 40px 0;
+    margin-top: -5px;
   }
 
-  .green_box .green_txt{
+  .green_box .green_txt {
     font-size: 16px;
     line-height: 24px;
     padding-top: 0px;
     margin-top: 0px;
   }
 
-  .introduction_box{
-    margin-top: 50px;  
+  .introduction_box {
+    margin-top: 50px;
   }
 
-  .introduction_tit_box .introduction_tit{
+  .introduction_tit_box .introduction_tit {
     font-size: 24px;
     line-height: 32px;
   }
 
-  .introduction_txt_box{
+  .introduction_txt_box {
     margin-top: 20px;
     font-size: 16px;
   }
 
-  .introduction_txt_box .introduction_txt4{
+  .introduction_txt_box .introduction_txt4 {
     margin-top: 50px;
     padding-bottom: 80px;
     font-size: 18px;
@@ -231,77 +233,76 @@
 
 /* /브랜드시작 */
 
-
-.text_box .line{
+.text_box .line {
   margin-top: 58px;
 }
 
-.tab_menu{
+.tab_menu {
   margin-top: 200px;
 }
 
-.tabs{
+.tabs {
   display: flex;
 }
 
-.tabs li{
-	background:#D9D9D9;
-	color: #222;
-	cursor: pointer;
+.tabs li {
+  background: #d9d9d9;
+  color: #222;
+  cursor: pointer;
   text-align: center;
   width: 237px;
   height: 80px;
   line-height: 80px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
 }
 
-.tabs li.current{
-	background: #fff;
-	color: #222;
+.tabs li.current {
+  background: #fff;
+  color: #222;
   border: 1px solid #000;
 }
 
-.tab-content{
-	display: none;
-	padding: 15px;
+.tab-content {
+  display: none;
+  padding: 15px;
   height: 1697px;
   margin-bottom: 646px;
   border: 1px solid #000;
 }
 
-.tab-content.current{
-	display: inherit;
+.tab-content.current {
+  display: inherit;
 }
 
-@media screen and (max-width: 1024px){
-  .tab_menu{
-  margin-top: 96px;
+@media screen and (max-width: 1024px) {
+  .tab_menu {
+    margin-top: 96px;
   }
 
-  .tabs li{
-  width: 137px;
-  height: 60px;
-  line-height: 60px;
+  .tabs li {
+    width: 137px;
+    height: 60px;
+    line-height: 60px;
   }
 
-  .tab-content{
+  .tab-content {
     height: 1297px;
     margin-bottom: 120px;
   }
 }
 
-@media screen and (max-width: 767px){
-  .tab_menu{
-  margin-top: 50px;
+@media screen and (max-width: 767px) {
+  .tab_menu {
+    margin-top: 50px;
   }
 
-  .tabs li{
-  width: 75px;
-  height: 40px;
-  line-height: 40px;
+  .tabs li {
+    width: 75px;
+    height: 40px;
+    line-height: 40px;
   }
 
-  .tab-content{
+  .tab-content {
     height: 997px;
     margin-bottom: 80px;
   }
@@ -311,56 +312,56 @@
 
 /* /스토리시작 */
 
-.story_list{
+.story_list {
   margin-top: 52px;
 }
 
-.board{
+.board {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.board li{
+.board li {
   width: calc(33.3% - 20px);
 }
 
-.board li img{
+.board li img {
   width: 100%;
   margin-top: 48px;
 }
 
-.board li .story_tit{
+.board li .story_tit {
   margin-top: 27px;
   color: #222222;
   font-size: 21px;
 }
 
-.board li .date{
+.board li .date {
   font-size: 16px;
-  color: #7B7B7B;
+  color: #7b7b7b;
   margin-top: 10px;
 }
 
-.page-wrap{
+.page-wrap {
   margin-top: 120px;
   margin-bottom: 180px;
 }
 
-.contents{
+.contents {
   display: flex;
   justify-content: center;
   gap: 55px;
 }
 
-.contents li{
+.contents li {
   font-size: 16px;
 }
 
-.contents img{
+.contents img {
   cursor: pointer;
 }
 
-.button.active{
-  color: #3AAA35;
+.button.active {
+  color: #3aaa35;
 }
