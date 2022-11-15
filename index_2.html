@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <title>Document</title>
+  <style>
+    .recycle .img_area {
+      background: none;
+      max-width: 1200px;
+      position: relative;
+    }
+
+    .recycle .img_area>div {
+      position: absolute;
+      display: flex;
+    }
+
+    .recycle .img_area .recycle_arrows_01 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .recycle .img_area .recycle_arrows_01 span svg {
+      animation: arrows 1.5s linear infinite;
+    }
+
+    .recycle .img_area .recycle_arrows_01 .arrows_02 svg {
+      animation-delay: 0.05s;
+    }
+
+    .recycle .img_area .recycle_arrows_01 .arrows_03 svg {
+      animation-delay: 0.1s;
+    }
+
+    .recycle .img_area .recycle_arrows_02 {
+      bottom: 16%;
+      right: 14%;
+      transform: rotate(-25deg);
+    }
+
+    .recycle .img_area .recycle_arrows_02 span svg,
+    .recycle .img_area .recycle_arrows_04 span svg {
+      animation: arrows 1.5s linear infinite;
+      animation-delay: 0.5s;
+    }
+
+    .recycle .img_area .recycle_arrows_02 .arrows_02 svg,
+    .recycle .img_area .recycle_arrows_04 .arrows_02 svg {
+      animation-delay: 0.55s;
+    }
+
+    .recycle .img_area .recycle_arrows_02 .arrows_03 svg,
+    .recycle .img_area .recycle_arrows_04 .arrows_03 svg {
+      animation-delay: 0.6s;
+    }
+
+    .recycle .img_area .recycle_arrows_03 {
+      top: 13%;
+      right: 16%;
+      transform: rotate(-150deg);
+    }
+
+    .recycle .img_area .recycle_arrows_03 span svg,
+    .recycle .img_area .recycle_arrows_05 span svg {
+      animation: arrows 1.5s linear infinite;
+      animation-delay: 0.75s;
+    }
+
+    .recycle .img_area .recycle_arrows_03 .arrows_02 svg,
+    .recycle .img_area .recycle_arrows_05 .arrows_02 svg {
+      animation-delay: 0.8s;
+    }
+
+    .recycle .img_area .recycle_arrows_03 .arrows_03 svg,
+    .recycle .img_area .recycle_arrows_05 .arrows_03 svg {
+      animation-delay: 0.85s;
+    }
+
+    .recycle .img_area .recycle_arrows_04 {
+      bottom: 16%;
+      left: 14%;
+      transform: rotate(-150deg);
+    }
+
+    .recycle .img_area .recycle_arrows_05 {
+      top: 14%;
+      left: 13%;
+      transform: rotate(-28deg);
+    }
+
+
+    @keyframes arrows {
+      0% {
+        opacity: 0;
+        transform: translate(-12px, 0);
+      }
+
+      10%,
+      90% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(12px, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="inner_container">
+        <div class="logo">
+          <a href="https://plasticproject.co.kr/" class="logo_text">
+            부활피앤피
+          </a>
+        </div>
+        <nav class="nav">
+          <ul class="depth1">
+            <li><a href="/introduction/">회사소개</a></li>
+            <li class="menu_list">
+              <a href="javascript:;">프로젝트</a>
+              <ul class="depth2">
+                <li><a href="javascript:;" onclick="alert('준비중입니다')">프로젝트1</a></li>
+                <li><a href="javascript:;" onclick="alert('준비중입니다')">프로젝트2</a></li>
+                <li><a href="javascript:;" onclick="alert('준비중입니다')">프로젝트3</a></li>
+                <li><a href="javascript:;" onclick="alert('준비중입니다')">프로젝트4</a></li>
+              </ul>
+            </li>
+            <li><a href="/story/">이야기</a></li>
+            <li><a href="/inquiry/">문의하기</a></li>
+          </ul>
+        </nav>
+        <div class="ghost">
+          <div class="ghost-menu">
+            <input type="checkbox" id="ghostMenu" />
+            <label for="ghostMenu" class="menuLine">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="ghost-list">
+        <div class="inner_container">
+          <ul class="mobile-list">
+            <li class="line-border mob">
+              <a href="/introduction/">회사소개</a>
+            </li>
+            <li class="line-border proBtn">
+              <a href="javascript:(0)">
+                <div class="project_flex">
+                  <p>프로젝트</p>
+                  <div class="flex_img">
+                    <img class="changeBtn" src="./image/arrow_up.png" />
+                  </div>
+                </div>
+              </a>
+              <ul class="project-list">
+                <li class="mob">
+                  <a href="javascript:(0)" onclick="alert('준비중입니다')">프로젝트1</a>
+                </li>
+                <li class="mob">
+                  <a href="javascript:(0)" onclick="alert('준비중입니다')">프로젝트2</a>
+                </li>
+                <li class="mob">
+                  <a href="javascript:(0)" onclick="alert('준비중입니다')">프로젝트3</a>
+                </li>
+                <li class="mob">
+                  <a href="javascript:(0)" onclick="alert('준비중입니다')">프로젝트4</a>
+                </li>
+              </ul>
+            </li>
+            <li class="line-border mob">
+              <a href="/story/">이야기</a>
+            </li>
+            <li class="line-border mob">
+              <a href="/inquiry/">문의하기</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- <section class="main_visual">
+      <div class="inner_container">
+        <div class="text_area">
+          <h1 class="intro_title">
+            <svg class="stroke stroke_white pc_ver" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <text x="50%" y="50%" dy="40px" lengthAdjust="spacingAndGlyphs" text-anchor="middle">
+                플라스틱의 지속 가능한 선순환을 꿈꿉니다.
+              </text>
+              <text x="50%" y="50%" dy="40px" lengthAdjust="spacingAndGlyphs" text-anchor="middle">
+                플라스틱의 지속 가능한 선순환을 꿈꿉니다.
+              </text>
+            </svg>
+            <svg class="stroke stroke_white tab_ver" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <text x="50%" y="45%" dy="0px" lengthAdjust="spacingAndGlyphs" text-anchor="middle">
+                플라스틱의 지속 가능한
+              </text>
+              <text x="50%" y="90%" dy="0px" lengthAdjust="spacingAndGlyphs" text-anchor="middle">
+                선순환을 꿈꿉니다.
+              </text>
+            </svg>
+            <span class="underline underLining"></span>
+            <span class="underline_tablet underLiningTab"></span>
+          </h1>
+          <p class="desc">
+            글을 잘 알고 활용하는 능력을 의미하는 리터러시(Literacy)와 같이
+            <br class="tab_only" />
+            플라스틱을 잘 이해하고 올바르게 사용
+          </p>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="recycle">
+      <div class="recycle_wrap">
+        <div class="inner_container">
+          <div class="text_area">
+            <h2 class="title">
+              <span class="tit_underline recycle_underline">
+                순환적 플라스틱
+              </span>
+            </h2>
+            <p class="desc">
+              더불어 함께 발전하는 기업시민 경영이념을 바탕으로
+              <br class="tab_only" />
+              건전하고 책임있는 ESG경영을 위해 노력하고 있습니다.
+            </p>
+          </div>
+          <div class="img_area">
+            <!-- <svg class="recycle_img" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <clipPath id="clippath">
+                <path d="M892.764 140.466C881.564 112.692 864.94 87.4663 843.879 66.286V66.286C823.23 45.4477 798.704 28.9157 771.705 17.6359C744.706 6.35617 715.763 0.550093 686.535 0.550093C657.306 0.550093 628.363 6.35617 601.364 17.6359C574.365 28.9157 549.839 45.4477 529.19 66.286L454.928 141.111L380.492 66.2512C359.854 45.3065 335.314 28.6725 308.28 17.3035C281.245 5.93459 252.248 0.0544514 222.953 0.000376392C193.657 -0.0536986 164.639 5.71933 137.563 16.9884C110.488 28.2574 85.8873 44.8007 65.1732 65.6691C44.4592 86.5376 28.0392 111.321 16.8553 138.596C5.67133 165.872 -0.0564837 195.104 0.000419854 224.614C0.0573234 254.125 5.89783 283.334 17.1869 310.566C28.4759 337.797 44.9913 362.516 65.7857 383.303V383.303C86.4465 404.131 110.979 420.653 137.982 431.925C164.984 443.198 193.927 449 223.156 449C252.386 449 281.328 443.198 308.331 431.925C335.333 420.653 359.866 404.131 380.527 383.303L454.928 308.513L529.207 383.338C565.545 419.835 613.284 442.565 664.346 447.682C715.408 452.8 766.657 439.991 809.421 411.422C852.186 382.854 883.839 340.28 899.027 290.905C914.214 241.531 912.001 188.387 892.764 140.466V140.466ZM297.401 299.637C287.678 309.612 276.09 317.547 263.305 322.985C250.521 328.423 236.793 331.255 222.916 331.319C209.038 331.382 195.286 328.675 182.453 323.355C169.619 318.034 157.96 310.204 148.148 300.319C138.335 290.433 130.564 278.687 125.284 265.759C120.003 252.831 117.318 238.978 117.382 224.998C117.447 211.019 120.26 197.191 125.66 184.313C131.06 171.435 138.939 159.763 148.842 149.97C153.883 144.886 159.422 140.328 165.373 136.368C171.104 132.552 177.199 129.322 183.567 126.725C202.705 118.875 223.718 116.893 243.969 121.029C264.221 125.164 282.809 135.232 297.401 149.97L371.837 224.795L297.401 299.637ZM783.829 264.657C777.312 280.848 766.916 295.161 753.569 306.317C740.221 317.473 724.339 325.126 707.339 328.59C690.34 332.055 672.753 331.224 656.151 326.171C639.548 321.119 624.446 312.003 612.194 299.637L537.88 224.795L612.194 149.97C617.216 144.903 622.731 140.358 628.657 136.403C634.394 132.587 640.494 129.357 646.867 126.76C666.006 118.914 687.018 116.935 707.268 121.07C727.519 125.205 746.107 135.271 760.702 150.004C775.306 164.717 785.287 183.435 789.4 203.824C793.512 224.213 791.575 245.37 783.829 264.657Z" fill="white" />
+              </clipPath>
+            </svg> -->
+            <img src="./image/recycle_2.png" alt="순환적 플라스틱" />
+            <div class="recycle_arrows_01">
+              <span class="arrows_01">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_02">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_03">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+            </div>
+            <div class="recycle_arrows_02">
+              <span class="arrows_01">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_02">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_03">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+            </div>
+            <div class="recycle_arrows_03">
+              <span class="arrows_01">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_02">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_03">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+            </div>
+            <div class="recycle_arrows_04">
+              <span class="arrows_01">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_02">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_03">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+            </div>
+            <div class="recycle_arrows_05">
+              <span class="arrows_01">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_02">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+              <span class="arrows_03">
+                <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1042 0.777886L0.8125 0.952576L15.12 21.1511L1.50252 41.7286L11.7942 41.5539L25.3319 20.9778L11.1042 0.777886Z" fill="white" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="./js/main.js"></script>
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script> -->
+</body>
+
+</html>
