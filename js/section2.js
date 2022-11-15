@@ -11,7 +11,7 @@ window.addEventListener("scroll", function () {
   // let titText = document.querySelectorAll(".tit_underline");
   let cycleText = document.querySelector(".recycle_underline");
   let proText = document.querySelector(".project_underline");
-  let newsText = document.querySelector('.news_underline');
+  let newsText = document.querySelectorAll('.news_underline');
   let inqText = document.querySelector('.inquire_underline');
   let value = window.scrollY;
   // console.log('123');
@@ -32,11 +32,13 @@ window.addEventListener("scroll", function () {
     };
 
     //세 번째 섹션 스크롤이벤트
-    if (value > 1800) {
-      newsText.classList.add('active');
-    } else {
-      newsText.classList.remove('active');
-    };
+    for (let i = 0; i < newsText.length; i++) {
+      if (value > 1800) {
+        newsText[i].classList.add('active');
+      } else {
+        newsText[i].classList.remove('active');
+      };
+    }
 
     //네 번째 섹션 스크롤이벤트
     if (value > 2700) {
@@ -64,11 +66,13 @@ window.addEventListener("scroll", function () {
     };
 
     //세 번째 섹션 스크롤이벤트
-    if (value > 1400) {
-      newsText.classList.add('active');
-    } else {
-      newsText.classList.remove('active');
-    };
+    for (let i = 0; i < newsText.length; i++) {
+      if (value > 1400) {
+        newsText.classList.add('active');
+      } else {
+        newsText.classList.remove('active');
+      };
+    }
 
     //네 번째 섹션 스크롤이벤트
     if (value > 2700) {

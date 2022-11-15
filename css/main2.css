@@ -191,6 +191,12 @@
   margin-bottom: 22px;
 }
 
+.main_inquire .inq_flexbox .inquire_txt {
+  font-size: 18px;
+  color: #7b7b7b;
+  font-weight: 300;
+}
+
 .main_inquire .inq_flexbox .inq_plug_box {
   height: 500px;
   width: 800px;
@@ -375,9 +381,6 @@
   }
   .project_intro .project_flexbox .pro_txt a {
     font-size: 14px;
-
-  .project_intro .project_flexbox .pro_txt a {
-		font-size: 14px;
     margin-top: 15px;
   }
 

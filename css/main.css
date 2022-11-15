@@ -555,3 +555,8 @@
 }
 
 /* recycle END */
+
+.line_test.active:before {
+  animation-name: titUnderline;
+  animation-delay: 0.75s;
+}
