@@ -23,13 +23,13 @@
   justify-content: space-around;
 }
 
-.depth1>li {
+.depth1 > li {
   position: relative;
   width: 108px;
   text-align: center;
 }
 
-.depth1>li>a {
+.depth1 > li > a {
   font-size: 16px;
   line-height: 60px;
 }
@@ -50,7 +50,7 @@
   display: block;
 }
 
-.depth1 .depth2>li>a {
+.depth1 .depth2 > li > a {
   font-size: 15px;
   margin: 8px 0;
 }
@@ -114,7 +114,7 @@
   margin-bottom: 20px;
 }
 
-.intro_title>svg.pc_ver {
+.intro_title > svg.pc_ver {
   width: 100%;
   height: 105px;
   animation: stroke 3s alternate;
@@ -142,7 +142,7 @@
   display: none;
 }
 
-.intro_title>svg.tab_ver {
+.intro_title > svg.tab_ver {
   display: none;
 }
 
@@ -246,7 +246,7 @@
     display: none;
   }
 
-  #ghostMenu+label {
+  #ghostMenu + label {
     display: block;
     width: 16px;
     height: 11px;
@@ -254,7 +254,7 @@
     position: relative;
   }
 
-  #ghostMenu+label>span {
+  #ghostMenu + label > span {
     display: block;
     height: 1px;
     width: 100%;
@@ -263,29 +263,29 @@
     transition: 0.3s;
   }
 
-  #ghostMenu+label>span:first-child {
+  #ghostMenu + label > span:first-child {
     top: 0;
   }
 
-  #ghostMenu+label>span:nth-child(2) {
+  #ghostMenu + label > span:nth-child(2) {
     top: 50%;
     transform: translateY(-50%);
   }
 
-  #ghostMenu+label>span:last-child {
+  #ghostMenu + label > span:last-child {
     bottom: 0;
   }
 
-  #ghostMenu:checked+label>span:first-child {
+  #ghostMenu:checked + label > span:first-child {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
   }
 
-  #ghostMenu:checked+label>span:nth-child(2) {
+  #ghostMenu:checked + label > span:nth-child(2) {
     display: none;
   }
 
-  #ghostMenu:checked+label>span:last-child {
+  #ghostMenu:checked + label > span:last-child {
     bottom: 50%;
     transform: translateY(50%) rotate(-45deg);
   }
@@ -307,7 +307,7 @@
     width: 100%;
   }
 
-  .ghost-list ul.mobile-list>li {
+  .ghost-list ul.mobile-list > li {
     padding: 20px 0;
     font-weight: 500;
     font-size: 20px;
@@ -428,11 +428,11 @@
     }
   }
 
-  .intro_title>svg.pc_ver {
+  .intro_title > svg.pc_ver {
     display: none;
   }
 
-  .intro_title>svg.tab_ver {
+  .intro_title > svg.tab_ver {
     display: block;
     width: 100%;
     height: 180px;
@@ -525,7 +525,7 @@
   }
 
   .main_visual .intro_title,
-  .intro_title>svg.tab_ver {
+  .intro_title > svg.tab_ver {
     height: 92px;
   }
 
@@ -589,35 +589,39 @@
 }
 
 .img_area {
-  max-width: 1200px;
+  position: relative;
+  max-width: 910px;
   width: 100%;
   margin: 0 auto;
-  background: linear-gradient(-90deg,
-      #007f5c,
-      #00ac77,
-      #00d190,
-      #00bdfb,
-      #004ffb,
-      #002095,
-      #002095,
-      #004ffb,
-      #00bdfb,
-      #00d190,
-      #00ac77,
-      #007f5c);
+  background: linear-gradient(
+    -90deg,
+    #007f5c,
+    #00ac77,
+    #00d190,
+    #00bdfb,
+    #004ffb,
+    #002095,
+    #002095,
+    #004ffb,
+    #00bdfb,
+    #00d190,
+    #00ac77,
+    #007f5c
+  );
   background-size: 200% 200%;
   animation-name: gradientCycle;
   animation-iteration-count: infinite;
   animation-duration: 5s;
-  animation-direction: normal;
-  animation-fill-mode: both;
-  animation-play-state: running;
+  animation-direction: alternate-reverse;
   animation-timing-function: linear;
   clip-path: url(#clippath);
 }
-
-.img_area img {
-  width: 100%;
+.img_area .img_roop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 97%;
+  transform: translate(-50%, -50%);
 }
 
 /* recycle END */
