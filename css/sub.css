@@ -59,9 +59,144 @@
   line-height: 61px;
 }
 
+.meaning {
+  padding: 200px 0;
+}
+
+.meaning .meaning_title {
+  text-align: center;
+  color: #021D25;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.meaning .meaning_flex {
+  display: flex;
+  justify-content: space-between;
+  height: 450px;
+}
+
+.meaning .meaning_flex .mean_left {
+  width: calc(50% - 10px);
+}
+
+.meaning .meaning_flex .mean_left .mean_img_box {
+  height: 100%;
+}
+
+.meaning .meaning_flex .mean_left .mean_img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.meaning .meaning_flex .mean_right {
+  width: calc(50% - 10px);
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.meaning .meaning_flex .mean_right .right_txt_box {
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+
+.meaning .meaning_flex .mean_right .right_txt_box .weight_txt {
+  font-weight: 600;
+}
+
+.meaning .meaning_flex .mean_right .green_txt  {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.meaning .meaning_flex .mean_right .green_txt .green01 {
+  color: #00D190;
+}
+
+.meaning .meaning_flex .mean_right .green_txt .green02 {
+  color: #007F5C;
+}
+
+.meaning .meaning_flex .mean_right .green_txt .green03 {
+  color: #04933D;
+}
+
+.direction {
+  padding-bottom: 200px;
+}
+
+.direction .direction_title {
+  text-align: center;
+  color: #021D25;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.direction .direction_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.direction .direction_flex .direct_box {
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.direction .direction_flex .direct_box .direct_flex_box {
+  display: flex;
+  justify-content: space-between
+}
+
+.direction .direction_flex .direct_box .direct_flex_box .img_box {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.direction .direction_flex .direct_box .direct_flex_box .img_box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.direction .direction_flex .direct_box .direct_flex_box .box01 {
+  background-color: #98EFB0;
+}
+
+.direction .direction_flex .direct_box .direct_flex_box .box02 {
+  background-color: #A7D3BF;
+}
+
+.direction .direction_flex .direct_box .direct_flex_box .box03 {
+  background-color: #99D7A3;
+}
+
+.direction .direction_flex .direct_box .direct_flex_box .direct_txt {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 240px);
+}
+
+.direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
+  font-size: 24px;
+  font-weight: 300;
+}
+
 /* 두번째섹션 */
 
-.introduction_box {
+/* .introduction_box {
   display: flex;
   justify-content: space-between;
   margin-top: 200px;
@@ -95,15 +230,21 @@
   padding-bottom: 300px;
   font-weight: bold;
   text-align: right;
-}
+} */
 
-@media all and (min-width: 1025px) and (max-width: 1400px) {
+/* @media all and (min-width: 1025px) and (max-width: 1400px) {
   .new_only {
     display: block;
   }
+} */
+
+@media screen and (max-width:1203px) and (min-width:1024px) {
+  .pc_only {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .pc_only {
     display: none;
   }
@@ -140,7 +281,7 @@
     padding-top: 228px;
   }
 
-  .introduction_box {
+  /* .introduction_box {
     display: block;
     margin-top: 100px;
   }
@@ -166,6 +307,64 @@
     padding-bottom: 120px;
     text-align: left;
     font-size: 24px;
+  } */
+
+  .meaning {
+    padding: 100px 0;
+  }
+
+  .meaning .meaning_title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .meaning .meaning_flex {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .meaning .meaning_flex .mean_left {
+    width: 100%;
+  }
+
+  .meaning .meaning_flex .mean_left .mean_img_box img {
+    width: 100%;
+  }
+
+  .meaning .meaning_flex .mean_right {
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .meaning .meaning_flex .mean_right .right_txt_box {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .meaning .meaning_flex .mean_right .green_txt  {
+    font-size: 24px;
+  }
+
+  .direction {
+    padding-bottom: 150px;
+  }
+
+  .direction .direction_title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt {
+    width: calc(100% - 190px);
+  }
+
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
+    font-size: 24px;
+  }
+
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
+    font-size: 20px;
   }
 }
 
@@ -208,7 +407,7 @@
     margin-top: 0px;
   }
 
-  .introduction_box {
+  /* .introduction_box {
     margin-top: 50px;
   }
 
@@ -226,6 +425,63 @@
     margin-top: 50px;
     padding-bottom: 80px;
     font-size: 18px;
+  } */
+
+  .meaning {
+    padding: 50px 0;
+  }
+
+  .meaning .meaning_title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .meaning .meaning_flex .mean_right .right_txt_box {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .meaning .meaning_flex .mean_right .green_txt  {
+    font-size: 20px;
+  }
+
+  .direction {
+    padding-bottom: 150px;
+  }
+
+  .direction .direction_title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .direction .direction_flex .direct_box .direct_flex_box {
+    flex-direction: column;
+  }
+
+  .direction .direction_flex .direct_box .direct_flex_box .img_box {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .direction .direction_flex .direct_box .direct_flex_box .img_box img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt {
+    width: 100%;
+    text-align: center;
+    display: unset;
+  }
+
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
+    font-size: 20px;
+  }
+
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
+    font-size: 16px;
   }
 }
 
