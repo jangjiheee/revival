@@ -10,6 +10,15 @@
   overflow: hidden;
 }
 
+.inquire .sub-title {
+  margin-top: 60px;
+  font-size: 24px;
+  font-weight: 300;
+}
+.inquire .sub-title span {
+  font-weight: 500;
+}
+
 /* .inquire .intro_title::after {
   content: "";
   height: 1px;
@@ -78,6 +87,10 @@
     width: 100px;
   }
 
+  .inquire .sub-title {
+    font-size: 20px;
+  }
+
   .inquire .inquire_flex {
     flex-direction: column;
     margin-top: 156px;
@@ -112,6 +125,16 @@
   .inquire .intro_title::after {
     width: 80px;
     bottom: -50px;
+  }
+
+  .inquire .sub-title {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 50px auto 0;
+  }
+
+  .inquire .sub-title br {
+    display: none;
   }
 
   .inquire .inquire_flex {
