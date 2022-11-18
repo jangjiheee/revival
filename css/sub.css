@@ -520,6 +520,9 @@ img {
 /* 회사소개끝 */
 
 /* /브랜드시작 */
+.cont1 {
+  display: none;
+}
 .title {
   text-align: center;
   font-weight: 700;
@@ -568,7 +571,6 @@ img {
   text-align: center;
 }
 .project_tab .cont_text .title {
-  margin-bottom: 60px;
   font-weight: 700;
   font-size: 48px;
 }
@@ -770,7 +772,95 @@ img {
   margin-top: 40px;
   font-size: 24px;
 }
+.bot_model img {
+  width: auto;
+}
 
+.cont_intro .intro_text .text {
+  text-align: center;
+}
+.cont_intro .intro_circle {
+  margin-top: 50px;
+}
+.intro_circle .circle_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.intro_circle .circle_wrap > p {
+  padding: 2.6738vw;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.circle_wrap p.circle_sp {
+  max-width: 150px;
+  width: 100%;
+  padding: 37px 46px;
+  height: 150px;
+  line-height: 1.2;
+}
+.intro_circle .circle_text {
+  text-align: center;
+  font-size: 24px;
+}
+.cont_hydrop {
+  margin-top: 80px;
+}
+.cont_hydrop .hydrop_wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 60px;
+}
+.hydrop_wrap .hydrop_item.item_right img {
+  width: auto;
+}
+.cont_hydrop .hydrop_item .title {
+  text-align: left;
+}
+.cont_hydrop .hydrop_item .text {
+  margin: 40px 0;
+  font-size: 24px;
+}
+.cont_hydrop .hydrop_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cont_hydrop .hydrop_list .list_flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: calc(100% / 3);
+}
+.list_flex img {
+  width: auto;
+}
+.list_flex.m-top {
+  margin-top: 30px;
+}
+.list_flex .list_tag {
+  font-size: 18px;
+}
+.cont_type .type_text .text {
+  padding: 40px 0;
+  text-align: center;
+}
+.cont_type .type_slide .slide_wrap {
+  border-radius: 10px;
+  border: 1px solid #c2c2c2;
+  text-align: center;
+}
+.cont_type .type_slide .slide_name {
+  border-top: 1px solid #c2c2c2;
+  line-height: 40px;
+}
+.cont_type .type_slide img {
+  width: auto;
+}
 /* 브랜드 태블릿 */
 @media screen and (max-width: 1024px) {
   .remark {
@@ -796,7 +886,6 @@ img {
     margin-top: 80px;
   }
   .project_tab .cont_text .title {
-    margin-bottom: 60px;
     font-size: 36px;
   }
   .project_tab .cont_text .desc {
@@ -804,10 +893,10 @@ img {
     font-size: 28px;
   }
   .project_tab .contents {
-    padding: 0 40px 80px;
+    padding: 0 30px 80px;
   }
   .contents > div {
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .contents > div .title {
     font-size: 28px;
@@ -926,6 +1015,29 @@ img {
   .bot_model .bot_text {
     margin-top: 20px;
     font-size: 18px;
+  }
+  .cont_intro .intro_circle {
+    margin-top: 40px;
+  }
+  .intro_circle .circle_wrap {
+    width: 90%;
+    margin: 0 auto 40px;
+  }
+  .intro_circle .circle_text {
+    font-size: 20px;
+  }
+  .cont_hydrop .hydrop_wrap {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .cont_hydrop .hydrop_item .text {
+    margin: 30px 0 40px;
+  }
+  .contents .cont_type {
+    margin-top: 60px;
+  }
+  .cont_type .type_text .text {
+    padding: 30px 0;
   }
 }
 
