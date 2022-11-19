@@ -32,6 +32,10 @@
       text-align: center;
     }
 
+    .project_area .case_gallery .item img {
+      width: 100%;
+    }
+
     .project_area .gallery_modal {
       position: fixed;
       top: 0;
@@ -43,25 +47,31 @@
     }
 
     .project_area .gallery_modal.active {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .project_area .gallery_modal .gallery_slide_wrap {
       position: relative;
       width: 90%;
       height: 100%;
-      max-width: 1200px;
+      max-width: 1000px;
       max-height: 90%;
-      margin: 0 auto;
+      margin: 2.5% auto;
       /* display: flex;
       justify-content: center;
       align-items: center; */
     }
 
     .project_area .gallery_modal .gallery_slide_wrap ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
       width: 100%;
       height: 100%;
-      position: relative;
+      transform: translate(-50%, -50%);
     }
 
     .project_area .gallery_modal .item {
@@ -90,6 +100,89 @@
       text-align: center;
       color: #fff;
       font-size: 20px;
+    }
+
+    .gallery_modal {
+      position: relative;
+    }
+    .gallery_modal .close {
+      width: 32px;
+      height: 32px;
+      margin-left: auto;
+      text-align: right;
+      cursor: pointer;
+    }
+    .gallery_modal .close img {
+      width: 100%;
+    }
+    .gallery_modal .prev {
+      z-index: 5;
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+    .gallery_modal .next {
+      z-index: 5;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+
+    @media (max-width: 1024px) {
+      .project_area .case_gallery .item {
+        width: calc((100% - 24px) /2);
+        margin-right: 24px;
+      }
+      .project_area .case_gallery .item:nth-child(2n) {
+        margin-right: 0;
+      }
+      .project_area .case_gallery .item:nth-child(3n) {
+        margin-right: 24px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .project_area .gallery_modal .gallery_slide_wrap {
+        max-height: 50%;
+      }
+      .project_area .case_gallery .item {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 24px;
+      }
+      .project_area .case_gallery .item:last-child {
+        margin-bottom: 0;
+      }
+      .project_area .case_gallery .item p {
+        font-size: 16px;
+      }
+      .gallery_modal .close {
+        z-index: 15;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+      }
+      .gallery_modal .next {
+        width: 24px;
+      }
+      .gallery_modal .next img {
+        width: 100%;
+      }
+      .gallery_modal .prev {
+        width: 24px;
+      }
+      .gallery_modal .prev img {
+        width: 100%;
+      }
+      .project_area .gallery_modal .item p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -150,14 +243,18 @@
                 </div>
               </div>
               <div class="gallery_modal">
-                <!-- <div class="close">
-                  X
-                </div> -->
+                
                 <div class="prev">
-                  < </div>
-                    <div class="next"> > </div>
-                    <div class="gallery_slide_wrap">
+                  <img src="image/icon/icon_prev.png" alt="" />
+                </div>
+                <div class="next">
+                  <img src="image/icon/icon_next.png" alt="" />
+                </div>
+                  <div class="gallery_slide_wrap">
+                    <div class="close">
+                      <img src="image/icon/icon_close.png" alt="" />
                     </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -222,13 +319,13 @@
         $('.gallery_modal').addClass('active');
       }
 
-      // function closeModal() {
-      //   $('.gallery_modal .item').each(function () {
-      //     $(this).removeClass('active');
-      //   });
+      function closeModal() {
+        $('.gallery_modal .item').each(function () {
+          $(this).removeClass('active');
+        });
 
-      //   $('.gallery_modal').removeClass('active');
-      // }
+        $('.gallery_modal').removeClass('active');
+      }
 
 
       function next() {

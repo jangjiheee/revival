@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="/css/common.css" />
   <link rel="stylesheet" href="/css/sub.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="./js/jquery-3.6.1.min.js"></script>
   <style>
     .project_area .accrodion-wrap .accrodion-container {
       border-top: 1px solid #ccc;
@@ -53,24 +51,31 @@
       color: #3AAA35;
     }
 
+    .project_area .accrodion-wrap .accrodion-label.on {
+      background: #f8f8f8;
+    }
+
     .project_area .accrodion-wrap .accrodion-conts {
-      padding: 40px 50px 40px 40px;
-      display: none;
+      padding: 0 50px 0 40px;
+      /* display: none; */
       background: #f8f8f8;
       transition: all ease 0.3s;
+      max-height: 0;
+      overflow: hidden;
     }
 
     .project_area .accrodion-wrap .accrodion-conts .accrodion-txt {
       color: #7b7b7b;
+      margin: 40px 0;
     }
 
-    .project_area .accrodion-wrap .accrodion-container .accrodion-label.on svg {
+    .project_area .accrodion-wrap .accrodion-container.on .accrodion-label svg {
       transform: rotate(-180deg);
     }
 
-    /* .project_area .accrodion-wrap .accrodion-container .accrodion-conts.on {
-      display: block;
-    } */
+    .project_area .accrodion-wrap .accrodion-container.on .accrodion-conts {
+      max-height: 200px;
+    }
 
     @media(max-width: 1024px) {
       .project_area .accrodion-wrap .accrodion-label {
@@ -97,7 +102,11 @@
       }
 
       .project_area .accrodion-wrap .accrodion-conts {
-        padding: 30px;
+        padding: 0 30px;
+      }
+
+      .project_area .accrodion-wrap .accrodion-conts .accrodion-txt {
+        margin: 30px 0;
       }
     }
 
@@ -126,7 +135,11 @@
       }
 
       .project_area .accrodion-wrap .accrodion-conts {
-        padding: 15px;
+        padding: 0 15px;
+      }
+
+      .project_area .accrodion-wrap .accrodion-conts .accrodion-txt {
+        margin: 15px 0;
       }
     }
   </style>
@@ -349,7 +362,8 @@
   </div>
   <!-- 스크립트영역 -->
 
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./js/jquery-3.6.1.min.js"></script>
   <script>
     // $(document).ready(function () {
     //   $("ul.tabs li").click(function () {
@@ -363,19 +377,23 @@
     //   });
     // });
 
-    let accrodion = document.querySelectorAll(".accrodion-container");
     let label = document.querySelectorAll(".accrodion-label");
+    let conts = document.querySelectorAll(".accrodion-container");
 
     for (i = 0; i < label.length; i++) {
       label[i].addEventListener("click", function () {
-        this.classList.toggle("on");
 
-        var next = this.nextElementSibling;
-        if (next.style.display === "block") {
-          next.style.display = "none";
+        var next = this.parentNode;
+        next.classList.toggle("on");
+        if (next.classList.contains("on")) {
+          for(j = 0; j <label.length; j++) {
+            conts[j].classList.remove('on');
+          }
+          next.classList.add("on");
         } else {
-          next.style.display = "block"
+          next.classList.remove("on");
         }
+
       });
     }
 
