@@ -530,6 +530,9 @@ img {
   text-align: center;
   font-weight: 700;
 }
+.tab_cont .contents {
+  display: block;
+}
 
 .text_box .line {
   margin-top: 58px;
@@ -612,6 +615,10 @@ img {
 }
 .cont_graph img {
   display: block;
+  margin: 0 auto;
+}
+.cont_graph .chart-wrap {
+  max-width: 600px;
   margin: 0 auto;
 }
 .cont_graph .text {
@@ -738,12 +745,12 @@ img {
 .model_list .list_btn {
   margin-top: 30px;
 }
-.list_btn .btn {
+.list_btn .btn.green {
   border: 1px solid #3aaa35;
   border-radius: 25px;
   background: #fff;
 }
-.list_btn a {
+.list_btn .btn.green a {
   padding: 0 30px;
   line-height: 50px;
   font-size: 20px;
