@@ -1,255 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>브랜드</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/sub.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>브랜드</title>
-  <link rel="stylesheet" href="/css/common.css" />
-  <link rel="stylesheet" href="/css/sub.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <style>
-    .project_area .case_gallery {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .project_area .case_gallery .item {
-      margin-right: 25px;
-      margin-bottom: 30px;
-      cursor: pointer;
-      width: calc((100% - 50px)/3);
-    }
-
-    .project_area .case_gallery .item:nth-child(3n) {
-      margin-right: 0;
-    }
-
-    .project_area .case_gallery .item p {
-      font-size: 20px;
-      text-align: center;
-    }
-
-    .project_area .case_gallery .item img {
-      width: 100%;
-    }
-
-    .project_area .gallery_modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      display: none;
-    }
-
-    .project_area .gallery_modal.active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .project_area .gallery_modal .gallery_slide_wrap {
-      position: relative;
-      width: 90%;
-      height: 100%;
-      max-width: 1000px;
-      max-height: 90%;
-      margin: 2.5% auto;
-      /* display: flex;
-      justify-content: center;
-      align-items: center; */
-    }
-
-    .project_area .gallery_modal .gallery_slide_wrap ul {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
-      transform: translate(-50%, -50%);
-    }
-
-    .project_area .gallery_modal .item {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 90%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .project_area .gallery_modal .item.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .project_area .gallery_modal .item img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .project_area .gallery_modal .item p {
-      text-align: center;
-      color: #fff;
-      font-size: 20px;
-    }
-
-    .gallery_modal {
-      position: relative;
-    }
-    .gallery_modal .close {
-      width: 32px;
-      height: 32px;
-      margin-left: auto;
-      text-align: right;
-      cursor: pointer;
-    }
-    .gallery_modal .close img {
-      width: 100%;
-    }
-    .gallery_modal .prev {
-      z-index: 5;
-      position: absolute;
-      top: 50%;
-      left: 15px;
-      cursor: pointer;
-      transform: translateY(-50%);
-    }
-    .gallery_modal .next {
-      z-index: 5;
-      position: absolute;
-      top: 50%;
-      right: 15px;
-      cursor: pointer;
-      transform: translateY(-50%);
-    }
-
-    @media (max-width: 1024px) {
-      .project_area .case_gallery .item {
-        width: calc((100% - 24px) /2);
-        margin-right: 24px;
+    <style>
+      .project_area .case_gallery {
+        display: flex;
+        flex-wrap: wrap;
       }
-      .project_area .case_gallery .item:nth-child(2n) {
+
+      .project_area .case_gallery .item {
+        margin-right: 25px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        width: calc((100% - 50px) / 3);
+      }
+
+      .project_area .case_gallery .item:nth-child(3n) {
         margin-right: 0;
       }
-      .project_area .case_gallery .item:nth-child(3n) {
-        margin-right: 24px;
-      }
-    }
 
-    @media (max-width: 767px) {
-      .project_area .gallery_modal .gallery_slide_wrap {
-        max-height: 50%;
-      }
-      .project_area .case_gallery .item {
-        width: 100%;
-        margin-right: 0 !important;
-        margin-bottom: 24px;
-      }
-      .project_area .case_gallery .item:last-child {
-        margin-bottom: 0;
-      }
       .project_area .case_gallery .item p {
-        font-size: 16px;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .project_area .case_gallery .item img {
+        width: 100%;
+      }
+
+      .project_area .gallery_modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+      }
+
+      .project_area .gallery_modal.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .project_area .gallery_modal .gallery_slide_wrap {
+        position: relative;
+        width: 90%;
+        height: 100%;
+        max-width: 1000px;
+        max-height: 90%;
+        margin: 2.5% auto;
+        /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      }
+
+      .project_area .gallery_modal .gallery_slide_wrap ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+      }
+
+      .project_area .gallery_modal .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 90%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .project_area .gallery_modal .item.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .project_area .gallery_modal .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .project_area .gallery_modal .item p {
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .gallery_modal {
+        position: relative;
       }
       .gallery_modal .close {
-        z-index: 15;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 20px;
-        height: 20px;
+        width: 32px;
+        height: 32px;
+        margin-left: auto;
+        text-align: right;
+        cursor: pointer;
       }
-      .gallery_modal .next {
-        width: 24px;
-      }
-      .gallery_modal .next img {
+      .gallery_modal .close img {
         width: 100%;
       }
       .gallery_modal .prev {
-        width: 24px;
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        cursor: pointer;
+        transform: translateY(-50%);
       }
-      .gallery_modal .prev img {
-        width: 100%;
+      .gallery_modal .next {
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        cursor: pointer;
+        transform: translateY(-50%);
       }
-      .project_area .gallery_modal .item p {
-        font-size: 16px;
-      }
-    }
-  </style>
-</head>
 
-<body>
+      @media (max-width: 1024px) {
+        .project_area .case_gallery .item {
+          width: calc((100% - 24px) / 2);
+          margin-right: 24px;
+        }
+        .project_area .case_gallery .item:nth-child(2n) {
+          margin-right: 0;
+        }
+        .project_area .case_gallery .item:nth-child(3n) {
+          margin-right: 24px;
+        }
+      }
 
-  <div class="wrap">
-    <div class="inner_container">
-      <div class="main">
-        <div class="text_box">
-          <h1 data-aos="zoom-in" class="intro_title">
-            새로운 프로젝트에<br class="tab_only" />
-            도전하는<br />
-            부활피앤피
-          </h1>
-          <div class="line"></div>
+      @media (max-width: 767px) {
+        .project_area .gallery_modal .gallery_slide_wrap {
+          max-height: 50%;
+        }
+        .project_area .case_gallery .item {
+          width: 100%;
+          margin-right: 0 !important;
+          margin-bottom: 24px;
+        }
+        .project_area .case_gallery .item:last-child {
+          margin-bottom: 0;
+        }
+        .project_area .case_gallery .item p {
+          font-size: 16px;
+        }
+        .gallery_modal .close {
+          z-index: 15;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 20px;
+          height: 20px;
+        }
+        .gallery_modal .next {
+          width: 24px;
+        }
+        .gallery_modal .next img {
+          width: 100%;
+        }
+        .gallery_modal .prev {
+          width: 24px;
+        }
+        .gallery_modal .prev img {
+          width: 100%;
+        }
+        .project_area .gallery_modal .item p {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="inner_container">
+        <div class="main">
+          <div class="text_box">
+            <h1 data-aos="zoom-in" class="intro_title">
+              새로운 프로젝트에<br class="tab_only" />
+              도전하는<br />
+              부활피앤피
+            </h1>
+            <div class="line"></div>
+          </div>
         </div>
-      </div>
-      <div class="project_area">
-        <div class="project_tab">
-          <ul class="tab_menu">
-            <li class="tab_list b_right"><a href="#">제품소개</a></li>
-            <li class="tab_list b_right"><a href="#">수경식물</a></li>
-            <li class="tab_list b_right"><a href="#">QnA</a></li>
-            <li class="tab_list"><a href="#">시공사례</a></li>
-          </ul>
-          <div class="tab_cont">
-            <div class="cont cont4">
-              <div class="cont_wrap">
-                <div class="cont_text">
-                  <h2 class="title">
-                    <span class="tit_underline">시공사례</span>
-                  </h2>
+        <div class="project_area">
+          <div class="project_tab">
+            <ul class="tab_menu">
+              <li class="tab_list b_right"><a href="#">제품소개</a></li>
+              <li class="tab_list b_right"><a href="#">수경식물</a></li>
+              <li class="tab_list b_right"><a href="#">QnA</a></li>
+              <li class="tab_list"><a href="#">시공사례</a></li>
+            </ul>
+            <div class="tab_cont">
+              <div class="cont cont4">
+                <div class="cont_wrap">
+                  <div class="cont_text">
+                    <h2 class="title">
+                      <span class="tit_underline">시공사례</span>
+                    </h2>
+                  </div>
+                  <div class="contents">
+                    <ul class="case_gallery">
+                      <li class="item">
+                        <img src="./image/gallery_img_01.jpg" alt="시공사례1" />
+                        <p>시공사례1</p>
+                      </li>
+                      <li class="item">
+                        <img src="./image/gallery_img_02.jpg" alt="시공사례1" />
+                        <p>시공사례1</p>
+                      </li>
+                      <li class="item">
+                        <img src="./image/gallery_img_01.jpg" alt="시공사례1" />
+                        <p>시공사례1</p>
+                      </li>
+                      <li class="item">
+                        <img src="./image/gallery_img_02.jpg" alt="시공사례1" />
+                        <p>시공사례1</p>
+                      </li>
+                      <li class="item">
+                        <img src="./image/gallery_img_01.jpg" alt="시공사례1" />
+                        <p>시공사례1</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="contents">
-                  <ul class="case_gallery">
-                    <li class="item">
-                      <img src="./image/gallery_img_01.jpg" alt="시공사례1">
-                      <p>시공사례1</p>
-                    </li>
-                    <li class="item">
-                      <img src="./image/gallery_img_02.jpg" alt="시공사례1">
-                      <p>시공사례1</p>
-                    </li>
-                    <li class="item">
-                      <img src="./image/gallery_img_01.jpg" alt="시공사례1">
-                      <p>시공사례1</p>
-                    </li>
-                    <li class="item">
-                      <img src="./image/gallery_img_02.jpg" alt="시공사례1">
-                      <p>시공사례1</p>
-                    </li>
-                    <li class="item">
-                      <img src="./image/gallery_img_01.jpg" alt="시공사례1">
-                      <p>시공사례1</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="gallery_modal">
-                
-                <div class="prev">
-                  <img src="image/icon/icon_prev.png" alt="" />
-                </div>
-                <div class="next">
-                  <img src="image/icon/icon_next.png" alt="" />
-                </div>
+                <div class="gallery_modal">
+                  <div class="prev">
+                    <img src="image/icon/icon_prev.png" alt="" />
+                  </div>
+                  <div class="next">
+                    <img src="image/icon/icon_next.png" alt="" />
+                  </div>
                   <div class="gallery_slide_wrap">
                     <div class="close">
                       <img src="image/icon/icon_close.png" alt="" />
@@ -271,83 +268,81 @@
 
       activeItemGallery();
 
-      $('.gallery_modal .close').on('click', function () {
+      $(".gallery_modal .close").on("click", function () {
         closeModal();
       });
 
-      $('.gallery_modal .next').on('click', function () {
-        if ($('.gallery_modal .item.active').is(':last-child')) {
-          nextFirst()
+      $(".gallery_modal .next").on("click", function () {
+        if ($(".gallery_modal .item.active").is(":last-child")) {
+          nextFirst();
         } else {
           next();
         }
       });
 
-      $('.gallery_modal .prev').on('click', function () {
-        if ($('.gallery_modal .item.active').is(':first-child')) {
-          prevLast()
+      $(".gallery_modal .prev").on("click", function () {
+        if ($(".gallery_modal .item.active").is(":first-child")) {
+          prevLast();
         } else {
           prev();
         }
       });
 
       function activeItemGallery() {
-        $('.case_gallery .item').on('click', function () {
+        $(".case_gallery .item").on("click", function () {
           // $('.case_gallery .item').removeClass('active');
           // $(this).addClass('active');
           var indexActive = $(this).index();
 
-          $('.gallery_modal .item').removeClass('active');
+          $(".gallery_modal .item").removeClass("active");
 
-          $('.gallery_modal .item').each(function () {
+          $(".gallery_modal .item").each(function () {
             var indexModalItem = $(this).index();
             if (indexActive === indexModalItem) {
-              $(this).addClass('active');
+              $(this).addClass("active");
             }
-          })
+          });
 
           openModal();
         });
       }
 
       function loadModal() {
-        var gallery = $('.case_gallery').clone().removeClass('case_gallery');
-        $('.gallery_modal .gallery_slide_wrap').append(gallery);
+        var gallery = $(".case_gallery").clone().removeClass("case_gallery");
+        $(".gallery_modal .gallery_slide_wrap").append(gallery);
       }
 
       function openModal() {
-        $('.gallery_modal').addClass('active');
+        $(".gallery_modal").addClass("active");
       }
 
       function closeModal() {
-        $('.gallery_modal .item').each(function () {
-          $(this).removeClass('active');
+        $(".gallery_modal .item").each(function () {
+          $(this).removeClass("active");
         });
 
-        $('.gallery_modal').removeClass('active');
+        $(".gallery_modal").removeClass("active");
       }
 
-
       function next() {
-        $('.item.active').next().addClass('active');
-        $('.item.active').prev().removeClass('active');
+        $(".item.active").next().addClass("active");
+        $(".item.active").prev().removeClass("active");
       }
 
       function prev() {
-        $('.item.active').prev().addClass('active');
-        $('.item.active').next().removeClass('active');
+        $(".item.active").prev().addClass("active");
+        $(".item.active").next().removeClass("active");
       }
 
       function nextFirst() {
-        $('.item').removeClass('active');
-        $('.item:first-child').addClass('active');
+        $(".item").removeClass("active");
+        $(".item:first-child").addClass("active");
       }
 
       function prevLast() {
-        $('.item').removeClass('active');
-        $('.item:last-child').addClass('active');
+        $(".item").removeClass("active");
+        $(".item:last-child").addClass("active");
       }
     </script>
-</body>
-
+  </body>
 </html>
