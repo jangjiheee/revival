@@ -378,16 +378,15 @@
     // });
 
     let label = document.querySelectorAll(".accrodion-label");
-    let conts = document.querySelectorAll(".accrodion-container");
+    let accrodion = document.querySelectorAll(".accrodion-container");
 
     for (i = 0; i < label.length; i++) {
       label[i].addEventListener("click", function () {
 
         var next = this.parentNode;
-        next.classList.toggle("on");
-        if (next.classList.contains("on")) {
-          for(j = 0; j <label.length; j++) {
-            conts[j].classList.remove('on');
+        if (!next.classList.contains("on")) {
+          for (j = 0; j < accrodion.length; j++) {
+            accrodion[j].classList.remove('on');
           }
           next.classList.add("on");
         } else {
