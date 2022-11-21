@@ -520,8 +520,11 @@ img {
 /* 회사소개끝 */
 
 /* /브랜드시작 */
-.cont1 {
+.cont {
   display: none;
+}
+.cont.is_on {
+  display: block;
 }
 .title {
   text-align: center;
@@ -549,8 +552,22 @@ img {
   color: #555555;
 }
 .project_tab .tab_menu .tab_list > a {
+  position: relative;
   padding: 22px 65px;
   font-size: 24px;
+}
+.project_tab .tab_menu .tab_list.on > a {
+  color: #3aaa35;
+  background: rgba(58, 170, 53, 0.12);
+}
+.project_tab .tab_menu .tab_list.on > a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #3aaa35;
 }
 .tab_list.b_right {
   border-right: 1px solid #d9d9d9;
@@ -575,7 +592,7 @@ img {
   font-size: 48px;
 }
 .project_tab .cont_text .desc {
-  margin-bottom: 40px;
+  margin: 80px 0 40px;
   font-size: 36px;
 }
 .project_tab .cont_text .b_text {
@@ -601,7 +618,7 @@ img {
   margin-top: 30px;
 }
 .cont_plant {
-  padding: 60px 200px;
+  padding: 60px;
   background: #eaffeb;
 }
 .cont_plant .title {
@@ -611,9 +628,9 @@ img {
 .cont_plant .plant_func {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60px;
-  justify-content: start;
-  margin-right: -50px;
+  max-width: 1040px;
+  width: 100%;
+  margin: 60px auto 0;
 }
 .cont_plant .plant_func .func_list {
   width: calc((100% / 3) - 50px);
@@ -791,18 +808,19 @@ img {
   gap: 30px;
 }
 .intro_circle .circle_wrap > p {
-  padding: 2.6738vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 150px;
+  width: 100%;
+  height: 150px;
   font-size: 30px;
   font-weight: 600;
   border-radius: 50%;
   border: 1px solid #000;
 }
 .circle_wrap p.circle_sp {
-  max-width: 150px;
-  width: 100%;
-  padding: 37px 46px;
-  height: 150px;
-  line-height: 1.2;
+  line-height: 1;
 }
 .intro_circle .circle_text {
   text-align: center;
@@ -813,11 +831,15 @@ img {
 }
 .cont_hydrop .hydrop_wrap {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
+  align-items: center;
   gap: 60px;
 }
-.hydrop_wrap .hydrop_item.item_right img {
-  width: auto;
+.hydrop_wrap .hydrop_item.item_right {
+  width: 45%;
+}
+.hydrop_wrap .hydrop_item.item_left {
+  width: 55%;
 }
 .cont_hydrop .hydrop_item .title {
   text-align: left;
@@ -849,17 +871,23 @@ img {
   padding: 40px 0;
   text-align: center;
 }
+.cont_type .type_slide {
+  height: 280px;
+}
 .cont_type .type_slide .slide_wrap {
+  width: 100%;
   border-radius: 10px;
   border: 1px solid #c2c2c2;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
   text-align: center;
+  overflow: hidden;
 }
 .cont_type .type_slide .slide_name {
   border-top: 1px solid #c2c2c2;
   line-height: 40px;
 }
 .cont_type .type_slide img {
-  width: auto;
+  display: block;
 }
 /* 브랜드 태블릿 */
 @media screen and (max-width: 1024px) {
@@ -889,11 +917,14 @@ img {
     font-size: 36px;
   }
   .project_tab .cont_text .desc {
-    margin-bottom: 40px;
+    margin: 50px 0 40px;
     font-size: 28px;
   }
   .project_tab .contents {
     padding: 0 30px 80px;
+  }
+  .contents .cont_text {
+    padding: 0 30px;
   }
   .contents > div {
     margin-top: 50px;
@@ -1009,6 +1040,9 @@ img {
   .model_struct .bot_model {
     margin-top: 50px;
   }
+  .bot_model img {
+    width: 100%;
+  }
   .bot_model .remark {
     font-size: 16px;
   }
@@ -1020,7 +1054,7 @@ img {
     margin-top: 40px;
   }
   .intro_circle .circle_wrap {
-    width: 90%;
+    width: 75%;
     margin: 0 auto 40px;
   }
   .intro_circle .circle_text {
@@ -1034,11 +1068,23 @@ img {
     margin: 30px 0 40px;
     font-size: 20px;
   }
+  .hydrop_wrap .hydrop_item.item_left {
+    width: 100%;
+  }
+  .hydrop_wrap .hydrop_item.item_right {
+    width: 100%;
+  }
   .contents .cont_type {
     margin-top: 60px;
   }
   .cont_type .type_text .text {
     padding: 30px 0;
+  }
+  .cont_type .type_slide {
+    height: 300px;
+  }
+  .project_tab .cont2 .contents {
+    padding: 0 30px 0;
   }
 }
 
@@ -1052,7 +1098,7 @@ img {
     line-height: 50px;
   }
   .project_tab .contents {
-    padding: 0 10px 60px;
+    padding: 0 0 60px;
   }
   .project_tab .cont_wrap {
     margin-top: 50px;
@@ -1061,15 +1107,15 @@ img {
   .project_tab .cont_text .title {
     font-size: 28px;
   }
-  .project_tab .cont_text .title {
-    margin-bottom: 35px;
-  }
   .project_tab .cont_text .desc {
-    margin-bottom: 0;
+    margin: 30px 0 20px;
     font-size: 20px;
   }
+  .contents .cont_text {
+    padding: 0 10px;
+  }
   .contents > div {
-    margin-top: 50px;
+    margin-top: 30px;
   }
   .cont_banner .text {
     margin-top: 10px;
@@ -1143,6 +1189,48 @@ img {
   }
   .bot_model .bot_text {
     font-size: 16px;
+  }
+  .intro_circle .circle_text {
+    font-size: 18px;
+  }
+  .intro_circle .circle_wrap {
+    width: 100%;
+    gap: 15px;
+  }
+  .intro_circle .circle_wrap > p {
+    max-width: 70px;
+    height: 70px;
+    font-size: 16px;
+  }
+  .cont_hydrop .hydrop_item .text {
+    margin: 20px 0 30px;
+    font-size: 16px;
+  }
+  .list_flex .list_tag {
+    font-size: 16px;
+  }
+  .cont_hydrop .hydrop_list {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .cont_hydrop .hydrop_list .list_flex {
+    width: 100%;
+    gap: 20px;
+  }
+  .list_flex.m-top {
+    margin-top: 0;
+  }
+  .contents .cont_type {
+    margin-top: 40px;
+  }
+  .cont_type .type_text .text {
+    padding: 20px 0;
+  }
+  .cont_type .type_slide {
+    height: 320px;
+  }
+  .project_tab .cont2 .contents {
+    padding: 0 0 20px;
   }
 }
 /* //브랜드끝 */

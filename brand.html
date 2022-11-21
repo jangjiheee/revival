@@ -29,13 +29,17 @@
         <div class="project_area">
           <div class="project_tab">
             <ul class="tab_menu">
-              <li class="tab_list b_right"><a href="#">제품소개</a></li>
-              <li class="tab_list b_right"><a href="#">수경식물</a></li>
-              <li class="tab_list b_right"><a href="#">QnA</a></li>
-              <li class="tab_list"><a href="#">시공사례</a></li>
+              <li class="tab_list b_right">
+                <a href="javascript:;">제품소개</a>
+              </li>
+              <li class="tab_list b_right">
+                <a href="javascript:;">수경식물</a>
+              </li>
+              <li class="tab_list b_right"><a href="javascript:;">QnA</a></li>
+              <li class="tab_list"><a href="javascript:;">시공사례</a></li>
             </ul>
             <div class="tab_cont">
-              <div class="cont cont1">
+              <div id="introduce" class="cont cont1 is_on">
                 <div class="cont_wrap">
                   <div class="cont_text">
                     <h2 class="title">
@@ -43,8 +47,9 @@
                     </h2>
                     <p class="desc">
                       우리가 항상 피곤한 이유, 혹시
-                      <span class="b_text">공기 때문</span>이라고 생각해보지
-                      않으셨나요?
+                      <span class="b_text">공기 때문</span>이라고
+                      <br class="mo_only" />
+                      생각해보지 않으셨나요?
                     </p>
                   </div>
                   <div class="contents">
@@ -365,7 +370,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cont cont2">
+              <div id="plants" class="cont cont2">
                 <div class="cont_wrap">
                   <div class="cont_text">
                     <h2 class="title">
@@ -396,7 +401,7 @@
                           <span
                             ><img src="./image/arrow_green.png" alt=""
                           /></span>
-                          <p class="circle_sp">수경전환</p>
+                          <p class="circle_sp">수경<br />전환</p>
                           <span
                             ><img src="./image/arrow_green.png" alt=""
                           /></span>
@@ -458,52 +463,54 @@
                         <h3 class="title">적용수종</h3>
                         <p class="text">
                           환경에 맞춰 식물이 가장 아름다운 시기에 디자인하여
-                          적용합니다. <br />특별히 원하는 수종은 협의 후
-                          진행합니다.
+                          적용합니다. <br class="pc_only ta_only" />특별히
+                          원하는 수종은 협의 후 진행합니다.
                         </p>
                       </div>
                       <div class="swiper type_swiper">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide type_slide">
                             <div class="slide_wrap">
-                              <img src="./image/type_img_01.png" alt="" />
+                              <div class="slide_img">
+                                <img src="./image/type_img_01.png" alt="" />
+                              </div>
                               <p class="slide_name">몬스테라</p>
                             </div>
                           </div>
                           <div class="swiper-slide type_slide">
                             <div class="slide_wrap">
                               <img src="./image/type_img_02.png" alt="" />
-                              <p class="slide_name">몬스테라</p>
+                              <p class="slide_name">스킨답서스</p>
                             </div>
                           </div>
                           <div class="swiper-slide type_slide">
                             <div class="slide_wrap">
                               <img src="./image/type_img_03.png" alt="" />
-                              <p class="slide_name">몬스테라</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_img_04.png" alt="" />
-                              <p class="slide_name">몬스테라</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_img_01.png" alt="" />
-                              <p class="slide_name">몬스테라</p>
+                              <p class="slide_name">이글라오네마</p>
                             </div>
                           </div>
                           <div class="swiper-slide type_slide">
                             <div class="slide_wrap">
                               <img src="./image/type_img_02.png" alt="" />
-                              <p class="slide_name">몬스테라</p>
+                              <p class="slide_name">크로커다일</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide type_slide">
+                            <div class="slide_wrap">
+                              <img src="./image/type_img_01.png" alt="" />
+                              <p class="slide_name">오로라</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide type_slide">
+                            <div class="slide_wrap">
+                              <img src="./image/type_img_02.png" alt="" />
+                              <p class="slide_name">스킨답서스</p>
                             </div>
                           </div>
                           <div class="swiper-slide type_slide">
                             <div class="slide_wrap">
                               <img src="./image/type_img_03.png" alt="" />
-                              <p class="slide_name">몬스테라</p>
+                              <p class="slide_name">이글라오네마</p>
                             </div>
                           </div>
                         </div>
@@ -512,6 +519,8 @@
                   </div>
                 </div>
               </div>
+              <div class="cont"></div>
+              <div class="cont"></div>
             </div>
           </div>
         </div>
@@ -527,16 +536,44 @@
     </script>
     <script>
       var swiper = new Swiper(".type_swiper", {
-        spaceBetween: 30,
+        spaceBetween: 40,
         slidesPerView: 5,
         centeredSlides: false,
         autoplay: {
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
+        },
+        breakpoints: {
+          1025: {
+            slidesPerView: 5,
+          },
+          767: {
+            spaceBetween: 15,
+            slidesPerView: 3,
+          },
+          0: {
+            slidesPerView: 1,
+          },
         },
       });
     </script>
+
     <script>
+      const tabList = document.querySelectorAll(".tab_menu .tab_list");
+      const cont = document.querySelectorAll(".tab_cont .cont");
+      for (let i = 0; i < tabList.length; i++) {
+        tabList[i].addEventListener("click", function (e) {
+          e.preventDefault();
+          for (let i = 0; i < cont.length; i++) {
+            cont[i].classList.remove("is_on");
+            tabList[i].classList.remove("on");
+          }
+          cont[i].classList.add("is_on");
+          tabList[i].classList.add("on");
+        });
+      }
+    </script>
+    <!-- <script>
       $(document).ready(function () {
         $("ul.tabs li").click(function () {
           var tab_id = $(this).attr("data-tab");
@@ -548,6 +585,6 @@
           $("#" + tab_id).addClass("current");
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>
