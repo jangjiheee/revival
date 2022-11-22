@@ -521,10 +521,15 @@ img {
 
 /* /브랜드시작 */
 .cont {
-  display: none;
+  visibility: hidden;
+  max-height: 0;
 }
 .cont.is_on {
-  display: block;
+  visibility: visible;
+  max-height: inherit;
+}
+.tab_cont {
+  padding-top: 80px;
 }
 .tab_cont .title {
   text-align: center;
@@ -587,9 +592,6 @@ img {
   border: 1px solid #d9d9d9;
 }
 
-.project_tab .cont_wrap {
-  margin-top: 80px;
-}
 .project_tab .cont_text {
   text-align: center;
 }
@@ -656,6 +658,7 @@ img {
 }
 .cont_plant .plant_func .green,
 .cont_plant .plant_func .func_tit {
+  margin-top: 10px;
   font-size: 24px;
   font-weight: 700;
 }
@@ -911,6 +914,9 @@ img {
   .project_tab .tab_menu {
     width: 100%;
   }
+  .project_tab .tab_cont {
+    padding-top: 60px;
+  }
   .project_tab .tab_menu .tab_list {
     width: 25%;
     text-align: center;
@@ -921,9 +927,6 @@ img {
     line-height: 60px;
   }
 
-  .project_tab .cont_wrap {
-    margin-top: 80px;
-  }
   .project_tab .cont_text .title {
     font-size: 36px;
   }
@@ -1027,10 +1030,10 @@ img {
     border-radius: 25px;
     background: #fff;
   }
-  .list_btn a {
+  .list_btn .btn.green a {
     padding: 0 20px;
     line-height: 40px;
-    font-size: 16px;
+    font-size: 18px;
   }
   .list_btn .btn:hover {
     background: #3aaa35;
@@ -1117,11 +1120,13 @@ img {
     font-size: 16px;
     line-height: 50px;
   }
+  .project_tab .tab_cont {
+    padding-top: 50px;
+  }
   .project_tab .contents {
     padding: 0 0 60px;
   }
   .project_tab .cont_wrap {
-    margin-top: 50px;
     padding: 0 10px;
   }
   .project_tab .cont_text .title {
@@ -1143,17 +1148,24 @@ img {
   .contents > div .title {
     font-size: 24px;
   }
+  .list_btn .btn.green a {
+    font-size: 16px;
+  }
   .cont_plant {
     padding: 40px 80px;
   }
   .cont_plant .title {
     padding-top: 15px;
   }
+
   .cont_plant .plant_func {
     margin-top: 50px;
     justify-content: center;
     margin-right: 0;
     gap: 20px;
+  }
+  .cont_plant .plant_func .func_tit {
+    margin-top: 5px;
   }
   .cont_plant .plant_func .func_list {
     width: 100%;
@@ -1538,8 +1550,8 @@ img {
     margin-right: 24px;
   }
   .gallery_modal .close {
-    top: 0.5859vw;
-    right: 1.47vw;
+    top: 0;
+    right: 0;
     width: 26px;
     height: 26px;
   }
@@ -1564,8 +1576,8 @@ img {
     font-size: 16px;
   }
   .gallery_modal .close {
-    top: 10vw;
-    right: 1.47vw;
+    top: 0;
+    right: 0;
     width: 20px;
     height: 20px;
   }

@@ -32,13 +32,13 @@ window.addEventListener("scroll", function () {
     };
 
     //세 번째 섹션 스크롤이벤트
-    for (let i = 0; i < newsText.length; i++) {
-      if (value > 1800) {
-        newsText[i].classList.add('active');
-      } else {
-        newsText[i].classList.remove('active');
-      };
-    }
+    // for (let i = 0; i < newsText.length; i++) {
+    //   if (value > 1800) {
+    //     newsText[i].classList.add('active');
+    //   } else {
+    //     newsText[i].classList.remove('active');
+    //   };
+    // }
 
     //네 번째 섹션 스크롤이벤트
     if (value > 2700) {
@@ -66,16 +66,34 @@ window.addEventListener("scroll", function () {
     };
 
     //세 번째 섹션 스크롤이벤트
+
     for (let i = 0; i < newsText.length; i++) {
-      if (value > 1400) {
-        newsText.classList.add('active');
+      if (value > 2990) {
+        newsText[i].classList.add('active');
       } else {
-        newsText.classList.remove('active');
+        newsText[i].classList.remove('active');
       };
     }
 
     //네 번째 섹션 스크롤이벤트
-    if (value > 2700) {
+    if (value > 4890) {
+      inqText.classList.add('active');
+    } else {
+      inqText.classList.remove('active');
+    }
+  }
+  // 모바일 ~460px
+  if (window.innerWidth < 460) {
+    for (let i = 0; i < newsText.length; i++) {
+      if (value > 2200) {
+        newsText[i].classList.add('active');
+      } else {
+        newsText[i].classList.remove('active');
+      };
+    }
+
+    //네 번째 섹션 스크롤이벤트
+    if (value > 3400) {
       inqText.classList.add('active');
     } else {
       inqText.classList.remove('active');
