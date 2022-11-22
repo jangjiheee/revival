@@ -526,11 +526,13 @@ img {
 .cont.is_on {
   display: block;
 }
-.title {
+.tab_cont .title {
   text-align: center;
   font-weight: 700;
 }
-
+.tab_cont .contents img {
+  cursor: auto;
+}
 .text_box .line {
   margin-top: 58px;
 }
@@ -837,6 +839,7 @@ img {
 }
 .hydrop_wrap .hydrop_item.item_right {
   width: 45%;
+  text-align: center;
 }
 .hydrop_wrap .hydrop_item.item_left {
   width: 55%;
@@ -939,7 +942,7 @@ img {
     margin-top: 30px;
   }
   .cont_plant {
-    padding: 40px 60px;
+    padding: 40px 45px;
   }
   .cont_plant .title {
     padding-top: 30px;
@@ -1093,6 +1096,15 @@ img {
   .inner_container {
     padding: 0 32px;
   }
+  .project_tab .tab_menu {
+    flex-wrap: wrap;
+  }
+  .project_tab .tab_menu .tab_list {
+    width: 50%;
+  }
+  .project_tab .tab_menu .tab_list.bot_border {
+    border-bottom: 1px solid #ccc;
+  }
   .project_tab .tab_menu .tab_list > a {
     font-size: 16px;
     line-height: 50px;
@@ -1158,8 +1170,12 @@ img {
     padding: 5px 0;
   }
   .cont_model .model_list {
+    flex-direction: column;
     margin-top: 50px;
     gap: 30px;
+  }
+  .cont_model .model_list > li {
+    width: 100%;
   }
   .remark {
     font-size: 15px;
@@ -1168,7 +1184,9 @@ img {
     min-height: 240px;
   }
   .model_list .list_text {
-    margin-top: 20px;
+    width: 90%;
+    margin-top: 0;
+    margin: 35px auto 0;
   }
   .model_list .list_title {
     font-size: 20px;
@@ -1182,7 +1200,11 @@ img {
     gap: 30px;
   }
   .model_struct .f_model {
+    flex-direction: column;
     padding-top: 30px;
+  }
+  .model_struct .f_model > div {
+    width: 100%;
   }
   .model_struct .bot_model {
     margin-top: 40px;
@@ -1402,6 +1424,7 @@ img {
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   display: none;
+  z-index: 100;
 }
 
 .project_area .gallery_modal.active {
@@ -1464,11 +1487,13 @@ img {
   position: relative;
 }
 .gallery_modal .close {
+  position: absolute;
+  top: 0;
+  right: 3.4759vw;
   width: 32px;
   height: 32px;
-  margin-left: auto;
-  text-align: right;
   cursor: pointer;
+  z-index: 101;
 }
 .gallery_modal .close img {
   width: 100%;
@@ -1504,6 +1529,12 @@ img {
   .project_area .case_gallery .item:nth-child(3n) {
     margin-right: 24px;
   }
+  .gallery_modal .close {
+    top: 0.5859vw;
+    right: 1.47vw;
+    width: 26px;
+    height: 26px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1525,10 +1556,8 @@ img {
     font-size: 16px;
   }
   .gallery_modal .close {
-    z-index: 15;
-    position: absolute;
-    top: 0;
-    right: 0;
+    top: 10vw;
+    right: 1.47vw;
     width: 20px;
     height: 20px;
   }
