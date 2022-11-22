@@ -530,14 +530,14 @@ img {
   text-align: center;
   font-weight: 700;
 }
-<<<<<<< HEAD .tab_cont .contents {
+.tab_cont .contents {
   display: block;
 }
 
-======= .tab_cont .contents img {
+.tab_cont .contents img {
   cursor: auto;
 }
->>>>>>>b3b66ab (이미지, 디테일 수정) .text_box .line {
+.text_box .line {
   margin-top: 58px;
 }
 .remark {
