@@ -3,6 +3,7 @@
 .wrap {
   width: 100%;
   overflow: hidden;
+  line-height: 1.3;
 }
 
 img {
@@ -634,7 +635,7 @@ img {
   background: #eaffeb;
 }
 .cont_plant .title {
-  padding-top: 60px;
+  padding-top: 0px;
   font-size: 36px;
 }
 .cont_plant .plant_func {
@@ -772,24 +773,37 @@ img {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-.model_module .module_list {
+.model_module .module_contain {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 80px;
-  padding: 0 100px 0;
-  gap: 60px;
+  gap: 20px;
 }
-.module_list > li {
+.module_contain .f_module {
+  width: calc(50% - 20px);
+}
+.module_contain .module_left {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+.module_contain .module_left td {
+  border: 1px solid #ccc;
+}
+.module_contain .module_left .module_text {
+  border-top: 1px solid #ccc;
   text-align: center;
 }
-.model_struct .f_model {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 60px;
+.module_contain .module_left .module_img {
+  text-align: center;
 }
-.model_struct .f_model > div {
-  width: 50%;
+.module_contain .module_left .module_img.f_img img {
+  max-width: 60px;
+  max-height: 60px;
+  height: 100%;
+}
+.module_contain .module_left .module_img img {
+  max-width: 90px;
+  max-height: 90px;
+  height: 100%;
 }
 .model_struct .bot_model {
   margin-top: 63px;
@@ -1044,13 +1058,6 @@ img {
   .model_module {
     padding: 40px 0 80px;
   }
-  .model_module .module_list {
-    margin-top: 60px;
-    gap: 40px;
-  }
-  .model_struct .f_model {
-    padding-top: 40px;
-  }
   .model_struct .bot_model {
     margin-top: 50px;
   }
@@ -1104,9 +1111,6 @@ img {
 
 /* 브랜드 모바일 */
 @media screen and (max-width: 767px) {
-  .inner_container {
-    padding: 0 32px;
-  }
   .project_tab .tab_menu {
     flex-wrap: wrap;
   }
@@ -1152,7 +1156,7 @@ img {
     font-size: 16px;
   }
   .cont_plant {
-    padding: 40px 80px;
+    padding: 35px 20px;
   }
   .cont_plant .title {
     padding-top: 15px;
@@ -1177,13 +1181,20 @@ img {
     margin-top: 0;
   }
   .cont_check {
-    padding: 0 10px;
+    padding: 0;
   }
   .cont_check .desc {
     margin-top: 20px;
   }
   .cont_check .check_table {
     margin-top: 40px;
+    font-size: 12px;
+  }
+  .check_table .w-40 {
+    width: 30%;
+  }
+  .check_table .w-20 {
+    width: calc((100% - 30%) / 3);
   }
   .check_table th,
   .check_table tr td {
@@ -1213,18 +1224,6 @@ img {
   }
   .model_list .text {
     font-size: 16px;
-  }
-  .model_module .module_list {
-    padding: 0 50px 0;
-    margin-top: 40px;
-    gap: 30px;
-  }
-  .model_struct .f_model {
-    flex-direction: column;
-    padding-top: 30px;
-  }
-  .model_struct .f_model > div {
-    width: 100%;
   }
   .model_struct .bot_model {
     margin-top: 40px;
