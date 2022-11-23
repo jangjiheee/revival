@@ -10,28 +10,40 @@
   <link rel="stylesheet" href="/css/sub.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
-    .chart-wrap {
-      width: 100%;
+    .whole_box {
+      display: flex;
+      align-items: center;
       max-width: 1440px;
+    }
+
+    .whole_box .chart-wrap {
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 5%;
+      flex-direction: column-reverse;
+      width: 60%;
+    }
+
+    .whole_box .text_box {
+      width: 40%;
     }
 
     .chart-wrap .chart_box {
-      width: 70%;
-      max-width: 600px;
-    }
-
-    .chart-wrap .chart_desc {
-      width: 30%;
+      width: 100%;
+      max-width: 700px;
     }
 
     .chart-wrap .chart_desc ul {
+      width: 70%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto;
     }
 
     .chart-wrap .chart_desc ul li {
@@ -49,8 +61,8 @@
     }
 
     .chart-wrap .chart_desc li .char_color {
-      height: 20px;
-      width: 70px;
+      height: 16px;
+      width: 50px;
     }
 
     .chart-wrap .chart_desc .list01 .char_color {
@@ -127,56 +139,58 @@
 
 <body>
   <div class="inner_container">
-    <div class="chart-wrap">
-      <div class="chart_box">
-        <canvas id="myChart" class="chart"></canvas>
+    <div class="whole_box">
+      <div class="chart-wrap">
+        <div class="chart_box">
+          <canvas id="myChart" class="chart"></canvas>
+        </div>
+        <div class="chart_desc">
+          <ul>
+            <li class="list01">
+              <div class="char_color"></div>
+              <span>실내공기</span>
+            </li>
+            <li class="list02">
+              <div class="char_color"></div>
+              <span>공공시설공기</span>
+            </li>
+            <li class="list03">
+              <div class="char_color"></div>
+              <span>산업배기</span>
+            </li>
+            <li class="list04">
+              <div class="char_color"></div>
+              <span>외기</span>
+            </li>
+            <li class="list05">
+              <div class="char_color"></div>
+              <span>음료, 물</span>
+            </li>
+            <li class="list06">
+              <div class="char_color"></div>
+              <span>음식류</span>
+            </li>
+            <li class="list07">
+              <div class="char_color"></div>
+              <span>기타</span>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="chart_desc">
-        <ul>
-          <li class="list01">
-            <div class="char_color"></div>
-            <span>실내공기</span>
-          </li>
-          <li class="list02">
-            <div class="char_color"></div>
-            <span>공공시설공기</span>
-          </li>
-          <li class="list03">
-            <div class="char_color"></div>
-            <span>산업배기</span>
-          </li>
-          <li class="list04">
-            <div class="char_color"></div>
-            <span>외기</span>
-          </li>
-          <li class="list05">
-            <div class="char_color"></div>
-            <span>음료, 물</span>
-          </li>
-          <li class="list06">
-            <div class="char_color"></div>
-            <span>음식류</span>
-          </li>
-          <li class="list07">
-            <div class="char_color"></div>
-            <span>기타</span>
-          </li>
-        </ul>
+      <div class="text_box">
+          <p class="text">
+            실내공기, 공공시설공기, 산업배기 및 외기 전체의 성인 1일
+            공기 섭취 비율은 약 83%(무게로는 약 20-30 kg)로 음료,
+            물과 음식류의 비율 약 15%에 비해 훨씬 많습니다.
+            <br />
+            특히 실내공기의 섭취비율이 약 57%로 가장 높아
+            실내공기질(IAQ)이 인체의 건강에 영향을 미치는 가장 큰
+            요인 중에 하나입니다. <br />규제 대상 오염물질인
+            미세먼지, 포름알데히드, 일산화탄소, 이산화탄소,
+            부유세균으로 모두 식물에 의해 제거가 가능합니다.
+          </p>
       </div>
     </div>
-    <div class="text_box">
-      <p class="text">
-        실내공기, 공공시설공기, 산업배기 및 외기 전체의 성인 1일
-        공기 섭취 비율은 약 83%(무게로는 약 20-30 kg)로 음료,
-        물과 음식류의 비율 약 15%에 비해 훨씬 많습니다.
-        <br />
-        특히 실내공기의 섭취비율이 약 57%로 가장 높아
-        실내공기질(IAQ)이 인체의 건강에 영향을 미치는 가장 큰
-        요인 중에 하나입니다. <br />규제 대상 오염물질인
-        미세먼지, 포름알데히드, 일산화탄소, 이산화탄소,
-        부유세균으로 모두 식물에 의해 제거가 가능합니다.
-      </p>
-      </div>
   </div>
   <!-- 스크립트영역 -->
 

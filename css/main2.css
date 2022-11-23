@@ -276,10 +276,6 @@
     height: auto;
   }
 
-  .swiper-fade .swiper-slide img {
-    height: 450px;
-  }
-
   .project_intro .project_flexbox .swiper-container .btn_group {
     max-width: unset;
   }
