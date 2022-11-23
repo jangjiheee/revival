@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>브랜드</title>
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/sub.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    .whole_box {
+      display: flex;
+      align-items: center;
+      max-width: 1440px;
+    }
+
+    .whole_box .chart-wrap {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5%;
+      flex-direction: column-reverse;
+      width: 60%;
+    }
+
+    .whole_box .text_box {
+      width: 40%;
+    }
+
+    .chart-wrap .chart_box {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .chart-wrap .chart_desc ul {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto;
+    }
+
+    .chart-wrap .chart_desc ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .chart-wrap .chart_desc ul li > div {
+      margin-right: 10px;
+    }
+
+    .chart-wrap .chart_desc span {
+      display: block;
+    }
+
+    .chart-wrap .chart_desc li .char_color {
+      height: 16px;
+      width: 50px;
+    }
+
+    .chart-wrap .chart_desc .list01 .char_color {
+      background-color: rgb(255, 138, 194);
+    }
+
+    .chart-wrap .chart_desc .list02 .char_color {
+      background-color: rgb(255, 159, 64);
+    }
+
+    .chart-wrap .chart_desc .list03 .char_color {
+      background-color: rgb(153, 102, 255);
+    }
+
+    .chart-wrap .chart_desc .list04 .char_color {
+      background-color: rgb(75, 192, 192);
+    }
+
+    .chart-wrap .chart_desc .list05 .char_color {
+      background-color: rgb(255, 206, 86);
+    }
+
+    .chart-wrap .chart_desc .list06 .char_color {
+      background-color: rgb(54, 162, 235);
+    }
+
+    .chart-wrap .chart_desc .list07 .char_color {
+      background-color: rgb(255, 99, 132);
+    }
+
+    .cart_title {
+      text-align: center;
+      font-size: 15px;
+      color: #555555;
+      font-weight: 500;
+    }
+
+    @media screen and (max-width:767px) {
+      .chart-wrap {
+        flex-direction: column;
+      }
+
+      .chart-wrap .chart_box {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .chart-wrap .chart_desc {
+        width: 100%;
+      }
+
+      .chart-wrap .chart_desc ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 15px;
+        row-gap: 5px;
+      }
+
+      .chart-wrap .chart_desc ul li > div {
+        margin-right: 6px;
+      }
+    }
+
+    @media screen and (max-width:560px) {
+      .chart-wrap .chart_desc li .char_color {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="inner_container">
+    <div class="whole_box">
+      <div class="chart-wrap">
+        <div class="chart_box">
+          <canvas id="myChart" class="chart"></canvas>
+        </div>
+        <div class="chart_desc">
+          <ul>
+            <li class="list01">
+              <div class="char_color"></div>
+              <span>실내공기</span>
+            </li>
+            <li class="list02">
+              <div class="char_color"></div>
+              <span>공공시설공기</span>
+            </li>
+            <li class="list03">
+              <div class="char_color"></div>
+              <span>산업배기</span>
+            </li>
+            <li class="list04">
+              <div class="char_color"></div>
+              <span>외기</span>
+            </li>
+            <li class="list05">
+              <div class="char_color"></div>
+              <span>음료, 물</span>
+            </li>
+            <li class="list06">
+              <div class="char_color"></div>
+              <span>음식류</span>
+            </li>
+            <li class="list07">
+              <div class="char_color"></div>
+              <span>기타</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text_box">
+          <p class="text">
+            실내공기, 공공시설공기, 산업배기 및 외기 전체의 성인 1일
+            공기 섭취 비율은 약 83%(무게로는 약 20-30 kg)로 음료,
+            물과 음식류의 비율 약 15%에 비해 훨씬 많습니다.
+            <br />
+            특히 실내공기의 섭취비율이 약 57%로 가장 높아
+            실내공기질(IAQ)이 인체의 건강에 영향을 미치는 가장 큰
+            요인 중에 하나입니다. <br />규제 대상 오염물질인
+            미세먼지, 포름알데히드, 일산화탄소, 이산화탄소,
+            부유세균으로 모두 식물에 의해 제거가 가능합니다.
+          </p>
+      </div>
+    </div>
+  </div>
+  <!-- 스크립트영역 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['기타', '음식류', '음료, 물', '외기', '산업배기', '공공시설공기', ' 실내공기'],
+        datasets: [{
+          label: '# of Votes',
+          data: [2, 7, 8, 5, 9, 12, 57],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 206, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(153, 102, 255)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 138, 194)'
+          ]
+        }],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'none',
+          },
+          title: {
+            display: true,
+            position: 'bottom',
+            text: '인체의 1일 물질 섭취량 비율',
+            font: {
+              size: '14px',
+              weight: '500'
+            }
+          }
+        }
+      },
+    });
+  </script>
+</body>
+
+</html>
