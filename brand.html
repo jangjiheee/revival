@@ -60,27 +60,62 @@
                       <p class="text">
                         WHO 데이터에 따르면, 모든 세계인구(99%)가 WHO 지침
                         한계를 초과하는 높은 수준의 오염물질을 포함한 공기를
-                        호흡하고 있습니다. 2020년에는 대기오염으로 인해 연간 약
-                        320만명이 사망하는 것으로 추산됩니다.
+                        호흡하고 있습니다. <br />
+                        2020년에는 대기오염으로 인해 연간 약 320만명이 사망하는
+                        것으로 추산됩니다.
                       </p>
                     </div>
-                    <div class="cont_graph">
-                      <img
-                        src="./image/project_graph.png"
-                        alt=""
-                        class="graph"
-                      />
-                      <!-- <p class="text">
-                        실내공기, 공공시설공기, 산업배기 및 외기 전체의 성인 1일
-                        공기 섭취 비율은 약 83%(무게로는 약 20-30 kg)로 음료,
-                        물과 음식류의 비율 약 15%에 비해 훨씬 많습니다.
-                        <br />
-                        특히 실내공기의 섭취비율이 약 57%로 가장 높아
-                        실내공기질(IAQ)이 인체의 건강에 영향을 미치는 가장 큰
-                        요인 중에 하나입니다. <br />규제 대상 오염물질인
-                        미세먼지, 포름알데히드, 일산화탄소, 이산화탄소,
-                        부유세균으로 모두 식물에 의해 제거가 가능합니다.
-                      </p> -->
+                    <div class="cont_chart">
+                      <div class="chart-wrap">
+                        <div class="chart_box">
+                          <canvas id="myChart" class="chart"></canvas>
+                        </div>
+                        <div class="chart_desc">
+                          <ul>
+                            <li class="list01">
+                              <div class="char_color"></div>
+                              <span>실내공기</span>
+                            </li>
+                            <li class="list02">
+                              <div class="char_color"></div>
+                              <span>공공시설공기</span>
+                            </li>
+                            <li class="list03">
+                              <div class="char_color"></div>
+                              <span>산업배기</span>
+                            </li>
+                            <li class="list04">
+                              <div class="char_color"></div>
+                              <span>외기</span>
+                            </li>
+                            <li class="list05">
+                              <div class="char_color"></div>
+                              <span>음료, 물</span>
+                            </li>
+                            <li class="list06">
+                              <div class="char_color"></div>
+                              <span>음식류</span>
+                            </li>
+                            <li class="list07">
+                              <div class="char_color"></div>
+                              <span>기타</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="text_box">
+                        <p class="text">
+                          실내공기, 공공시설공기, 산업배기 및 외기 전체의 성인
+                          1일 공기 섭취 비율은 약 83%(무게로는 약 20-30 kg)로
+                          음료, 물과 음식류의 비율 약 15%에 비해 훨씬 많습니다.
+                          <br />
+                          특히 실내공기의 섭취비율이 약 57%로 가장 높아
+                          실내공기질(IAQ)이 인체의 건강에 영향을 미치는 가장 큰
+                          요인 중에 하나입니다. <br />규제 대상 오염물질인
+                          미세먼지, 포름알데히드, 일산화탄소, 이산화탄소,
+                          부유세균으로 모두 식물에 의해 제거가 가능합니다.
+                        </p>
+                      </div>
                     </div>
                     <div class="cont_plant">
                       <h3 class="title">식물이 주는 효과</h3>
@@ -1036,6 +1071,7 @@
     </div>
     <!-- 스크립트영역 -->
     <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- <script src="./js/main.js"></script> -->
 
@@ -1255,6 +1291,55 @@
         $(".item").removeClass("active");
         $(".item:last-child").addClass("active");
       }
+    </script>
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "pie",
+        data: {
+          labels: [
+            "기타",
+            "음식류",
+            "음료, 물",
+            "외기",
+            "산업배기",
+            "공공시설공기",
+            " 실내공기",
+          ],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [2, 7, 8, 5, 9, 12, 57],
+              backgroundColor: [
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(255, 206, 86)",
+                "rgb(75, 192, 192)",
+                "rgb(153, 102, 255)",
+                "rgb(255, 159, 64)",
+                "rgb(255, 138, 194)",
+              ],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "none",
+            },
+            title: {
+              display: true,
+              position: "bottom",
+              text: "인체의 1일 물질 섭취량 비율",
+              font: {
+                size: "14px",
+                weight: "500",
+              },
+            },
+          },
+        },
+      });
     </script>
   </body>
 </html>
