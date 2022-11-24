@@ -192,13 +192,23 @@ table th {
   width: calc(100% - 240px);
 }
 
-.direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
+.direction
+  .direction_flex
+  .direct_box
+  .direct_flex_box
+  .direct_txt
+  .direct_txt_title {
   margin-bottom: 15px;
   font-size: 28px;
   font-weight: 600;
 }
 
-.direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
+.direction
+  .direction_flex
+  .direct_box
+  .direct_flex_box
+  .direct_txt
+  .direct_txt_desc {
   font-size: 24px;
   font-weight: 300;
 }
@@ -368,11 +378,21 @@ table th {
     width: calc(100% - 190px);
   }
 
-  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
+  .direction
+    .direction_flex
+    .direct_box
+    .direct_flex_box
+    .direct_txt
+    .direct_txt_title {
     font-size: 24px;
   }
 
-  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
+  .direction
+    .direction_flex
+    .direct_box
+    .direct_flex_box
+    .direct_txt
+    .direct_txt_desc {
     font-size: 20px;
   }
 }
@@ -486,11 +506,21 @@ table th {
     display: unset;
   }
 
-  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
+  .direction
+    .direction_flex
+    .direct_box
+    .direct_flex_box
+    .direct_txt
+    .direct_txt_title {
     font-size: 20px;
   }
 
-  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
+  .direction
+    .direction_flex
+    .direct_box
+    .direct_flex_box
+    .direct_txt
+    .direct_txt_desc {
     font-size: 16px;
   }
 }
@@ -516,6 +546,12 @@ table th {
   text-align: center;
   font-weight: 700;
 }
+.tab_cont .cont .text {
+  font-size: 18px;
+}
+.tab_cont .cont p {
+  line-height: 28px;
+}
 
 .tab_cont .contents {
   display: block;
@@ -530,7 +566,10 @@ table th {
 }
 
 .remark {
+  display: block;
+  margin-top: 10px;
   font-size: 16px;
+  line-height: 24px;
   color: #ed1c24;
 }
 
@@ -550,18 +589,18 @@ table th {
   color: #555555;
 }
 
-.project_tab .tab_menu .tab_list>a {
+.project_tab .tab_menu .tab_list > a {
   position: relative;
   padding: 22px 65px;
   font-size: 24px;
 }
 
-.project_tab .tab_menu .tab_list.on>a {
+.project_tab .tab_menu .tab_list.on > a {
   color: #3aaa35;
   background: rgba(58, 170, 53, 0.12);
 }
 
-.project_tab .tab_menu .tab_list.on>a:before {
+.project_tab .tab_menu .tab_list.on > a:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -607,11 +646,11 @@ table th {
   padding: 0 40px 80px;
 }
 
-.contents>div {
+.contents > div {
   margin-top: 80px;
 }
 
-.contents>div .title {
+.contents > div .title {
   font-size: 36px;
 }
 
@@ -652,7 +691,7 @@ table th {
 }
 
 .cont_plant .plant_func .func_list {
-  width: calc((100% / 3) - 50px);
+  width: calc((100% / 3) - 34px);
 }
 
 .cont_plant .plant_func .func_list.m-right {
@@ -690,7 +729,8 @@ table th {
 
 .cont_plant .plant_func .text {
   margin-top: 30px;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 24px;
   color: #7b7b7b;
 }
 
@@ -769,10 +809,9 @@ table th {
 .model_struct .remark {
   display: block;
   margin-top: 20px;
-  font-size: 16px;
 }
 
-.model_list>li {
+.model_list > li {
   width: 50%;
 }
 
@@ -809,14 +848,15 @@ table th {
 
 .list_btn .btn:hover {
   background: #3aaa35;
+  transition: all 0.2s;
+}
+.list_btn .btn:hover a {
   color: #fff;
-  transition: all 0.5s;
 }
 
 .model_module {
   padding: 40px 0 80px;
   border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
 }
 
 .model_module .module_contain {
@@ -875,7 +915,7 @@ table th {
   height: 100%;
 }
 
-.module_contain .module_right>div {
+.module_contain .module_right > div {
   text-align: right;
 }
 
@@ -888,13 +928,9 @@ table th {
   text-align: center;
 }
 
-.bot_model .remark {
-  font-size: 18px;
-}
-
 .bot_model .bot_text {
   margin-top: 40px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .bot_model img {
@@ -918,7 +954,7 @@ table th {
   gap: 30px;
 }
 
-.intro_circle .circle_wrap>p {
+.intro_circle .circle_wrap > p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -966,7 +1002,6 @@ table th {
 
 .cont_hydrop .hydrop_item .text {
   margin: 40px 0;
-  font-size: 24px;
 }
 
 .cont_hydrop .hydrop_list {
@@ -1028,6 +1063,8 @@ table th {
 /* 브랜드 태블릿 */
 @media screen and (max-width: 1024px) {
   .remark {
+    font-size: 14px;
+    line-height: 24px;
     color: #ed1c24;
   }
 
@@ -1048,7 +1085,7 @@ table th {
     text-align: center;
   }
 
-  .project_tab .tab_menu .tab_list>a {
+  .project_tab .tab_menu .tab_list > a {
     padding: 0;
     font-size: 20px;
     line-height: 60px;
@@ -1056,6 +1093,10 @@ table th {
 
   .project_tab .cont_text .title {
     font-size: 36px;
+  }
+  .tab_cont .cont p {
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .project_tab .cont_text .desc {
@@ -1071,11 +1112,11 @@ table th {
     padding: 0 30px;
   }
 
-  .contents>div {
+  .contents > div {
     margin-top: 50px;
   }
 
-  .contents>div .title {
+  .contents > div .title {
     font-size: 28px;
   }
 
@@ -1110,7 +1151,7 @@ table th {
 
   .cont_plant .plant_func .text {
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .cont_check {
@@ -1224,10 +1265,6 @@ table th {
     width: 100%;
   }
 
-  .bot_model .remark {
-    font-size: 16px;
-  }
-
   .bot_model .bot_text {
     margin-top: 20px;
     font-size: 18px;
@@ -1253,7 +1290,6 @@ table th {
 
   .cont_hydrop .hydrop_item .text {
     margin: 30px 0 40px;
-    font-size: 20px;
   }
 
   .hydrop_wrap .hydrop_item.item_left {
@@ -1295,7 +1331,7 @@ table th {
     border-bottom: 1px solid #ccc;
   }
 
-  .project_tab .tab_menu .tab_list>a {
+  .project_tab .tab_menu .tab_list > a {
     font-size: 16px;
     line-height: 50px;
   }
@@ -1325,7 +1361,7 @@ table th {
     padding: 0 10px;
   }
 
-  .contents>div {
+  .contents > div {
     margin-top: 30px;
   }
 
@@ -1333,7 +1369,7 @@ table th {
     margin-top: 10px;
   }
 
-  .contents>div .title {
+  .contents > div .title {
     font-size: 24px;
   }
 
@@ -1400,14 +1436,19 @@ table th {
     gap: 30px;
   }
 
-  .cont_model .model_list>li {
+  .cont_model .model_list > li {
     width: 100%;
+  }
+  .model_module {
+    padding: 40px 0;
   }
 
   .model_module .module_contain {
     flex-direction: column;
   }
-
+  .module_contain .module_left {
+    width: 90%;
+  }
   .module_contain .module_left .module_text {
     padding: 10px 0;
     font-size: 16px;
@@ -1434,6 +1475,9 @@ table th {
   .model_list .text {
     font-size: 16px;
   }
+  .model_struct .remark {
+    margin-top: 0;
+  }
 
   .model_struct .bot_model {
     margin-top: 40px;
@@ -1452,7 +1496,7 @@ table th {
     gap: 15px;
   }
 
-  .intro_circle .circle_wrap>p {
+  .intro_circle .circle_wrap > p {
     max-width: 70px;
     height: 70px;
     font-size: 16px;
@@ -1460,7 +1504,6 @@ table th {
 
   .cont_hydrop .hydrop_item .text {
     margin: 20px 0 30px;
-    font-size: 16px;
   }
 
   .list_flex .list_tag {

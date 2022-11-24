@@ -127,8 +127,8 @@
 
 .intro_title .underline {
   position: absolute;
-  bottom: 0;
-  left: 6.5775vw;
+  bottom: -4px;
+  left: 6vw;
   height: 13px;
   background: #3cb371;
   z-index: -1;
