@@ -372,7 +372,13 @@
   .main_inquire {
     padding-bottom: 80px;
   }
-
+  .project_intro .project_flexbox .swiper-container .swiper_btn {
+    width: 35px;
+    height: 35px;
+  }
+  .project_intro .project_flexbox .swiper-container .swiper_btn img {
+    width: 25px;
+  }
   .project_intro .project_flexbox {
     flex-direction: column;
     position: relative;

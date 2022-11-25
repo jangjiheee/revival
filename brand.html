@@ -113,7 +113,10 @@
                           실내공기질(IAQ)이 인체의 건강에 영향을 미치는 가장 큰
                           요인 중에 하나입니다. <br />규제 대상 오염물질인
                           미세먼지, 포름알데히드, 일산화탄소, 이산화탄소,
-                          부유세균으로 모두 식물에 의해 제거가 가능합니다.
+                          부유세균으로 모두<br class="pointBr" />
+                          <span class="desc_underline underLining"
+                            >식물에 의해 제거</span
+                          >가 가능합니다.
                         </p>
                       </div>
                     </div>
@@ -1108,6 +1111,7 @@
         let hydropText = document.querySelector(".hydrop_underline");
         let qnaText = document.querySelector(".qna_underline");
         let galText = document.querySelector(".gallery_underline");
+        let descText = document.querySelector(".desc_underline");
         let value = window.scrollY;
         console.log("123");
 
@@ -1123,6 +1127,12 @@
             hydropText.classList.remove("active");
             qnaText.classList.remove("active");
             galText.classList.remove("active");
+          }
+          //desc 밑줄 스크롤이벤트
+          if (value > 1500) {
+            descText.classList.add("active");
+          } else {
+            descText.classList.remove("active");
           }
 
           //세 번째 섹션 스크롤이벤트
@@ -1141,7 +1151,7 @@
           //   };
           // }
         }
-        if (window.innerWidth < 1024) {
+        if (window.innerWidth <= 1024) {
           // 첫 번째 섹션 스크롤이벤트
           if (value > 50) {
             introText.classList.add("active");
@@ -1153,6 +1163,11 @@
             hydropText.classList.remove("active");
             qnaText.classList.remove("active");
             galText.classList.remove("active");
+          }
+          if (value > 1095) {
+            descText.classList.add("active");
+          } else {
+            descText.classList.remove("active");
           }
 
           //세 번째 섹션 스크롤이벤트

@@ -29,6 +29,9 @@ img {
 .new_only {
   display: none;
 }
+.pointBr {
+  display: none;
+}
 
 table td,
 table th {
@@ -671,6 +674,32 @@ table th {
 }
 .cont_chart .text {
   margin-top: 20px;
+}
+.cont_chart .text .desc_underline {
+  position: relative;
+}
+
+.cont_chart .text .desc_underline.active:before {
+  content: "";
+
+  position: absolute;
+  bottom: 3px;
+  left: 0px;
+  height: 4px;
+  background: #3cb371;
+  z-index: -1;
+  animation-name: underLining;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes underLining {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 .chart-wrap {
   width: 100%;
@@ -1468,7 +1497,11 @@ table th {
     width: 85%;
   }
 }
-
+@media screen and (max-width: 830px) {
+  .pointBr {
+    display: block;
+  }
+}
 /* 브랜드 모바일 */
 @media screen and (max-width: 767px) {
   .project_tab .tab_menu {
