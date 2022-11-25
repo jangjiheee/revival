@@ -1632,13 +1632,16 @@ table th {
 
   .intro_circle .circle_wrap {
     width: 100%;
-    gap: 15px;
+    gap: 10px;
   }
 
   .intro_circle .circle_wrap p {
     max-width: 70px;
     height: 70px;
     font-size: 16px;
+  }
+  .circle_wrap span {
+    width: 20px;
   }
 
   .cont_hydrop .hydrop_item .text {
@@ -1690,6 +1693,11 @@ table th {
   .module_contain .module_left .module_img.f_img img {
     max-width: 40px;
     max-height: 45px;
+  }
+}
+@media screen and (max-width: 351px) {
+  .intro_circle .circle_wrap {
+    gap: 7px;
   }
 }
 .project_area .accrodion-wrap .accrodion-container {
