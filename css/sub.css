@@ -3,6 +3,7 @@ html,
 body {
   --webkit-appearance: none;
 }
+
 .wrap {
   width: 100%;
   overflow: hidden;
@@ -40,9 +41,9 @@ table th {
   text-align: center;
 }
 
-.main .text_box .intro_title {
+/* .main .text_box .intro_title {
   line-height: 88px;
-}
+} */
 
 .banner {
   max-width: 750px;
@@ -195,23 +196,13 @@ table th {
   width: calc(100% - 240px);
 }
 
-.direction
-  .direction_flex
-  .direct_box
-  .direct_flex_box
-  .direct_txt
-  .direct_txt_title {
+.direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
   margin-bottom: 15px;
   font-size: 28px;
   font-weight: 600;
 }
 
-.direction
-  .direction_flex
-  .direct_box
-  .direct_flex_box
-  .direct_txt
-  .direct_txt_desc {
+.direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
   font-size: 24px;
   font-weight: 300;
 }
@@ -283,9 +274,9 @@ table th {
     margin-top: 120px;
   }
 
-  .main .text_box .intro_title {
+  /* .main .text_box .intro_title {
     line-height: 68px;
-  }
+  } */
 
   .banner {
     max-width: 704px;
@@ -381,21 +372,11 @@ table th {
     width: calc(100% - 190px);
   }
 
-  .direction
-    .direction_flex
-    .direct_box
-    .direct_flex_box
-    .direct_txt
-    .direct_txt_title {
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
     font-size: 24px;
   }
 
-  .direction
-    .direction_flex
-    .direct_box
-    .direct_flex_box
-    .direct_txt
-    .direct_txt_desc {
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
     font-size: 20px;
   }
 }
@@ -417,9 +398,9 @@ table th {
     margin-top: 80px;
   }
 
-  .main .text_box .intro_title {
+  /* .main .text_box .intro_title {
     line-height: 46px;
-  }
+  } */
 
   .banner {
     max-width: 100%;
@@ -509,21 +490,11 @@ table th {
     display: unset;
   }
 
-  .direction
-    .direction_flex
-    .direct_box
-    .direct_flex_box
-    .direct_txt
-    .direct_txt_title {
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
     font-size: 20px;
   }
 
-  .direction
-    .direction_flex
-    .direct_box
-    .direct_flex_box
-    .direct_txt
-    .direct_txt_desc {
+  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
     font-size: 16px;
   }
 }
@@ -549,9 +520,11 @@ table th {
   text-align: center;
   font-weight: 700;
 }
+
 .tab_cont .cont .text {
   font-size: 18px;
 }
+
 .tab_cont .cont p {
   line-height: 28px;
 }
@@ -592,18 +565,18 @@ table th {
   color: #555555;
 }
 
-.project_tab .tab_menu .tab_list > a {
+.project_tab .tab_menu .tab_list>a {
   position: relative;
   padding: 22px 65px;
   font-size: 24px;
 }
 
-.project_tab .tab_menu .tab_list.on > a {
+.project_tab .tab_menu .tab_list.on>a {
   color: #3aaa35;
   background: rgba(58, 170, 53, 0.12);
 }
 
-.project_tab .tab_menu .tab_list.on > a:before {
+.project_tab .tab_menu .tab_list.on>a:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -650,28 +623,32 @@ table th {
   padding: 0 40px 80px;
 }
 
-.contents > div {
+.contents>div {
   margin-top: 80px;
 }
 
-.contents > div .title {
+.contents>div .title {
   font-size: 36px;
 }
 
 .cont_banner .text {
   margin-top: 20px;
 }
+
 .cont_banner .text,
 .cont_chart .text {
   text-align: center;
 }
+
 .cont_chart .chart-wrap {
   max-width: 600px;
   margin: 0 auto;
 }
+
 .cont_chart .text {
   margin-top: 20px;
 }
+
 .chart-wrap {
   width: 100%;
   display: flex;
@@ -700,7 +677,7 @@ table th {
   margin-bottom: 15px;
 }
 
-.chart-wrap .chart_desc ul li > div {
+.chart-wrap .chart_desc ul li>div {
   margin-right: 10px;
 }
 
@@ -770,7 +747,7 @@ table th {
     row-gap: 5px;
   }
 
-  .chart-wrap .chart_desc ul li > div {
+  .chart-wrap .chart_desc ul li>div {
     margin-right: 6px;
   }
 }
@@ -786,6 +763,7 @@ table th {
     margin-bottom: 5px;
   }
 }
+
 .cont_plant {
   padding: 60px;
   background: #eaffeb;
@@ -855,6 +833,7 @@ table th {
 .cont_check .check_text {
   text-align: center;
 }
+
 .check_text .desc {
   font-size: 18px;
   line-height: 28px;
@@ -925,7 +904,7 @@ table th {
   margin-top: 20px;
 }
 
-.model_list > li {
+.model_list>li {
   width: 50%;
 }
 
@@ -964,6 +943,7 @@ table th {
   background: #3aaa35;
   transition: all 0.2s;
 }
+
 .list_btn .btn:hover a {
   color: #fff;
 }
@@ -1025,12 +1005,14 @@ table th {
   max-height: 90px;
   height: 100%;
 }
+
 .module_contain .module_right {
   display: flex;
   flex-direction: column;
   height: auto;
   justify-content: center;
 }
+
 @media screen and (max-width: 1200px) and (min_width: 1024px) {
   .module_contain .module_right {
     justify-content: space-evenly;
@@ -1067,6 +1049,7 @@ table th {
   align-items: center;
   gap: 30px;
 }
+
 .intro_circle .circle_wrap p {
   display: flex;
   align-items: center;
@@ -1083,6 +1066,7 @@ table th {
 .circle_wrap p.circle_sp {
   line-height: 1;
 }
+
 .circle_wrap span {
   width: 25px;
 }
@@ -1091,21 +1075,25 @@ table th {
   text-align: center;
   font-size: 18px;
 }
+
 @media screen and (max-width: 1263px) {
   .intro_circle .circle_wrap {
     gap: 20px;
   }
 }
+
 @media screen and (max-width: 1183px) {
   .intro_circle .circle_wrap p {
     width: 130px;
     height: 130px;
   }
 }
+
 @media screen and (max-width: 1083px) {
   .intro_circle .circle_wrap {
     gap: 10px;
   }
+
   .intro_circle .circle_wrap p {
     width: 120px;
     height: 120px;
@@ -1195,6 +1183,7 @@ table th {
 .cont_type .type_slide img {
   display: block;
 }
+
 @media screen and (min-width: 1560px) {
   .module_right.f_module {
     width: 40%;
@@ -1226,7 +1215,7 @@ table th {
     text-align: center;
   }
 
-  .project_tab .tab_menu .tab_list > a {
+  .project_tab .tab_menu .tab_list>a {
     padding: 0;
     font-size: 20px;
     line-height: 60px;
@@ -1235,9 +1224,11 @@ table th {
   .project_tab .cont_text .title {
     font-size: 36px;
   }
+
   .tab_cont .cont p {
     line-height: 24px;
   }
+
   .tab_cont .cont .text {
     font-size: 16px;
   }
@@ -1255,11 +1246,11 @@ table th {
     padding: 0 30px;
   }
 
-  .contents > div {
+  .contents>div {
     margin-top: 50px;
   }
 
-  .contents > div .title {
+  .contents>div .title {
     font-size: 28px;
   }
 
@@ -1420,6 +1411,7 @@ table th {
     margin: 0 auto 40px;
     gap: 20px;
   }
+
   .intro_circle .circle_wrap p {
     width: 130px;
     height: 130px;
@@ -1463,6 +1455,7 @@ table th {
     padding: 0 30px 0;
   }
 }
+
 @media screen and (max-width: 950px) {
   .intro_circle .circle_wrap {
     width: 85%;
@@ -1483,7 +1476,7 @@ table th {
     border-bottom: 1px solid #ccc;
   }
 
-  .project_tab .tab_menu .tab_list > a {
+  .project_tab .tab_menu .tab_list>a {
     font-size: 16px;
     line-height: 50px;
   }
@@ -1513,7 +1506,7 @@ table th {
     padding: 0 10px;
   }
 
-  .contents > div {
+  .contents>div {
     margin-top: 30px;
   }
 
@@ -1521,7 +1514,7 @@ table th {
     margin-top: 10px;
   }
 
-  .contents > div .title {
+  .contents>div .title {
     font-size: 24px;
   }
 
@@ -1584,9 +1577,10 @@ table th {
     gap: 30px;
   }
 
-  .cont_model .model_list > li {
+  .cont_model .model_list>li {
     width: 100%;
   }
+
   .model_module {
     padding: 40px 0;
   }
@@ -1594,9 +1588,11 @@ table th {
   .model_module .module_contain {
     flex-direction: column;
   }
+
   .module_contain .module_left {
     width: 90%;
   }
+
   .module_contain .module_left .module_text {
     font-size: 15px;
   }
@@ -1622,6 +1618,7 @@ table th {
   .model_list .text {
     font-size: 16px;
   }
+
   .model_struct .remark {
     margin-top: 0;
   }
@@ -1640,6 +1637,7 @@ table th {
     height: 70px;
     font-size: 16px;
   }
+
   .circle_wrap span {
     width: 20px;
   }
@@ -1682,24 +1680,29 @@ table th {
     padding: 0 0 20px;
   }
 }
+
 @media (max-width: 576px) {
   .module_contain .module_left .module_img {
     height: 60px;
   }
+
   .module_contain .module_left .module_img img {
     max-width: 60px;
     height: 100%;
   }
+
   .module_contain .module_left .module_img.f_img img {
     max-width: 40px;
     max-height: 45px;
   }
 }
+
 @media screen and (max-width: 351px) {
   .intro_circle .circle_wrap {
     gap: 7px;
   }
 }
+
 .project_area .accrodion-wrap .accrodion-container {
   border-top: 1px solid #ccc;
 }
