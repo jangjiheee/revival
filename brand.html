@@ -1,326 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>브랜드</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/sub.css" />
-  </head>
-  <body>
-    <div class="wrap">
-      <div class="inner_container">
-        <div class="main">
-          <div class="text_box">
-            <h1 data-aos="zoom-in" class="intro_title">
-              새로운 프로젝트에<br class="tab_only" />
-              도전하는<br />
-              부활피앤피
-            </h1>
-            <div class="line"></div>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>브랜드</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/sub.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="inner_container">
+      <div class="main">
+        <div class="text_box">
+          <h1 data-aos="zoom-in" class="intro_title">
+            새로운 프로젝트에<br class="tab_only" />
+            도전하는<br />
+            부활피앤피
+          </h1>
+          <div class="line"></div>
         </div>
-        <div class="project_area">
-          <div class="project_tab">
-            <ul class="tab_menu">
-              <li class="tab_list bot_border b_right on">
-                <a href="javascript:;">제품소개</a>
-              </li>
-              <li class="tab_list bot_border b_right">
-                <a href="javascript:;">수경식물</a>
-              </li>
-              <li class="tab_list b_right"><a href="javascript:;">QnA</a></li>
-              <li class="tab_list"><a href="javascript:;">시공사례</a></li>
-            </ul>
-            <div class="tab_cont">
-              <div class="cont cont1 is_on">
-                <div class="cont_wrap">
-                  <div class="cont_text">
-                    <h2 class="title">
-                      부활피앤피
-                      <span class="tit_underline intro_underline">소개</span>
-                    </h2>
-                    <p class="desc">
-                      우리가 항상 피곤한 이유,<br class="mo_only" />
-                      혹시 <span class="b_text">공기 때문</span>이라고
-                      <br class="mo_only" />
-                      생각해보지 않으셨나요?
+      </div>
+      <div class="project_area">
+        <div class="project_tab">
+          <ul class="tab_menu">
+            <li class="tab_list bot_border b_right on">
+              <a href="javascript:;">제품소개</a>
+            </li>
+            <li class="tab_list bot_border b_right">
+              <a href="javascript:;">수경식물</a>
+            </li>
+            <li class="tab_list b_right"><a href="javascript:;">QnA</a></li>
+            <li class="tab_list"><a href="javascript:;">시공사례</a></li>
+          </ul>
+          <div class="tab_cont">
+            <div class="cont cont1 is_on">
+              <div class="cont_wrap">
+                <div class="cont_text">
+                  <h2 class="title">
+                    부활피앤피
+                    <span class="tit_underline intro_underline">소개</span>
+                  </h2>
+                  <p class="desc">
+                    우리가 항상 피곤한 이유, 혹시 <span class="b_text">공기 때문</span>이라고 생각해보지 않으셨나요?
+                  </p>
+                </div>
+                <div class="contents">
+                  <div class="cont_banner">
+                    <div class="banner_img">
+                      <img src="./image/project_air.png" alt="공장 매연" />
+                    </div>
+                    <p class="text">
+                      WHO 데이터에 따르면, 모든 세계인구(99%)가 WHO 지침
+                      한계를 초과하는 높은 수준의 오염물질을 포함한 공기를
+                      호흡하고 있습니다. <br />
+                      2020년에는 대기오염으로 인해 연간 약 320만명이 사망하는
+                      것으로 추산됩니다.
                     </p>
                   </div>
-                  <div class="contents">
-                    <div class="cont_banner">
-                      <div class="banner_img">
-                        <img src="./image/project_air.png" alt="공장 매연" />
+                  <div class="cont_chart">
+                    <div class="chart-wrap">
+                      <div class="chart_box">
+                        <canvas id="myChart" class="chart"></canvas>
                       </div>
+                      <div class="chart_desc">
+                        <ul>
+                          <li class="list01">
+                            <div class="char_color"></div>
+                            <span>실내공기</span>
+                          </li>
+                          <li class="list02">
+                            <div class="char_color"></div>
+                            <span>공공시설공기</span>
+                          </li>
+                          <li class="list03">
+                            <div class="char_color"></div>
+                            <span>산업배기</span>
+                          </li>
+                          <li class="list04">
+                            <div class="char_color"></div>
+                            <span>외기</span>
+                          </li>
+                          <li class="list05">
+                            <div class="char_color"></div>
+                            <span>음료, 물</span>
+                          </li>
+                          <li class="list06">
+                            <div class="char_color"></div>
+                            <span>음식류</span>
+                          </li>
+                          <li class="list07">
+                            <div class="char_color"></div>
+                            <span>기타</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="text_box">
                       <p class="text">
-                        WHO 데이터에 따르면, 모든 세계인구(99%)가 WHO 지침
-                        한계를 초과하는 높은 수준의 오염물질을 포함한 공기를
-                        호흡하고 있습니다. <br />
-                        2020년에는 대기오염으로 인해 연간 약 320만명이 사망하는
-                        것으로 추산됩니다.
+                        실내공기, 공공시설공기, 산업배기 및 외기 전체의 성인
+                        1일 공기 섭취 비율은 약 83%(무게로는 약 20-30 kg)로
+                        음료, 물과 음식류의 비율 약 15%에 비해 훨씬 많습니다.
+                        <br />
+                        특히 실내공기의 섭취비율이 약 57%로 가장 높아
+                        실내공기질(IAQ)이 인체의 건강에 영향을 미치는 가장 큰
+                        요인 중에 하나입니다. <br />규제 대상 오염물질인
+                        미세먼지, 포름알데히드, 일산화탄소, 이산화탄소,
+                        부유세균으로 모두<br class="pointBr" />
+                        <span class="desc_underline underLining">식물에 의해 제거</span>가 가능합니다.
                       </p>
                     </div>
-                    <div class="cont_chart">
-                      <div class="chart-wrap">
-                        <div class="chart_box">
-                          <canvas id="myChart" class="chart"></canvas>
-                        </div>
-                        <div class="chart_desc">
-                          <ul>
-                            <li class="list01">
-                              <div class="char_color"></div>
-                              <span>실내공기</span>
-                            </li>
-                            <li class="list02">
-                              <div class="char_color"></div>
-                              <span>공공시설공기</span>
-                            </li>
-                            <li class="list03">
-                              <div class="char_color"></div>
-                              <span>산업배기</span>
-                            </li>
-                            <li class="list04">
-                              <div class="char_color"></div>
-                              <span>외기</span>
-                            </li>
-                            <li class="list05">
-                              <div class="char_color"></div>
-                              <span>음료, 물</span>
-                            </li>
-                            <li class="list06">
-                              <div class="char_color"></div>
-                              <span>음식류</span>
-                            </li>
-                            <li class="list07">
-                              <div class="char_color"></div>
-                              <span>기타</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="text_box">
+                  </div>
+                  <div class="cont_plant">
+                    <h3 class="title">식물이 주는 효과</h3>
+                    <ul class="plant_func">
+                      <li class="func_list m-right">
+                        <span class="green">01</span>
+                        <h4 class="func_tit">장식적 기능</h4>
                         <p class="text">
-                          실내공기, 공공시설공기, 산업배기 및 외기 전체의 성인
-                          1일 공기 섭취 비율은 약 83%(무게로는 약 20-30 kg)로
-                          음료, 물과 음식류의 비율 약 15%에 비해 훨씬 많습니다.
-                          <br />
-                          특히 실내공기의 섭취비율이 약 57%로 가장 높아
-                          실내공기질(IAQ)이 인체의 건강에 영향을 미치는 가장 큰
-                          요인 중에 하나입니다. <br />규제 대상 오염물질인
-                          미세먼지, 포름알데히드, 일산화탄소, 이산화탄소,
-                          부유세균으로 모두<br class="pointBr" />
-                          <span class="desc_underline underLining"
-                            >식물에 의해 제거</span
-                          >가 가능합니다.
+                          생명력 있는 식물로 공간을 아름답게 연출. <br />
+                          면, 직선, 색채 등을 활용하여 건물 자체를 더욱
+                          특색있게 조성.
                         </p>
-                      </div>
-                    </div>
-                    <div class="cont_plant">
-                      <h3 class="title">식물이 주는 효과</h3>
-                      <ul class="plant_func">
-                        <li class="func_list m-right">
-                          <span class="green">01</span>
-                          <h4 class="func_tit">장식적 기능</h4>
-                          <p class="text">
-                            생명력 있는 식물로 공간을 아름답게 연출. <br />
-                            면, 직선, 색채 등을 활용하여 건물 자체를 더욱
-                            특색있게 조성.
-                          </p>
-                        </li>
-                        <li class="func_list m-right">
-                          <span class="green">02</span>
-                          <h4 class="func_tit">환경적 기능</h4>
-                          <p class="text">
-                            식물의 증산작용을 통해 공중 습도를 높여주는 역할.<br />
-                            실내 오염물질 제거와 음이온 발생으로 실내 환경을
-                            쾌적하게 조성.
-                          </p>
-                        </li>
-                        <li class="func_list mr-0">
-                          <span class="green">03</span>
-                          <h4 class="func_tit">심리적 기능</h4>
-                          <p class="text">
-                            아름다운 실내공간을 창출함으로써 스트레스 해소와
-                            여가활동의 기회를 제공.<br />
-                            녹색식물 공간에서 사람의 뇌파에 알파파가 많아짐으로
-                            피로회복 및 심리적 효과를 일으켜 일의 능률과
-                            산업활동을 촉진.
-                          </p>
-                        </li>
-                        <li class="func_list m-right m-top">
-                          <span class="green">04</span>
-                          <h4 class="func_tit">건축적 기능</h4>
-                          <p class="text">
-                            실내 조경을 통한 특정한 공간의 고유기능 선사.<br />
-                            이용자의 동선을 유도, 사생활 노출의 차폐 기능 효과.
-                          </p>
-                        </li>
-                        <li class="func_list m-right m-top">
-                          <span class="green">05</span>
-                          <h4 class="func_tit">광장 기능</h4>
-                          <p class="text">
-                            대형 공공건물의 실내 조경 공간은 휴식과 만남의 장이
-                            되기도 하며 공연장 등 상업적 공간으로 활용이 되는 등
-                            다목적 실내광장 역할.
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="cont_check">
-                      <div class="check_text">
-                        <h2 class="title">눈으로 확인하세요</h2>
-                        <p class="desc">
-                          부활피앤피의 환경을 생각한 <br class="mo_only" />
-                          수직정원으로 자연을 경험하세요
+                      </li>
+                      <li class="func_list m-right">
+                        <span class="green">02</span>
+                        <h4 class="func_tit">환경적 기능</h4>
+                        <p class="text">
+                          식물의 증산작용을 통해 공중 습도를 높여주는 역할.<br />
+                          실내 오염물질 제거와 음이온 발생으로 실내 환경을
+                          쾌적하게 조성.
                         </p>
-                      </div>
-                      <table class="check_table">
-                        <tr>
-                          <th class="w-40">구분</th>
-                          <th class="w-20 bg-green">부활피앤피</th>
-                          <th class="w-20">일반플랜트월</th>
-                          <th class="w-20">공기청정기</th>
-                        </tr>
-                        <tr>
-                          <td>가격</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>X</td>
-                          <td>X</td>
-                        </tr>
-                        <tr>
-                          <td>친환경</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>X</td>
-                          <td>X</td>
-                        </tr>
-                        <tr>
-                          <td>공기정화</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>?</td>
-                          <td>?</td>
-                        </tr>
-                        <tr>
-                          <td>부분교체 AS</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>X</td>
-                          <td>X</td>
-                        </tr>
-                        <tr>
-                          <td>유해물질제거</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>O</td>
-                          <td>X</td>
-                        </tr>
-                        <tr>
-                          <td>방문관리</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>X</td>
-                          <td>?</td>
-                        </tr>
-                        <tr>
-                          <td>습도관리</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>?</td>
-                          <td>X</td>
-                        </tr>
-                        <tr>
-                          <td>먼지제거</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>X</td>
-                          <td>?</td>
-                        </tr>
-                        <tr>
-                          <td>모듈형</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>X</td>
-                          <td>X</td>
-                        </tr>
-                        <tr>
-                          <td>유지관리</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>X</td>
-                          <td>O</td>
-                        </tr>
-                        <tr>
-                          <td>디자인</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>X</td>
-                          <td>O</td>
-                        </tr>
-                        <tr>
-                          <td>벌레억제율</td>
-                          <td class="bg-Lgreen">O</td>
-                          <td>X</td>
-                          <td>O</td>
-                        </tr>
-                      </table>
+                      </li>
+                      <li class="func_list mr-0">
+                        <span class="green">03</span>
+                        <h4 class="func_tit">심리적 기능</h4>
+                        <p class="text">
+                          아름다운 실내공간을 창출함으로써 스트레스 해소와
+                          여가활동의 기회를 제공.<br />
+                          녹색식물 공간에서 사람의 뇌파에 알파파가 많아짐으로
+                          피로회복 및 심리적 효과를 일으켜 일의 능률과
+                          산업활동을 촉진.
+                        </p>
+                      </li>
+                      <li class="func_list m-right m-top">
+                        <span class="green">04</span>
+                        <h4 class="func_tit">건축적 기능</h4>
+                        <p class="text">
+                          실내 조경을 통한 특정한 공간의 고유기능 선사.<br />
+                          이용자의 동선을 유도, 사생활 노출의 차폐 기능 효과.
+                        </p>
+                      </li>
+                      <li class="func_list m-right m-top">
+                        <span class="green">05</span>
+                        <h4 class="func_tit">광장 기능</h4>
+                        <p class="text">
+                          대형 공공건물의 실내 조경 공간은 휴식과 만남의 장이
+                          되기도 하며 공연장 등 상업적 공간으로 활용이 되는 등
+                          다목적 실내광장 역할.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="cont_check">
+                    <div class="check_text">
+                      <h2 class="title">눈으로 확인하세요</h2>
+                      <p class="desc">
+                        부활피앤피의 환경을 생각한 <br class="mo_only" />
+                        수직정원으로 자연을 경험하세요
+                      </p>
                     </div>
-                    <div class="cont_model">
-                      <h2 class="title">
-                        부활피앤피
-                        <span class="tit_underline model_underline"
-                          >제품 모델</span
-                        >
-                      </h2>
-                      <ul class="model_list">
-                        <li>
-                          <div class="model_img">
-                            <img src="./image/project_product_1.png" alt="" />
-                            <span class="remark"
-                              >*옆으로 한 줄 추가시 850mm 증가, 위로 한 줄
-                              추가시 200mm 증가</span
-                            >
+                    <table class="check_table">
+                      <tr>
+                        <th class="w-40">구분</th>
+                        <th class="w-20 bg-green">부활피앤피</th>
+                        <th class="w-20">일반플랜트월</th>
+                        <th class="w-20">공기청정기</th>
+                      </tr>
+                      <tr>
+                        <td>가격</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>X</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>친환경</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>X</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>공기정화</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>?</td>
+                        <td>?</td>
+                      </tr>
+                      <tr>
+                        <td>부분교체 AS</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>X</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>유해물질제거</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>O</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>방문관리</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>X</td>
+                        <td>?</td>
+                      </tr>
+                      <tr>
+                        <td>습도관리</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>?</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>먼지제거</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>X</td>
+                        <td>?</td>
+                      </tr>
+                      <tr>
+                        <td>모듈형</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>X</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>유지관리</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>X</td>
+                        <td>O</td>
+                      </tr>
+                      <tr>
+                        <td>디자인</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>X</td>
+                        <td>O</td>
+                      </tr>
+                      <tr>
+                        <td>벌레억제율</td>
+                        <td class="bg-Lgreen">O</td>
+                        <td>X</td>
+                        <td>O</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="cont_model">
+                    <h2 class="title">
+                      부활피앤피
+                      <span class="tit_underline model_underline">제품 모델</span>
+                    </h2>
+                    <ul class="model_list">
+                      <li>
+                        <div class="model_img">
+                          <img src="./image/project_product_1.png" alt="" />
+                          <span class="remark">*옆으로 한 줄 추가시 850mm 증가, 위로 한 줄
+                            추가시 200mm 증가</span>
+                        </div>
+                        <div class="list_text">
+                          <h4 class="list_title m-10">친환경 수직정원</h4>
+                          <p class="text">
+                            벽면에 별도의 고정 장치 없이 세워둘 수 있는 단면형
+                            수직정원 입니다. <br />벽면의 형태에 맞게 90도로
+                            꺽이는 부분도 연결설치가 가능한 제품입니다.<br />벽면의
+                            길이와 높이에 맞게 사이즈 변경 가능합니다.
+                          </p>
+                          <div class="list_btn">
+                            <button class="btn green">
+                              <a href="/inquiry/">견적 문의</a>
+                            </button>
                           </div>
-                          <div class="list_text">
-                            <h4 class="list_title m-10">친환경 수직정원</h4>
-                            <p class="text">
-                              벽면에 별도의 고정 장치 없이 세워둘 수 있는 단면형
-                              수직정원 입니다. <br />벽면의 형태에 맞게 90도로
-                              꺽이는 부분도 연결설치가 가능한 제품입니다.<br />벽면의
-                              길이와 높이에 맞게 사이즈 변경 가능합니다.
-                            </p>
-                            <div class="list_btn">
-                              <button class="btn green">
-                                <a href="/inquiry/">견적 문의</a>
-                              </button>
-                            </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="model_img">
+                          <img src="./image/project_product_2.png" alt="" />
+                          <span class="remark">*옆으로 한 줄 추가시 850mm 증가, 위로 한 줄
+                            추가시 200mm 증가</span>
+                        </div>
+                        <div class="list_text">
+                          <h4 class="list_title">친환경 파티션정원</h4>
+                          <p class="text">
+                            어떤 공간이든 별도의 고정 장치 없이 세워둘 수 있는
+                            양면형 파티션 정원입니다. <br />자연스러운
+                            공간분리가 가능한 제품입니다. <br />공간의 크기에
+                            맞게 길이와 높이가 변경이 가능합니다.
+                          </p>
+                          <div class="list_btn">
+                            <button class="btn green">
+                              <a href="/inquiry/">견적 문의</a>
+                            </button>
                           </div>
-                        </li>
-                        <li>
-                          <div class="model_img">
-                            <img src="./image/project_product_2.png" alt="" />
-                            <span class="remark"
-                              >*옆으로 한 줄 추가시 850mm 증가, 위로 한 줄
-                              추가시 200mm 증가</span
-                            >
-                          </div>
-                          <div class="list_text">
-                            <h4 class="list_title">친환경 파티션정원</h4>
-                            <p class="text">
-                              어떤 공간이든 별도의 고정 장치 없이 세워둘 수 있는
-                              양면형 파티션 정원입니다. <br />자연스러운
-                              공간분리가 가능한 제품입니다. <br />공간의 크기에
-                              맞게 길이와 높이가 변경이 가능합니다.
-                            </p>
-                            <div class="list_btn">
-                              <button class="btn green">
-                                <a href="/inquiry/">견적 문의</a>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="model_module">
-                        <h3 class="title">
-                          모듈형 제품으로 <br class="mo_only" />
-                          내가 원하는 공간에 맞게 조립 가능합니다.
-                        </h3>
-                        <!-- <ul class="module_list">
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="model_module">
+                      <h3 class="title">
+                        모듈형 제품으로 <br class="mo_only" />
+                        내가 원하는 공간에 맞게 조립 가능합니다.
+                      </h3>
+                      <!-- <ul class="module_list">
                           <li>
                             <div class="list_img">
                               <img src="./image/module_icon_01.png" alt="" />
@@ -382,153 +370,288 @@
                             <span>⑩분리형 화분 (8구)</span>
                           </li>
                         </ul> -->
-                        <div class="module_contain">
-                          <table class="module_left f_module">
-                            <colgroup>
-                              <col width="calc(50%/3)" />
-                              <col width="calc(50%/3)" />
-                              <col width="calc(50%/3)" />
-                            </colgroup>
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <div class="module_img">
-                                    <img
-                                      src="./image/module_icon_01.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">T 연결대</p>
-                                </td>
-                                <td>
-                                  <div class="module_img">
-                                    <img
-                                      src="./image/module_icon_02.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">십자연결대</p>
-                                </td>
-                                <td>
-                                  <div class="module_img">
-                                    <img
-                                      src="./image/module_icon_03.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">ㄱ연결대</p>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="module_img">
-                                    <img
-                                      src="./image/module_icon_04.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">바 연결대</p>
-                                </td>
-                                <td colspan="2">
-                                  <div class="module_img f_img">
-                                    <img
-                                      src="./image/module_icon_05_1.png"
-                                      alt=""
-                                    />
-                                    <img
-                                      src="./image/module_icon_05_2.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">속 연결대</p>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="module_img">
-                                    <img
-                                      src="./image/module_icon_06.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">화분</p>
-                                </td>
-                                <td>
-                                  <div class="module_img">
-                                    <img
-                                      src="./image/module_icon_07.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">화분덮개</p>
-                                </td>
-                                <td>
-                                  <div class="module_img">
-                                    <img
-                                      src="./image/module_icon_08.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">홀더</p>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td colspan="3">
-                                  <div class="module_img fit_img">
-                                    <img
-                                      src="./image/module_icon_09.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">일체형 화분 (5구)</p>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td colspan="3">
-                                  <div class="module_img fit_img">
-                                    <img
-                                      src="./image/module_icon_10.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <p class="module_text">분리형 화분 (6구)</p>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <div class="module_right f_module">
-                            <div class="module_fir">
-                              <img
-                                src="./image/project_product_03.png"
-                                alt=""
-                              />
-                            </div>
-                            <div class="module_sec">
-                              <img
-                                src="./image/project_product_04.png"
-                                alt=""
-                              />
-                            </div>
+                      <div class="module_contain">
+                        <table class="module_left f_module">
+                          <colgroup>
+                            <col width="calc(50%/3)" />
+                            <col width="calc(50%/3)" />
+                            <col width="calc(50%/3)" />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="module_img">
+                                  <img src="./image/module_icon_01.png" alt="" />
+                                </div>
+                                <p class="module_text">T 연결대</p>
+                              </td>
+                              <td>
+                                <div class="module_img">
+                                  <img src="./image/module_icon_02.png" alt="" />
+                                </div>
+                                <p class="module_text">십자연결대</p>
+                              </td>
+                              <td>
+                                <div class="module_img">
+                                  <img src="./image/module_icon_03.png" alt="" />
+                                </div>
+                                <p class="module_text">ㄱ연결대</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="module_img">
+                                  <img src="./image/module_icon_04.png" alt="" />
+                                </div>
+                                <p class="module_text">바 연결대</p>
+                              </td>
+                              <td colspan="2">
+                                <div class="module_img f_img">
+                                  <img src="./image/module_icon_05_1.png" alt="" />
+                                  <img src="./image/module_icon_05_2.png" alt="" />
+                                </div>
+                                <p class="module_text">속 연결대</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="module_img">
+                                  <img src="./image/module_icon_06.png" alt="" />
+                                </div>
+                                <p class="module_text">화분</p>
+                              </td>
+                              <td>
+                                <div class="module_img">
+                                  <img src="./image/module_icon_07.png" alt="" />
+                                </div>
+                                <p class="module_text">화분덮개</p>
+                              </td>
+                              <td>
+                                <div class="module_img">
+                                  <img src="./image/module_icon_08.png" alt="" />
+                                </div>
+                                <p class="module_text">홀더</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="3">
+                                <div class="module_img fit_img">
+                                  <img src="./image/module_icon_09.png" alt="" />
+                                </div>
+                                <p class="module_text">일체형 화분 (5구)</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="3">
+                                <div class="module_img fit_img">
+                                  <img src="./image/module_icon_10.png" alt="" />
+                                </div>
+                                <p class="module_text">분리형 화분 (6구)</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="module_right f_module">
+                          <div class="module_fir">
+                            <img src="./image/project_product_03.png" alt="" />
+                          </div>
+                          <div class="module_sec">
+                            <img src="./image/project_product_04.png" alt="" />
                           </div>
                         </div>
                       </div>
-                      <div class="model_struct">
-                        <div class="bot_model">
-                          <span class="remark"
-                            >2cm 수위에 물이 자동으로 오버플로우되며 물이
-                            순환됩니다.</span
-                          >
-                          <img src="./image/project_product_05.png" alt="" />
-                          <div class="bot_text">
-                            <p>
-                              *박막식구조: 물을 일정시간 흐르게 함으로써
-                              수분부족과 산소부족을 쉽게 해결하는 수경재배방법
-                            </p>
-                            <p>
-                              *수동형 같은 경우 위와같은 형태로 설치가 되며
-                              자동형일 경우 현장 여건에 따라 배관 작업이 진행
-                              됩니다.
-                            </p>
+                    </div>
+                    <div class="model_struct">
+                      <div class="bot_model">
+                        <span class="remark">2cm 수위에 물이 자동으로 오버플로우되며 물이
+                          순환됩니다.</span>
+                        <img src="./image/project_product_05.png" alt="" />
+                        <div class="bot_text">
+                          <p>
+                            *박막식구조: 물을 일정시간 흐르게 함으로써
+                            수분부족과 산소부족을 쉽게 해결하는 수경재배방법
+                          </p>
+                          <p>
+                            *수동형 같은 경우 위와같은 형태로 설치가 되며
+                            자동형일 경우 현장 여건에 따라 배관 작업이 진행
+                            됩니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cont cont2">
+              <div class="cont_wrap">
+                <div class="cont_text">
+                  <h2 class="title">
+                    부활피앤피는<span class="tit_underline hydrop_underline">식물부터</span>
+                    다릅니다
+                  </h2>
+                </div>
+                <div class="contents">
+                  <div class="cont_intro">
+                    <div class="intro_text">
+                      <p class="text">
+                        부활피앤피는 직접 농원에 방문하여 식물을 하나 하나
+                        선택하고 흙을 제거하고 최대한 일반 사무실 환경과
+                        동일한 곳에서 <br class="pc_only" />
+                        식물을 적응시키기 위하여 본사 사무실에서 당사의
+                        제품으로 직접 수경으로 전환 후 온전히 물뿌리가 내린
+                        <br class="pc_only" />식물에 한해서 출하를 원칙으로
+                        하고 있습니다.
+                      </p>
+                    </div>
+                    <div class="intro_circle">
+                      <div class="circle_wrap">
+                        <p>농원</p>
+                        <span><img src="./image/arrow_green.png" alt="" /></span>
+                        <p>세척</p>
+                        <span><img src="./image/arrow_green.png" alt="" /></span>
+                        <p class="circle_sp">수경<br />전환</p>
+                        <span><img src="./image/arrow_green.png" alt="" /></span>
+                        <p>세척</p>
+                        <span><img src="./image/arrow_green.png" alt="" /></span>
+                        <p>출하</p>
+                      </div>
+                      <p class="circle_text">
+                        일반적인 토분을 구매하여 넣어 놓는 타사의 제품과 달리
+                        식물 하나하나 뿌리 하나하나를 전문성 있게 관리합니다.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="cont_hydrop">
+                    <div class="hydrop_wrap">
+                      <div class="hydrop_item item_right">
+                        <img src="./image/hydrop_img_plant.png" alt="" />
+                      </div>
+                      <div class="hydrop_item item_left">
+                        <h3 class="title">수경재배란?</h3>
+                        <p class="text">
+                          일반적으로 흙에서 키우는 방법이 아니라 물로만 키우는
+                          방법이기 때문에 병충해 걱정과 물주기 걱정 없이
+                          유지관리가 용이합니다. 또한 성장속도가 느리기 때문에
+                          수직정원에 가장 적합하며, 뿌리가 흙에서 드러남으로
+                          식물에 공기정화 능력이 15배 이상 상승하기 때문에
+                          높은 공기정화능력과 천연 가습 효과를 얻을 수
+                          있습니다.
+                        </p>
+                        <ul class="hydrop_list">
+                          <li class="list_flex">
+                            <img src="./image/hydrop_img_01.png" alt="" />
+                            <span class="list_tag">병충해</span>
+                          </li>
+                          <li class="list_flex">
+                            <img src="./image/hydrop_img_02.png" alt="" />
+                            <span class="list_tag">흙</span>
+                          </li>
+                          <li class="list_flex">
+                            <img src="./image/hydrop_img_03.png" alt="" />
+                            <span class="list_tag">유지관리</span>
+                          </li>
+                          <li class="list_flex m-top">
+                            <img src="./image/hydrop_img_04.png" alt="" />
+                            <span class="list_tag">가습효과</span>
+                          </li>
+                          <li class="list_flex m-top">
+                            <img src="./image/hydrop_img_05.png" alt="" />
+                            <span class="list_tag">공기정화능력</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cont_type">
+                    <div class="type_text">
+                      <h3 class="title">적용수종</h3>
+                      <p class="text">
+                        환경에 맞춰 식물이 가장 아름다운 시기에 디자인하여
+                        적용합니다. <br class="pc_only ta_only" />특별히
+                        원하는 수종은 협의 후 진행합니다.
+                      </p>
+                    </div>
+                    <div class="swiper type_swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <div class="slide_img">
+                              <img src="./image/type_slide_01.png" alt="" />
+                            </div>
+                            <p class="slide_name">빅토리아</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_02.png" alt="" />
+                            <p class="slide_name">레드비치</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_03.png" alt="" />
+                            <p class="slide_name">립살리스</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_04.png" alt="" />
+                            <p class="slide_name">마리안느</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_05.png" alt="" />
+                            <p class="slide_name">몬스테라</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_06.png" alt="" />
+                            <p class="slide_name">스킨답서스</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_07.png" alt="" />
+                            <p class="slide_name">실버퀸</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_08.png" alt="" />
+                            <p class="slide_name">아단소니</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_09.png" alt="" />
+                            <p class="slide_name">오션</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_10.png" alt="" />
+                            <p class="slide_name">콩고</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_11.png" alt="" />
+                            <p class="slide_name">형광 스킨답서스</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_12.png" alt="" />
+                            <p class="slide_name">형광 팔르덴드론</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide type_slide">
+                          <div class="slide_wrap">
+                            <img src="./image/type_slide_13.png" alt="" />
+                            <p class="slide_name">히메 몬스테라</p>
                           </div>
                         </div>
                       </div>
@@ -536,533 +659,261 @@
                   </div>
                 </div>
               </div>
-              <div class="cont cont2">
-                <div class="cont_wrap">
-                  <div class="cont_text">
-                    <h2 class="title">
-                      부활피앤피는<span class="tit_underline hydrop_underline"
-                        >식물부터</span
-                      >
-                      다릅니다
-                    </h2>
-                  </div>
-                  <div class="contents">
-                    <div class="cont_intro">
-                      <div class="intro_text">
-                        <p class="text">
-                          부활피앤피는 직접 농원에 방문하여 식물을 하나 하나
-                          선택하고 흙을 제거하고 최대한 일반 사무실 환경과
-                          동일한 곳에서 <br class="pc_only" />
-                          식물을 적응시키기 위하여 본사 사무실에서 당사의
-                          제품으로 직접 수경으로 전환 후 온전히 물뿌리가 내린
-                          <br class="pc_only" />식물에 한해서 출하를 원칙으로
-                          하고 있습니다.
-                        </p>
-                      </div>
-                      <div class="intro_circle">
-                        <div class="circle_wrap">
-                          <p>농원</p>
-                          <span
-                            ><img src="./image/arrow_green.png" alt=""
-                          /></span>
-                          <p>세척</p>
-                          <span
-                            ><img src="./image/arrow_green.png" alt=""
-                          /></span>
-                          <p class="circle_sp">수경<br />전환</p>
-                          <span
-                            ><img src="./image/arrow_green.png" alt=""
-                          /></span>
-                          <p>세척</p>
-                          <span
-                            ><img src="./image/arrow_green.png" alt=""
-                          /></span>
-                          <p>출하</p>
-                        </div>
-                        <p class="circle_text">
-                          일반적인 토분을 구매하여 넣어 놓는 타사의 제품과 달리
-                          식물 하나하나 뿌리 하나하나를 전문성 있게 관리합니다.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="cont_hydrop">
-                      <div class="hydrop_wrap">
-                        <div class="hydrop_item item_right">
-                          <img src="./image/hydrop_img_plant.png" alt="" />
-                        </div>
-                        <div class="hydrop_item item_left">
-                          <h3 class="title">수경재배란?</h3>
-                          <p class="text">
-                            일반적으로 흙에서 키우는 방법이 아니라 물로만 키우는
-                            방법이기 때문에 병충해 걱정과 물주기 걱정 없이
-                            유지관리가 용이합니다. 또한 성장속도가 느리기 때문에
-                            수직정원에 가장 적합하며, 뿌리가 흙에서 드러남으로
-                            식물에 공기정화 능력이 15배 이상 상승하기 때문에
-                            높은 공기정화능력과 천연 가습 효과를 얻을 수
-                            있습니다.
-                          </p>
-                          <ul class="hydrop_list">
-                            <li class="list_flex">
-                              <img src="./image/hydrop_img_01.png" alt="" />
-                              <span class="list_tag">병충해</span>
-                            </li>
-                            <li class="list_flex">
-                              <img src="./image/hydrop_img_02.png" alt="" />
-                              <span class="list_tag">흙</span>
-                            </li>
-                            <li class="list_flex">
-                              <img src="./image/hydrop_img_03.png" alt="" />
-                              <span class="list_tag">유지관리</span>
-                            </li>
-                            <li class="list_flex m-top">
-                              <img src="./image/hydrop_img_04.png" alt="" />
-                              <span class="list_tag">가습효과</span>
-                            </li>
-                            <li class="list_flex m-top">
-                              <img src="./image/hydrop_img_05.png" alt="" />
-                              <span class="list_tag">공기정화능력</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cont_type">
-                      <div class="type_text">
-                        <h3 class="title">적용수종</h3>
-                        <p class="text">
-                          환경에 맞춰 식물이 가장 아름다운 시기에 디자인하여
-                          적용합니다. <br class="pc_only ta_only" />특별히
-                          원하는 수종은 협의 후 진행합니다.
-                        </p>
-                      </div>
-                      <div class="swiper type_swiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <div class="slide_img">
-                                <img src="./image/type_slide_01.png" alt="" />
-                              </div>
-                              <p class="slide_name">빅토리아</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_02.png" alt="" />
-                              <p class="slide_name">레드비치</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_03.png" alt="" />
-                              <p class="slide_name">립살리스</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_04.png" alt="" />
-                              <p class="slide_name">마리안느</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_05.png" alt="" />
-                              <p class="slide_name">몬스테라</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_06.png" alt="" />
-                              <p class="slide_name">스킨답서스</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_07.png" alt="" />
-                              <p class="slide_name">실버퀸</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_08.png" alt="" />
-                              <p class="slide_name">아단소니</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_09.png" alt="" />
-                              <p class="slide_name">오션</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_10.png" alt="" />
-                              <p class="slide_name">콩고</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_11.png" alt="" />
-                              <p class="slide_name">형광 스킨답서스</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_12.png" alt="" />
-                              <p class="slide_name">형광 팔르덴드론</p>
-                            </div>
-                          </div>
-                          <div class="swiper-slide type_slide">
-                            <div class="slide_wrap">
-                              <img src="./image/type_slide_13.png" alt="" />
-                              <p class="slide_name">히메 몬스테라</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            </div>
+            <div class="cont cont3">
+              <div class="cont_wrap">
+                <div class="cont_text">
+                  <h2 class="title">
+                    <span class="tit_underline qna_underline">자주 묻는 질문</span>
+                  </h2>
                 </div>
-              </div>
-              <div class="cont cont3">
-                <div class="cont_wrap">
-                  <div class="cont_text">
-                    <h2 class="title">
-                      <span class="tit_underline qna_underline"
-                        >자주 묻는 질문</span
-                      >
-                    </h2>
-                  </div>
-                  <div class="contents">
-                    <div class="accrodion-wrap">
-                      <div class="accrodion-container on">
-                        <div class="accrodion-label">
-                          <p class="accrodion-txt">
-                            <span class="point">Q</span>
-                            <span>주문 시 설치까지 얼마나 걸리나요?</span>
-                          </p>
-                          <svg
-                            width="29"
-                            height="15"
-                            viewBox="0 0 29 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-                        <div class="accrodion-conts">
-                          <p class="accrodion-txt">
-                            <span class="point">A</span>
-                            <span>
-                              식물을 수경으로 전환하여 최상의 상태로 보내드리기
-                              위하여 2주에서 한달정도의 시간을 두고 있습니다.
-                              일부 협의 가능합니다.
-                            </span>
-                          </p>
-                        </div>
+                <div class="contents">
+                  <div class="accrodion-wrap">
+                    <div class="accrodion-container on">
+                      <div class="accrodion-label">
+                        <p class="accrodion-txt">
+                          <span class="point">Q</span>
+                          <span>주문 시 설치까지 얼마나 걸리나요?</span>
+                        </p>
+                        <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
+                            fill="black" />
+                        </svg>
                       </div>
-                      <div class="accrodion-container">
-                        <div class="accrodion-label">
-                          <p class="accrodion-txt">
-                            <span class="point">Q</span>
-                            <span>분갈이가 필요하나요?</span>
-                          </p>
-                          <svg
-                            width="29"
-                            height="15"
-                            viewBox="0 0 29 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-                        <div class="accrodion-conts">
-                          <p class="accrodion-txt">
-                            <span class="point">A</span>
-                            <span> 따로 분갈이가 필요하지 않습니다. </span>
-                          </p>
-                        </div>
+                      <div class="accrodion-conts">
+                        <p class="accrodion-txt">
+                          <span class="point">A</span>
+                          <span>
+                            식물을 수경으로 전환하여 최상의 상태로 보내드리기
+                            위하여 2주에서 한달정도의 시간을 두고 있습니다.
+                            일부 협의 가능합니다.
+                          </span>
+                        </p>
                       </div>
-                      <div class="accrodion-container">
-                        <div class="accrodion-label">
-                          <p class="accrodion-txt">
-                            <span class="point">Q</span>
-                            <span>정해진 사이즈가 있나요?</span>
-                          </p>
-                          <svg
-                            width="29"
-                            height="15"
-                            viewBox="0 0 29 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-                        <div class="accrodion-conts">
-                          <p class="accrodion-txt">
-                            <span class="point">A</span>
-                            <span>
-                              모듈형 제품으로 사이즈에 맞게 설치가 가능합니다.
-                            </span>
-                          </p>
-                        </div>
+                    </div>
+                    <div class="accrodion-container">
+                      <div class="accrodion-label">
+                        <p class="accrodion-txt">
+                          <span class="point">Q</span>
+                          <span>분갈이가 필요하나요?</span>
+                        </p>
+                        <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
+                            fill="black" />
+                        </svg>
                       </div>
-                      <div class="accrodion-container">
-                        <div class="accrodion-label">
-                          <p class="accrodion-txt">
-                            <span class="point">Q</span>
-                            <span>물은 어떻게 주고, 얼마나 주어야 하나요?</span>
-                          </p>
-                          <svg
-                            width="29"
-                            height="15"
-                            viewBox="0 0 29 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-                        <div class="accrodion-conts">
-                          <p class="accrodion-txt">
-                            <span class="point">A</span>
-                            <span>
-                              수동형 같은 경우 환경에 따라 3주에 1번 정도
-                              워터탱크에 물을 넣어주셔야 합니다. <br />
-                              자동형 같은 경우 별도의 관리가 필요하지 않습니다.
-                            </span>
-                          </p>
-                        </div>
+                      <div class="accrodion-conts">
+                        <p class="accrodion-txt">
+                          <span class="point">A</span>
+                          <span> 따로 분갈이가 필요하지 않습니다. </span>
+                        </p>
                       </div>
-                      <div class="accrodion-container">
-                        <div class="accrodion-label">
-                          <p class="accrodion-txt">
-                            <span class="point">Q</span>
-                            <span>색상은 검은색 밖에 없나요?</span>
-                          </p>
-                          <svg
-                            width="29"
-                            height="15"
-                            viewBox="0 0 29 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-                        <div class="accrodion-conts">
-                          <p class="accrodion-txt">
-                            <span class="point">A</span>
-                            <span>
-                              재생 플라스틱 원료를 사용하여 제품을 생산하기
-                              때문에 다른 색상으로 변경은 불가능합니다.
-                            </span>
-                          </p>
-                        </div>
+                    </div>
+                    <div class="accrodion-container">
+                      <div class="accrodion-label">
+                        <p class="accrodion-txt">
+                          <span class="point">Q</span>
+                          <span>정해진 사이즈가 있나요?</span>
+                        </p>
+                        <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
+                            fill="black" />
+                        </svg>
                       </div>
+                      <div class="accrodion-conts">
+                        <p class="accrodion-txt">
+                          <span class="point">A</span>
+                          <span>
+                            모듈형 제품으로 사이즈에 맞게 설치가 가능합니다.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accrodion-container">
+                      <div class="accrodion-label">
+                        <p class="accrodion-txt">
+                          <span class="point">Q</span>
+                          <span>물은 어떻게 주고, 얼마나 주어야 하나요?</span>
+                        </p>
+                        <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
+                            fill="black" />
+                        </svg>
+                      </div>
+                      <div class="accrodion-conts">
+                        <p class="accrodion-txt">
+                          <span class="point">A</span>
+                          <span>
+                            수동형 같은 경우 환경에 따라 3주에 1번 정도
+                            워터탱크에 물을 넣어주셔야 합니다. <br />
+                            자동형 같은 경우 별도의 관리가 필요하지 않습니다.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accrodion-container">
+                      <div class="accrodion-label">
+                        <p class="accrodion-txt">
+                          <span class="point">Q</span>
+                          <span>색상은 검은색 밖에 없나요?</span>
+                        </p>
+                        <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
+                            fill="black" />
+                        </svg>
+                      </div>
+                      <div class="accrodion-conts">
+                        <p class="accrodion-txt">
+                          <span class="point">A</span>
+                          <span>
+                            재생 플라스틱 원료를 사용하여 제품을 생산하기
+                            때문에 다른 색상으로 변경은 불가능합니다.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
 
-                      <div class="accrodion-container">
-                        <div class="accrodion-label">
-                          <p class="accrodion-txt">
-                            <span class="point">Q</span>
-                            <span>방문 관리 서비스가 있나요?</span>
-                          </p>
-                          <svg
-                            width="29"
-                            height="15"
-                            viewBox="0 0 29 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-                        <div class="accrodion-conts">
-                          <p class="accrodion-txt">
-                            <span class="point">A</span>
-                            <span>
-                              네, 전문 케어 담당자가 방문하여 식물과 기기를 전부
-                              관리해 줍니다. 자세한 사항은 따로 문의 바랍니다.
-                            </span>
-                          </p>
-                        </div>
+                    <div class="accrodion-container">
+                      <div class="accrodion-label">
+                        <p class="accrodion-txt">
+                          <span class="point">Q</span>
+                          <span>방문 관리 서비스가 있나요?</span>
+                        </p>
+                        <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
+                            fill="black" />
+                        </svg>
                       </div>
-                      <div class="accrodion-container">
-                        <div class="accrodion-label">
-                          <p class="accrodion-txt">
-                            <span class="point">Q</span>
-                            <span>유지해주어야 하는 환경이 있을가요?</span>
-                          </p>
-                          <svg
-                            width="29"
-                            height="15"
-                            viewBox="0 0 29 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-                        <div class="accrodion-conts">
-                          <p class="accrodion-txt">
-                            <span class="point">A</span>
-                            <span>
-                              살아 있는 식물이기 때문에 실내 온도는 16도 이상
-                              유지해 주시는게 식물의 성장에 도움이 됩니다.
-                            </span>
-                          </p>
-                        </div>
+                      <div class="accrodion-conts">
+                        <p class="accrodion-txt">
+                          <span class="point">A</span>
+                          <span>
+                            네, 전문 케어 담당자가 방문하여 식물과 기기를 전부
+                            관리해 줍니다. 자세한 사항은 따로 문의 바랍니다.
+                          </span>
+                        </p>
                       </div>
-                      <div class="accrodion-container">
-                        <div class="accrodion-label">
-                          <p class="accrodion-txt">
-                            <span class="point">Q</span>
-                            <span>배관공사를 해야 하나요?</span>
-                          </p>
-                          <svg
-                            width="29"
-                            height="15"
-                            viewBox="0 0 29 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-                        <div class="accrodion-conts">
-                          <p class="accrodion-txt">
-                            <span class="point">A</span>
-                            <span>
-                              수동형 같은 경우 별도의 배관 공사 없이 어디든 설치
-                              가능합니다. <br />
-                              자동형 같은 경우 현장에 따라 일부 배관공사를
-                              진행하게 됩니다.
-                            </span>
-                          </p>
-                        </div>
+                    </div>
+                    <div class="accrodion-container">
+                      <div class="accrodion-label">
+                        <p class="accrodion-txt">
+                          <span class="point">Q</span>
+                          <span>유지해주어야 하는 환경이 있을가요?</span>
+                        </p>
+                        <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
+                            fill="black" />
+                        </svg>
                       </div>
-                      <div class="accrodion-container">
-                        <div class="accrodion-label">
-                          <p class="accrodion-txt">
-                            <span class="point">Q</span>
-                            <span>전원이 필요한가요?</span>
-                          </p>
-                          <svg
-                            width="29"
-                            height="15"
-                            viewBox="0 0 29 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
-                              fill="black"
-                            />
-                          </svg>
-                        </div>
-                        <div class="accrodion-conts">
-                          <p class="accrodion-txt">
-                            <span class="point">A</span>
-                            <span>
-                              부활피앤피의 수직 정원 / 파티션 정원은 지속적인
-                              유지관리를 위하여 220V의 전원 콘센트가 필요합니다.
-                            </span>
-                          </p>
-                        </div>
+                      <div class="accrodion-conts">
+                        <p class="accrodion-txt">
+                          <span class="point">A</span>
+                          <span>
+                            살아 있는 식물이기 때문에 실내 온도는 16도 이상
+                            유지해 주시는게 식물의 성장에 도움이 됩니다.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accrodion-container">
+                      <div class="accrodion-label">
+                        <p class="accrodion-txt">
+                          <span class="point">Q</span>
+                          <span>배관공사를 해야 하나요?</span>
+                        </p>
+                        <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
+                            fill="black" />
+                        </svg>
+                      </div>
+                      <div class="accrodion-conts">
+                        <p class="accrodion-txt">
+                          <span class="point">A</span>
+                          <span>
+                            수동형 같은 경우 별도의 배관 공사 없이 어디든 설치
+                            가능합니다. <br />
+                            자동형 같은 경우 현장에 따라 일부 배관공사를
+                            진행하게 됩니다.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="accrodion-container">
+                      <div class="accrodion-label">
+                        <p class="accrodion-txt">
+                          <span class="point">Q</span>
+                          <span>전원이 필요한가요?</span>
+                        </p>
+                        <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M29 0.757074L14.5581 15L14.5 14.9352L14.4418 15L-9.41223e-05 0.757072L0.679126 -2.82251e-05L14.5 13.6303L28.3208 -2.58086e-05L29 0.757074Z"
+                            fill="black" />
+                        </svg>
+                      </div>
+                      <div class="accrodion-conts">
+                        <p class="accrodion-txt">
+                          <span class="point">A</span>
+                          <span>
+                            부활피앤피의 수직 정원 / 파티션 정원은 지속적인
+                            유지관리를 위하여 220V의 전원 콘센트가 필요합니다.
+                          </span>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="cont cont4">
-                <div class="cont_wrap">
-                  <div class="cont_text">
-                    <h2 class="title">
-                      <span class="tit_underline gallery_underline"
-                        >시공사례</span
-                      >
-                    </h2>
-                  </div>
-                  <div class="contents">
-                    <ul class="case_gallery">
-                      <li class="item">
-                        <img src="./image/gallery_img_01.jpg" alt="시공사례1" />
-                        <p>시공사례1</p>
-                      </li>
-                      <li class="item">
-                        <img src="./image/gallery_img_02.jpg" alt="시공사례1" />
-                        <p>시공사례1</p>
-                      </li>
-                      <li class="item">
-                        <img src="./image/gallery_img_01.jpg" alt="시공사례1" />
-                        <p>시공사례1</p>
-                      </li>
-                      <li class="item">
-                        <img src="./image/gallery_img_02.jpg" alt="시공사례1" />
-                        <p>시공사례1</p>
-                      </li>
-                      <li class="item">
-                        <img src="./image/gallery_img_01.jpg" alt="시공사례1" />
-                        <p>시공사례1</p>
-                      </li>
-                    </ul>
-                  </div>
+            </div>
+            <div class="cont cont4">
+              <div class="cont_wrap">
+                <div class="cont_text">
+                  <h2 class="title">
+                    <span class="tit_underline gallery_underline">시공사례</span>
+                  </h2>
                 </div>
-                <div class="gallery_modal">
-                  <div class="prev">
-                    <img src="image/icon/icon_prev.png" alt="" />
-                  </div>
-                  <div class="next">
-                    <img src="image/icon/icon_next.png" alt="" />
-                  </div>
-                  <div class="gallery_slide_wrap">
-                    <div class="close">
-                      <img src="image/icon/icon_close.png" alt="" />
-                    </div>
+                <div class="contents">
+                  <ul class="case_gallery">
+                    <li class="item">
+                      <img src="./image/gallery_img_01.jpg" alt="시공사례1" />
+                      <p>시공사례1</p>
+                    </li>
+                    <li class="item">
+                      <img src="./image/gallery_img_02.jpg" alt="시공사례1" />
+                      <p>시공사례1</p>
+                    </li>
+                    <li class="item">
+                      <img src="./image/gallery_img_01.jpg" alt="시공사례1" />
+                      <p>시공사례1</p>
+                    </li>
+                    <li class="item">
+                      <img src="./image/gallery_img_02.jpg" alt="시공사례1" />
+                      <p>시공사례1</p>
+                    </li>
+                    <li class="item">
+                      <img src="./image/gallery_img_01.jpg" alt="시공사례1" />
+                      <p>시공사례1</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="gallery_modal">
+                <div class="prev">
+                  <img src="image/icon/icon_prev.png" alt="" />
+                </div>
+                <div class="next">
+                  <img src="image/icon/icon_next.png" alt="" />
+                </div>
+                <div class="gallery_slide_wrap">
+                  <div class="close">
+                    <img src="image/icon/icon_close.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -1070,291 +921,293 @@
           </div>
         </div>
       </div>
-      <!-- 탭메뉴 -->
     </div>
-    <!-- 스크립트영역 -->
-    <script src="./js/jquery-3.6.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="./js/main.js"></script> -->
+    <!-- 탭메뉴 -->
+  </div>
+  <!-- 스크립트영역 -->
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="./js/main.js"></script> -->
 
-    <script>
-      var swiper = new Swiper(".type_swiper", {
-        spaceBetween: 40,
-        slidesPerView: 5,
-        centeredSlides: false,
-        loop: true,
-        observer: true,
-        observeParents: true,
-        autoplay: {
-          delay: 2000,
-          disableOnInteraction: false,
+  <script>
+    var swiper = new Swiper(".type_swiper", {
+      spaceBetween: 40,
+      slidesPerView: 5,
+      centeredSlides: false,
+      loop: true,
+      observer: true,
+      observeParents: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        1025: {
+          slidesPerView: 5,
         },
-        breakpoints: {
-          1025: {
-            slidesPerView: 5,
-          },
-          767: {
-            spaceBetween: 15,
-            slidesPerView: 3,
-          },
-          0: {
-            slidesPerView: 1,
-          },
+        767: {
+          spaceBetween: 15,
+          slidesPerView: 3,
         },
-      });
-    </script>
-    <script>
-      window.addEventListener("scroll", function () {
-        let introText = document.querySelector(".intro_underline");
-        let modelText = document.querySelector(".model_underline");
-        let hydropText = document.querySelector(".hydrop_underline");
-        let qnaText = document.querySelector(".qna_underline");
-        let galText = document.querySelector(".gallery_underline");
-        let descText = document.querySelector(".desc_underline");
-        let value = window.scrollY;
-        console.log("123");
+        0: {
+          slidesPerView: 1,
+        },
+      },
+    });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      let introText = document.querySelector(".intro_underline");
+      let modelText = document.querySelector(".model_underline");
+      let hydropText = document.querySelector(".hydrop_underline");
+      let qnaText = document.querySelector(".qna_underline");
+      let galText = document.querySelector(".gallery_underline");
+      let descText = document.querySelector(".desc_underline");
+      let value = window.scrollY;
+      console.log("123");
 
-        if (window.innerWidth >= 768) {
-          //첫 번째 섹션 스크롤이벤트
-          if (value > 100) {
-            introText.classList.add("active");
-            hydropText.classList.add("active");
-            qnaText.classList.add("active");
-            galText.classList.add("active");
-          } else {
-            introText.classList.remove("active");
-            hydropText.classList.remove("active");
-            qnaText.classList.remove("active");
-            galText.classList.remove("active");
-          }
-          //desc 밑줄 스크롤이벤트
-          if (value > 1500) {
-            descText.classList.add("active");
-          } else {
-            descText.classList.remove("active");
-          }
-
-          //세 번째 섹션 스크롤이벤트
-          if (value > 3600) {
-            modelText.classList.add("active");
-          } else {
-            modelText.classList.remove("active");
-          }
-
-          //세 번째 섹션 스크롤이벤트
-          // for (let i = 0; i < newsText.length; i++) {
-          //   if (value > 1800) {
-          //     newsText[i].classList.add('active');
-          //   } else {
-          //     newsText[i].classList.remove('active');
-          //   };
-          // }
-        }
-        if (window.innerWidth <= 1024) {
-          // 첫 번째 섹션 스크롤이벤트
-          if (value > 50) {
-            introText.classList.add("active");
-            hydropText.classList.add("active");
-            qnaText.classList.add("active");
-            galText.classList.add("active");
-          } else {
-            introText.classList.remove("active");
-            hydropText.classList.remove("active");
-            qnaText.classList.remove("active");
-            galText.classList.remove("active");
-          }
-          if (value > 1095) {
-            descText.classList.add("active");
-          } else {
-            descText.classList.remove("active");
-          }
-
-          //세 번째 섹션 스크롤이벤트
-          if (value > 2750) {
-            modelText.classList.add("active");
-          } else {
-            modelText.classList.remove("active");
-          }
-        }
-
-        //모바일사이즈
-
-        if (window.innerWidth < 768) {
-          //세 번째 섹션 스크롤이벤트
-          if (value > 2500) {
-            modelText.classList.add("active");
-          } else {
-            modelText.classList.remove("active");
-          }
-        }
-      });
-    </script>
-
-    <script>
-      //brand tab
-
-      const tabList = document.querySelectorAll(".tab_menu .tab_list");
-      const cont = document.querySelectorAll(".tab_cont .cont");
-      for (let i = 0; i < tabList.length; i++) {
-        tabList[i].addEventListener("click", function (e) {
-          e.preventDefault();
-          for (let i = 0; i < cont.length; i++) {
-            cont[i].classList.remove("is_on");
-            tabList[i].classList.remove("on");
-          }
-          cont[i].classList.add("is_on");
-          tabList[i].classList.add("on");
-        });
-      }
-
-      //brand QnA
-      let label = document.querySelectorAll(".accrodion-label");
-      let accrodion = document.querySelectorAll(".accrodion-container");
-
-      for (i = 0; i < label.length; i++) {
-        label[i].addEventListener("click", function () {
-          var next = this.parentNode;
-          if (!next.classList.contains("on")) {
-            for (j = 0; j < accrodion.length; j++) {
-              accrodion[j].classList.remove("on");
-            }
-            next.classList.add("on");
-          } else {
-            next.classList.remove("on");
-          }
-        });
-      }
-
-      //brand gallery
-      loadModal();
-
-      activeItemGallery();
-
-      $(".gallery_modal .close").on("click", function () {
-        closeModal();
-      });
-
-      $(".gallery_modal .next").on("click", function () {
-        if ($(".gallery_modal .item.active").is(":last-child")) {
-          nextFirst();
+      if (window.innerWidth >= 768) {
+        //첫 번째 섹션 스크롤이벤트
+        if (value > 100) {
+          introText.classList.add("active");
+          hydropText.classList.add("active");
+          qnaText.classList.add("active");
+          galText.classList.add("active");
         } else {
-          next();
+          introText.classList.remove("active");
+          hydropText.classList.remove("active");
+          qnaText.classList.remove("active");
+          galText.classList.remove("active");
         }
-      });
-
-      $(".gallery_modal .prev").on("click", function () {
-        if ($(".gallery_modal .item.active").is(":first-child")) {
-          prevLast();
+        //desc 밑줄 스크롤이벤트
+        if (value > 1500) {
+          descText.classList.add("active");
         } else {
-          prev();
+          descText.classList.remove("active");
+        }
+
+        //세 번째 섹션 스크롤이벤트
+        if (value > 3600) {
+          modelText.classList.add("active");
+        } else {
+          modelText.classList.remove("active");
+        }
+
+        //세 번째 섹션 스크롤이벤트
+        // for (let i = 0; i < newsText.length; i++) {
+        //   if (value > 1800) {
+        //     newsText[i].classList.add('active');
+        //   } else {
+        //     newsText[i].classList.remove('active');
+        //   };
+        // }
+      }
+      if (window.innerWidth <= 1024) {
+        // 첫 번째 섹션 스크롤이벤트
+        if (value > 50) {
+          introText.classList.add("active");
+          hydropText.classList.add("active");
+          qnaText.classList.add("active");
+          galText.classList.add("active");
+        } else {
+          introText.classList.remove("active");
+          hydropText.classList.remove("active");
+          qnaText.classList.remove("active");
+          galText.classList.remove("active");
+        }
+        if (value > 1095) {
+          descText.classList.add("active");
+        } else {
+          descText.classList.remove("active");
+        }
+
+        //세 번째 섹션 스크롤이벤트
+        if (value > 2750) {
+          modelText.classList.add("active");
+        } else {
+          modelText.classList.remove("active");
+        }
+      }
+
+      //모바일사이즈
+
+      if (window.innerWidth < 768) {
+        //세 번째 섹션 스크롤이벤트
+        if (value > 2500) {
+          modelText.classList.add("active");
+        } else {
+          modelText.classList.remove("active");
+        }
+      }
+    });
+  </script>
+
+  <script>
+    //brand tab
+
+    const tabList = document.querySelectorAll(".tab_menu .tab_list");
+    const cont = document.querySelectorAll(".tab_cont .cont");
+    for (let i = 0; i < tabList.length; i++) {
+      tabList[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        for (let i = 0; i < cont.length; i++) {
+          cont[i].classList.remove("is_on");
+          tabList[i].classList.remove("on");
+        }
+        cont[i].classList.add("is_on");
+        tabList[i].classList.add("on");
+      });
+    }
+
+    //brand QnA
+    let label = document.querySelectorAll(".accrodion-label");
+    let accrodion = document.querySelectorAll(".accrodion-container");
+
+    for (i = 0; i < label.length; i++) {
+      label[i].addEventListener("click", function () {
+        var next = this.parentNode;
+        if (!next.classList.contains("on")) {
+          for (j = 0; j < accrodion.length; j++) {
+            accrodion[j].classList.remove("on");
+          }
+          next.classList.add("on");
+        } else {
+          next.classList.remove("on");
         }
       });
+    }
 
-      function activeItemGallery() {
-        $(".case_gallery .item").on("click", function () {
-          // $('.case_gallery .item').removeClass('active');
-          // $(this).addClass('active');
-          var indexActive = $(this).index();
+    //brand gallery
+    loadModal();
 
-          $(".gallery_modal .item").removeClass("active");
+    activeItemGallery();
 
-          $(".gallery_modal .item").each(function () {
-            var indexModalItem = $(this).index();
-            if (indexActive === indexModalItem) {
-              $(this).addClass("active");
-            }
-          });
+    $(".gallery_modal .close").on("click", function () {
+      closeModal();
+    });
 
-          openModal();
-        });
+    $(".gallery_modal .next").on("click", function () {
+      if ($(".gallery_modal .item.active").is(":last-child")) {
+        nextFirst();
+      } else {
+        next();
       }
+    });
 
-      function loadModal() {
-        var gallery = $(".case_gallery").clone().removeClass("case_gallery");
-        $(".gallery_modal .gallery_slide_wrap").append(gallery);
+    $(".gallery_modal .prev").on("click", function () {
+      if ($(".gallery_modal .item.active").is(":first-child")) {
+        prevLast();
+      } else {
+        prev();
       }
+    });
 
-      function openModal() {
-        $(".gallery_modal").addClass("active");
-      }
+    function activeItemGallery() {
+      $(".case_gallery .item").on("click", function () {
+        // $('.case_gallery .item').removeClass('active');
+        // $(this).addClass('active');
+        var indexActive = $(this).index();
 
-      function closeModal() {
+        $(".gallery_modal .item").removeClass("active");
+
         $(".gallery_modal .item").each(function () {
-          $(this).removeClass("active");
+          var indexModalItem = $(this).index();
+          if (indexActive === indexModalItem) {
+            $(this).addClass("active");
+          }
         });
 
-        $(".gallery_modal").removeClass("active");
-      }
+        openModal();
+      });
+    }
 
-      function next() {
-        $(".item.active").next().addClass("active");
-        $(".item.active").prev().removeClass("active");
-      }
+    function loadModal() {
+      var gallery = $(".case_gallery").clone().removeClass("case_gallery");
+      $(".gallery_modal .gallery_slide_wrap").append(gallery);
+    }
 
-      function prev() {
-        $(".item.active").prev().addClass("active");
-        $(".item.active").next().removeClass("active");
-      }
+    function openModal() {
+      $(".gallery_modal").addClass("active");
+    }
 
-      function nextFirst() {
-        $(".item").removeClass("active");
-        $(".item:first-child").addClass("active");
-      }
+    function closeModal() {
+      $(".gallery_modal .item").each(function () {
+        $(this).removeClass("active");
+      });
 
-      function prevLast() {
-        $(".item").removeClass("active");
-        $(".item:last-child").addClass("active");
-      }
-    </script>
-    <script>
-      const ctx = document.getElementById("myChart").getContext("2d");
-      const myChart = new Chart(ctx, {
-        type: "pie",
-        data: {
-          labels: [
-            "기타",
-            "음식류",
-            "음료, 물",
-            "외기",
-            "산업배기",
-            "공공시설공기",
-            " 실내공기",
-          ],
-          datasets: [
-            {
-              label: "# of Votes",
-              data: [2, 7, 8, 5, 9, 12, 57],
-              backgroundColor: [
-                "rgb(255, 99, 132)",
-                "rgb(54, 162, 235)",
-                "rgb(255, 206, 86)",
-                "rgb(75, 192, 192)",
-                "rgb(153, 102, 255)",
-                "rgb(255, 159, 64)",
-                "rgb(255, 138, 194)",
-              ],
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: "none",
-            },
-            title: {
-              display: true,
-              position: "bottom",
-              text: "인체의 1일 물질 섭취량 비율",
-              font: {
-                size: "14px",
-                weight: "500",
-              },
+      $(".gallery_modal").removeClass("active");
+    }
+
+    function next() {
+      $(".item.active").next().addClass("active");
+      $(".item.active").prev().removeClass("active");
+    }
+
+    function prev() {
+      $(".item.active").prev().addClass("active");
+      $(".item.active").next().removeClass("active");
+    }
+
+    function nextFirst() {
+      $(".item").removeClass("active");
+      $(".item:first-child").addClass("active");
+    }
+
+    function prevLast() {
+      $(".item").removeClass("active");
+      $(".item:last-child").addClass("active");
+    }
+  </script>
+  <script>
+    const ctx = document.getElementById("myChart").getContext("2d");
+    const myChart = new Chart(ctx, {
+      type: "pie",
+      data: {
+        labels: [
+          "기타",
+          "음식류",
+          "음료, 물",
+          "외기",
+          "산업배기",
+          "공공시설공기",
+          " 실내공기",
+        ],
+        datasets: [
+          {
+            label: "# of Votes",
+            data: [2, 7, 8, 5, 9, 12, 57],
+            backgroundColor: [
+              "rgb(255, 99, 132)",
+              "rgb(54, 162, 235)",
+              "rgb(255, 206, 86)",
+              "rgb(75, 192, 192)",
+              "rgb(153, 102, 255)",
+              "rgb(255, 159, 64)",
+              "rgb(255, 138, 194)",
+            ],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "none",
+          },
+          title: {
+            display: true,
+            position: "bottom",
+            text: "인체의 1일 물질 섭취량 비율",
+            font: {
+              size: "14px",
+              weight: "500",
             },
           },
         },
-      });
-    </script>
-  </body>
+      },
+    });
+  </script>
+</body>
+
 </html>

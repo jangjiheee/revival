@@ -1195,7 +1195,7 @@ table th {
 }
 
 .cont_type .type_slide {
-  height: 280px;
+  height: auto;
 }
 
 .cont_type .type_slide .slide_wrap {
@@ -1479,12 +1479,12 @@ table th {
     padding: 30px 0;
   }
 
-  .cont_type .type_slide {
+  /* .cont_type .type_slide {
     height: 300px;
-  }
+  } */
 
   .project_tab .cont2 .contents {
-    padding: 0 30px 0;
+    padding: 0 30px 80px;
   }
 }
 
@@ -1524,7 +1524,7 @@ table th {
   }
 
   .project_tab .contents {
-    padding: 0 0 60px;
+    padding: 0 0 50px;
   }
 
   .project_tab .cont_wrap {
@@ -1710,12 +1710,12 @@ table th {
     padding: 20px 0;
   }
 
-  .cont_type .type_slide {
+  /* .cont_type .type_slide {
     height: 320px;
-  }
+  } */
 
   .project_tab .cont2 .contents {
-    padding: 0 0 20px;
+    padding: 0 0 50px;
   }
 }
 
@@ -1760,6 +1760,7 @@ table th {
   font-size: 24px;
   display: flex;
   flex: 1;
+  line-height: 1.35;
 }
 
 .project_area .accrodion-wrap .accrodion-txt .point {
@@ -1768,7 +1769,7 @@ table th {
 }
 
 .project_area .accrodion-wrap .accrodion-txt span:last-child {
-  padding-top: 12px;
+  padding-top: 10px;
 }
 
 .project_area .accrodion-wrap .accrodion-label svg {
@@ -1797,7 +1798,7 @@ table th {
 
 .project_area .accrodion-wrap .accrodion-conts .accrodion-txt {
   color: #7b7b7b;
-  margin: 40px 0;
+  margin: 15px 0 40px;
 }
 
 .project_area .accrodion-wrap .accrodion-container.on .accrodion-label svg {
@@ -1837,7 +1838,7 @@ table th {
   }
 
   .project_area .accrodion-wrap .accrodion-conts .accrodion-txt {
-    margin: 30px 0;
+    margin: 10px 0 30px;
   }
 }
 
@@ -1870,7 +1871,7 @@ table th {
   }
 
   .project_area .accrodion-wrap .accrodion-conts .accrodion-txt {
-    margin: 15px 0;
+    margin: 5px 0 15px;
   }
 }
 
