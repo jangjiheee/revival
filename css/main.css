@@ -110,8 +110,9 @@
 }
 
 .main_visual .intro_title {
+  width: 1290px;
   height: 105px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 .intro_title > svg.pc_ver {
@@ -125,14 +126,14 @@
   position: relative;
 }
 
-.intro_title .underline {
+.intro_title .underline_pc {
   position: absolute;
   bottom: -4px;
   left: 6vw;
   height: 13px;
   background: #3cb371;
   z-index: -1;
-  animation-name: underLining;
+  animation-name: underLiningPc;
   animation-duration: 2s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
@@ -146,6 +147,14 @@
 .intro_title > svg.tab_ver {
   display: none;
 }
+@keyframes underLiningPc {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 915px;
+  }
+}
 
 @keyframes underLining {
   0% {
@@ -156,75 +165,27 @@
     width: 60%;
   }
 }
-
-@media screen and (max-width: 1680px) {
-  .intro_title .underline {
-    left: 7.2vw;
+@media screen and (max-width: 1335px) and (min-width: 1025px) {
+  .main_visual .intro_title {
+    width: 990px;
   }
 
-  @keyframes underLining {
-    0% {
-      width: 0%;
-    }
-
-    100% {
-      width: 60%;
-    }
-  }
-}
-
-@media screen and (max-width: 1530px) {
-  .intro_title .underline {
-    left: 6.2vw;
-  }
-
-  @keyframes underLining {
-    0% {
-      width: 0%;
-    }
-
-    100% {
-      width: 62%;
-    }
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .intro_title .underline {
-    left: 3.5vw;
-  }
-
-  @keyframes underLining {
-    0% {
-      width: 0%;
-    }
-
-    100% {
-      width: 66%;
-    }
-  }
-}
-
-@media screen and (max-width: 1208px) {
-  .intro_title .underline {
-    left: 3vw;
-  }
-
-  @keyframes underLining {
-    0% {
-      width: 0%;
-    }
-
-    100% {
-      width: 67%;
-    }
-  }
-}
-
-@media screen and (max-width: 1400px) and (min-width: 1025px) {
   .intro_title {
-    font-size: 5vw;
-    margin-bottom: 1.0417vw;
+    position: relative;
+    font-size: 55px;
+  }
+
+  .intro_title .underline_pc {
+    bottom: 0;
+  }
+
+  @keyframes underLiningPc {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 705px;
+    }
   }
 }
 
@@ -390,6 +351,21 @@
     left: 0;
     top: 78px;
     height: 10px;
+  }
+  .intro_title .underline_pc {
+    display: none;
+  }
+  .intro_title .underline {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 13px;
+    background: #3cb371;
+    z-index: -1;
+    animation-name: underLining;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
   }
 
   .intro_title .underline_tablet {

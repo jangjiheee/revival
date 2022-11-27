@@ -31,6 +31,10 @@ img {
   display: none;
 }
 
+.pointBr {
+  display: none;
+}
+
 table td,
 table th {
   padding: 0;
@@ -647,6 +651,34 @@ table th {
 
 .cont_chart .text {
   margin-top: 20px;
+}
+
+.cont_chart .text .desc_underline {
+  position: relative;
+}
+
+.cont_chart .text .desc_underline.active:before {
+  content: "";
+
+  position: absolute;
+  bottom: 3px;
+  left: 0px;
+  height: 4px;
+  background: #3cb371;
+  z-index: -1;
+  animation-name: underLining;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes underLining {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 
 .chart-wrap {
@@ -1459,6 +1491,12 @@ table th {
 @media screen and (max-width: 950px) {
   .intro_circle .circle_wrap {
     width: 85%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .pointBr {
+    display: block;
   }
 }
 
