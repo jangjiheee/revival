@@ -201,13 +201,23 @@ table th {
   width: calc(100% - 240px);
 }
 
-.direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
+.direction
+  .direction_flex
+  .direct_box
+  .direct_flex_box
+  .direct_txt
+  .direct_txt_title {
   margin-bottom: 15px;
   font-size: 28px;
   font-weight: 600;
 }
 
-.direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
+.direction
+  .direction_flex
+  .direct_box
+  .direct_flex_box
+  .direct_txt
+  .direct_txt_desc {
   font-size: 24px;
   font-weight: 300;
 }
@@ -377,11 +387,21 @@ table th {
     width: calc(100% - 190px);
   }
 
-  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
+  .direction
+    .direction_flex
+    .direct_box
+    .direct_flex_box
+    .direct_txt
+    .direct_txt_title {
     font-size: 24px;
   }
 
-  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
+  .direction
+    .direction_flex
+    .direct_box
+    .direct_flex_box
+    .direct_txt
+    .direct_txt_desc {
     font-size: 20px;
   }
 }
@@ -495,11 +515,21 @@ table th {
     display: unset;
   }
 
-  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_title {
+  .direction
+    .direction_flex
+    .direct_box
+    .direct_flex_box
+    .direct_txt
+    .direct_txt_title {
     font-size: 20px;
   }
 
-  .direction .direction_flex .direct_box .direct_flex_box .direct_txt .direct_txt_desc {
+  .direction
+    .direction_flex
+    .direct_box
+    .direct_flex_box
+    .direct_txt
+    .direct_txt_desc {
     font-size: 16px;
   }
 }
@@ -507,6 +537,26 @@ table th {
 /* 회사소개끝 */
 
 /* /브랜드시작 */
+.project_title {
+	font-size: 56px; 
+	line-height: 1.4;
+}
+
+@media(max-width: 1024px) {
+   .project_title {
+	font-size: 40px; 
+}
+}
+@media(max-width: 767px) {
+   .project_title {
+	font-size: 32px; 
+}
+}
+
+.project_tab .banner_img {
+	max-width: 1100px;
+	margin: 0 auto;
+}
 .cont {
   visibility: hidden;
   max-height: 0;
@@ -570,18 +620,18 @@ table th {
   color: #555555;
 }
 
-.project_tab .tab_menu .tab_list>a {
+.project_tab .tab_menu .tab_list > a {
   position: relative;
   padding: 22px 65px;
   font-size: 24px;
 }
 
-.project_tab .tab_menu .tab_list.on>a {
+.project_tab .tab_menu .tab_list.on > a {
   color: #3aaa35;
   background: rgba(58, 170, 53, 0.12);
 }
 
-.project_tab .tab_menu .tab_list.on>a:before {
+.project_tab .tab_menu .tab_list.on > a:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -611,12 +661,12 @@ table th {
 
 .project_tab .cont_text .title {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 42px;
 }
 
 .project_tab .cont_text .desc {
-  margin: 80px 0 40px;
-  font-size: 36px;
+  margin: 60px 0 40px;
+  font-size: 32px;
   line-height: inherit;
 }
 
@@ -628,11 +678,11 @@ table th {
   padding: 0 40px 80px;
 }
 
-.contents>div {
+.contents > div {
   margin-top: 80px;
 }
 
-.contents>div .title {
+.contents > div .title {
   font-size: 36px;
 }
 
@@ -710,7 +760,7 @@ table th {
   margin-bottom: 15px;
 }
 
-.chart-wrap .chart_desc ul li>div {
+.chart-wrap .chart_desc ul li > div {
   margin-right: 10px;
 }
 
@@ -780,7 +830,7 @@ table th {
     row-gap: 5px;
   }
 
-  .chart-wrap .chart_desc ul li>div {
+  .chart-wrap .chart_desc ul li > div {
     margin-right: 6px;
   }
 }
@@ -937,7 +987,7 @@ table th {
   margin-top: 20px;
 }
 
-.model_list>li {
+.model_list > li {
   width: 50%;
 }
 
@@ -1051,7 +1101,9 @@ table th {
     justify-content: space-evenly;
   }
 }
-
+.bot_model .title {
+  margin-bottom: 80px;
+}
 .model_struct .bot_model {
   margin-top: 63px;
   text-align: center;
@@ -1211,6 +1263,7 @@ table th {
 .cont_type .type_slide .slide_name {
   border-top: 1px solid #c2c2c2;
   line-height: 40px;
+  font-size: 15px;
 }
 
 .cont_type .type_slide img {
@@ -1248,7 +1301,7 @@ table th {
     text-align: center;
   }
 
-  .project_tab .tab_menu .tab_list>a {
+  .project_tab .tab_menu .tab_list > a {
     padding: 0;
     font-size: 20px;
     line-height: 60px;
@@ -1267,8 +1320,8 @@ table th {
   }
 
   .project_tab .cont_text .desc {
-    margin: 50px 0 40px;
-    font-size: 28px;
+    margin: 40px 0 30px;
+    font-size: 24px;
   }
 
   .project_tab .contents {
@@ -1279,11 +1332,11 @@ table th {
     padding: 0 30px;
   }
 
-  .contents>div {
+  .contents > div {
     margin-top: 50px;
   }
 
-  .contents>div .title {
+  .contents > div .title {
     font-size: 28px;
   }
 
@@ -1515,7 +1568,7 @@ table th {
     border-bottom: 1px solid #ccc;
   }
 
-  .project_tab .tab_menu .tab_list>a {
+  .project_tab .tab_menu .tab_list > a {
     font-size: 16px;
     line-height: 50px;
   }
@@ -1545,7 +1598,7 @@ table th {
     padding: 0 10px;
   }
 
-  .contents>div {
+  .contents > div {
     margin-top: 30px;
   }
 
@@ -1553,7 +1606,7 @@ table th {
     margin-top: 10px;
   }
 
-  .contents>div .title {
+  .contents > div .title {
     font-size: 24px;
   }
 
@@ -1616,7 +1669,7 @@ table th {
     gap: 30px;
   }
 
-  .cont_model .model_list>li {
+  .cont_model .model_list > li {
     width: 100%;
   }
 
@@ -1661,7 +1714,9 @@ table th {
   .model_struct .remark {
     margin-top: 0;
   }
-
+  .bot_model .title {
+    margin-bottom: 60px;
+  }
   .bot_model .bot_text {
     font-size: 16px;
   }
